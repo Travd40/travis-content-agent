@@ -1,5 +1,5 @@
 {
-  "total_posts": 17,
+  "total_posts": 18,
   "history": [
     {
       "post_number": 1,
@@ -195,6 +195,14 @@
       "tip": "Apologies without changed behavior are just performances. She's watching what you do next, not what you said.",
       "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0017_COUPLES_COACHING.mp4",
       "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0017_COUPLES_COACHING_caption.txt"
+    },
+    {
+      "post_number": 18,
+      "timestamp": "2026-04-29T15:03:09.138968",
+      "category": "MEN'S COACHING",
+      "tip": "Your follow-through is her forecast. Every broken small promise teaches her not to count on you.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0018_MENS_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0018_MENS_COACHING_caption.txt"
     }
   ]
 }
