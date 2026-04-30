@@ -1,5 +1,5 @@
 {
-  "total_posts": 18,
+  "total_posts": 19,
   "history": [
     {
       "post_number": 1,
@@ -203,6 +203,14 @@
       "tip": "Your follow-through is her forecast. Every broken small promise teaches her not to count on you.",
       "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0018_MENS_COACHING.mp4",
       "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0018_MENS_COACHING_caption.txt"
+    },
+    {
+      "post_number": 19,
+      "timestamp": "2026-04-30T14:59:17.030622",
+      "category": "COMMUNICATION",
+      "tip": "Tone carries more weight than words. She's reading how you said it long after.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0019_COMMUNICATION.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0019_COMMUNICATION_caption.txt"
     }
   ]
 }
