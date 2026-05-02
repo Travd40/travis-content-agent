@@ -1,5 +1,5 @@
 {
-  "total_posts": 20,
+  "total_posts": 21,
   "history": [
     {
       "post_number": 1,
@@ -219,6 +219,14 @@
       "tip": "Safety dies in inconsistency. The version of you she met must match who shows up Tuesday.",
       "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0020_TRUST_and_SAFETY.mp4",
       "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0020_TRUST_and_SAFETY_caption.txt"
+    },
+    {
+      "post_number": 21,
+      "timestamp": "2026-05-02T14:05:51.427967",
+      "category": "COUPLES COACHING",
+      "tip": "Curiosity beats criticism. Ask what she's protecting before assuming what she's attacking.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0021_COUPLES_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0021_COUPLES_COACHING_caption.txt"
     }
   ]
 }
