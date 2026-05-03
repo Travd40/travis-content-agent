@@ -1,5 +1,5 @@
 {
-  "total_posts": 21,
+  "total_posts": 22,
   "history": [
     {
       "post_number": 1,
@@ -227,6 +227,14 @@
       "tip": "Curiosity beats criticism. Ask what she's protecting before assuming what she's attacking.",
       "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0021_COUPLES_COACHING.mp4",
       "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0021_COUPLES_COACHING_caption.txt"
+    },
+    {
+      "post_number": 22,
+      "timestamp": "2026-05-03T14:06:03.542283",
+      "category": "MEN'S COACHING",
+      "tip": "Leadership in love means choosing the harder right over the easier comfortable. Lead, don't drift.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0022_MENS_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0022_MENS_COACHING_caption.txt"
     }
   ]
 }
