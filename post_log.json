@@ -1,5 +1,5 @@
 {
-  "total_posts": 25,
+  "total_posts": 26,
   "history": [
     {
       "post_number": 1,
@@ -259,6 +259,14 @@
       "tip": "Schedule the hard conversation. Ambushing her with heavy topics guarantees defensiveness before you even speak.",
       "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0025_COUPLES_COACHING.mp4",
       "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0025_COUPLES_COACHING_caption.txt"
+    },
+    {
+      "post_number": 26,
+      "timestamp": "2026-05-07T15:26:06.639165",
+      "category": "MEN'S COACHING",
+      "tip": "Master the pause. Three seconds of silence prevents three weeks of damage control.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0026_MENS_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0026_MENS_COACHING_caption.txt"
     }
   ]
 }
