@@ -1,5 +1,5 @@
 {
-  "total_posts": 24,
+  "total_posts": 25,
   "history": [
     {
       "post_number": 1,
@@ -251,6 +251,14 @@
       "tip": "Transparency isn't surveillance. It's volunteering information before she has to ask twice.",
       "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0024_TRUST_and_SAFETY.mp4",
       "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0024_TRUST_and_SAFETY_caption.txt"
+    },
+    {
+      "post_number": 25,
+      "timestamp": "2026-05-07T14:42:44.443333",
+      "category": "COUPLES COACHING",
+      "tip": "Schedule the hard conversation. Ambushing her with heavy topics guarantees defensiveness before you even speak.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0025_COUPLES_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0025_COUPLES_COACHING_caption.txt"
     }
   ]
 }
