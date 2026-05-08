@@ -1,5 +1,5 @@
 {
-  "total_posts": 26,
+  "total_posts": 27,
   "history": [
     {
       "post_number": 1,
@@ -267,6 +267,14 @@
       "tip": "Master the pause. Three seconds of silence prevents three weeks of damage control.",
       "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0026_MENS_COACHING.mp4",
       "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0026_MENS_COACHING_caption.txt"
+    },
+    {
+      "post_number": 27,
+      "timestamp": "2026-05-08T14:32:11.237683",
+      "category": "COMMUNICATION",
+      "tip": "Repeat her words back before responding. She needs evidence you heard her, not just proof you replied.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0027_COMMUNICATION.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0027_COMMUNICATION_caption.txt"
     }
   ]
 }
