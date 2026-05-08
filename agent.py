@@ -145,8 +145,10 @@ def run_pipeline():
             )
             print(f"[agent] Meta result: {meta_result}")
         except Exception as e:
-            print(f"[agent] WARNING: Meta publish failed — {e}")
-            print(f"[agent] Video and caption are still saved. Post manually from output/.")
+            print(f"[agent] ERROR: Meta publish failed — {type(e).__name__}: {e}", flush=True)
+            traceback.print_exc()
+            record_failure("meta_publish", e)
+            raise
     else:
         print(f"\n[agent] No META_PAGE_ACCESS_TOKEN found — skipping auto-post.")
 
