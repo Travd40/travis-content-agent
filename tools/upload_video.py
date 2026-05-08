@@ -26,7 +26,7 @@ def upload_video(video_path: str) -> str:
     Returns:
         Public URL (raw.githubusercontent.com) for the video
     """
-    token = os.getenv("GITHUB_TOKEN")
+    token = (os.getenv("GITHUB_TOKEN") or "").strip()
     if not token:
         raise RuntimeError("GITHUB_TOKEN not set in .env")
 
