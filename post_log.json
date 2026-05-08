@@ -1,5 +1,5 @@
 {
-  "total_posts": 27,
+  "total_posts": 28,
   "history": [
     {
       "post_number": 1,
@@ -275,6 +275,24 @@
       "tip": "Repeat her words back before responding. She needs evidence you heard her, not just proof you replied.",
       "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0027_COMMUNICATION.mp4",
       "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0027_COMMUNICATION_caption.txt"
+    },
+    {
+      "post_number": 28,
+      "timestamp": "2026-05-08T16:17:09.997312",
+      "category": "TRUST & SAFETY",
+      "tip": "Volunteer the truth she didn't ask for. Trust grows when you disclose before she discovers.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0028_TRUST_and_SAFETY.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0028_TRUST_and_SAFETY_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18091139543188916",
+          "container_id": "18534474109077598"
+        },
+        "facebook": {
+          "error": "FB publish failed: 400 {\"error\":{\"message\":\"(#100) No permission to publish the video\",\"type\":\"OAuthException\",\"code\":100,\"fbtrace_id\":\"AAY_-LR9NThWtH_ccnniXED\"}}"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0028_TRUST_and_SAFETY.mp4"
+      }
     }
   ]
 }
