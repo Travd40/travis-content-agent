@@ -30,7 +30,7 @@ GRAPH = f"https://graph.facebook.com/{GRAPH_VERSION}"
 
 
 def _require(name: str) -> str:
-    val = os.getenv(name)
+    val = (os.getenv(name) or "").strip()
     if not val:
         raise RuntimeError(f"{name} not set in .env")
     return val
