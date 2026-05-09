@@ -1,5 +1,5 @@
 {
-  "total_posts": 29,
+  "total_posts": 30,
   "history": [
     {
       "post_number": 1,
@@ -310,6 +310,24 @@
           "error": "FB publish failed: 400 {\"error\":{\"message\":\"(#100) No permission to publish the video\",\"type\":\"OAuthException\",\"code\":100,\"fbtrace_id\":\"AooSpSkWhLHYeMPesg8BoxF\"}}"
         },
         "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0029_COUPLES_COACHING.mp4"
+      }
+    },
+    {
+      "post_number": 30,
+      "timestamp": "2026-05-09T14:14:34.357826",
+      "category": "MEN'S COACHING",
+      "tip": "Protect her peace from your bad day. Decompress before you cross the threshold home.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0030_MENS_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0030_MENS_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18010454924773284",
+          "container_id": "18534671254077598"
+        },
+        "facebook": {
+          "error": "FB publish failed: 400 {\"error\":{\"message\":\"(#100) No permission to publish the video\",\"type\":\"OAuthException\",\"code\":100,\"fbtrace_id\":\"A_ZSP8e-xLhveHApTMkiJr5\"}}"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0030_MENS_COACHING.mp4"
       }
     }
   ]
