@@ -1,5 +1,5 @@
 {
-  "total_posts": 30,
+  "total_posts": 31,
   "history": [
     {
       "post_number": 1,
@@ -328,6 +328,24 @@
           "error": "FB publish failed: 400 {\"error\":{\"message\":\"(#100) No permission to publish the video\",\"type\":\"OAuthException\",\"code\":100,\"fbtrace_id\":\"A_ZSP8e-xLhveHApTMkiJr5\"}}"
         },
         "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0030_MENS_COACHING.mp4"
+      }
+    },
+    {
+      "post_number": 31,
+      "timestamp": "2026-05-10T14:17:22.083791",
+      "category": "COMMUNICATION",
+      "tip": "Ask one more question before giving your opinion. Depth comes from inquiry, not from delivery.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0031_COMMUNICATION.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0031_COMMUNICATION_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18102702752071164",
+          "container_id": "18534915265077598"
+        },
+        "facebook": {
+          "error": "FB publish failed: 400 {\"error\":{\"message\":\"(#100) No permission to publish the video\",\"type\":\"OAuthException\",\"code\":100,\"fbtrace_id\":\"AMPwGdGAZ6gdpVMXezYmLVF\"}}"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0031_COMMUNICATION.mp4"
       }
     }
   ]
