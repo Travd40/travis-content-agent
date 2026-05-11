@@ -1,5 +1,5 @@
 {
-  "total_posts": 31,
+  "total_posts": 32,
   "history": [
     {
       "post_number": 1,
@@ -346,6 +346,24 @@
           "error": "FB publish failed: 400 {\"error\":{\"message\":\"(#100) No permission to publish the video\",\"type\":\"OAuthException\",\"code\":100,\"fbtrace_id\":\"AMPwGdGAZ6gdpVMXezYmLVF\"}}"
         },
         "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0031_COMMUNICATION.mp4"
+      }
+    },
+    {
+      "post_number": 32,
+      "timestamp": "2026-05-11T15:54:26.191212",
+      "category": "TRUST & SAFETY",
+      "tip": "Eye contact during her hard truths tells her you can hold weight without flinching.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0032_TRUST_and_SAFETY.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0032_TRUST_and_SAFETY_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18108795427906809",
+          "container_id": "18535161871077598"
+        },
+        "facebook": {
+          "error": "FB publish failed: 400 {\"error\":{\"message\":\"(#100) No permission to publish the video\",\"type\":\"OAuthException\",\"code\":100,\"fbtrace_id\":\"APOxfRXbrKhb0utIBGm-jKU\"}}"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0032_TRUST_and_SAFETY.mp4"
       }
     }
   ]
