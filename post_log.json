@@ -1,5 +1,5 @@
 {
-  "total_posts": 32,
+  "total_posts": 33,
   "history": [
     {
       "post_number": 1,
@@ -364,6 +364,24 @@
           "error": "FB publish failed: 400 {\"error\":{\"message\":\"(#100) No permission to publish the video\",\"type\":\"OAuthException\",\"code\":100,\"fbtrace_id\":\"APOxfRXbrKhb0utIBGm-jKU\"}}"
         },
         "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0032_TRUST_and_SAFETY.mp4"
+      }
+    },
+    {
+      "post_number": 33,
+      "timestamp": "2026-05-11T20:36:08.054811",
+      "category": "COUPLES COACHING",
+      "tip": "Initiate the check-in before the resentment forms. Don't wait for her to bring it up.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0033_COUPLES_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0033_COUPLES_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18106054498941288",
+          "container_id": "18535208329077598"
+        },
+        "facebook": {
+          "id": "1717253495935821"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0033_COUPLES_COACHING.mp4"
       }
     }
   ]
