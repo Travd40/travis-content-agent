@@ -1,5 +1,5 @@
 {
-  "total_posts": 33,
+  "total_posts": 34,
   "history": [
     {
       "post_number": 1,
@@ -382,6 +382,24 @@
           "id": "1717253495935821"
         },
         "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0033_COUPLES_COACHING.mp4"
+      }
+    },
+    {
+      "post_number": 34,
+      "timestamp": "2026-05-12T15:43:08.691071",
+      "category": "MEN'S COACHING",
+      "tip": "Touch her without an agenda. Affection that doesn't lead to sex becomes the safest currency you own.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0034_MENS_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0034_MENS_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "17947344740996595",
+          "container_id": "18535363273077598"
+        },
+        "facebook": {
+          "id": "1983037395736908"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0034_MENS_COACHING.mp4"
       }
     }
   ]
