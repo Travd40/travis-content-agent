@@ -1,5 +1,5 @@
 {
-  "total_posts": 34,
+  "total_posts": 35,
   "history": [
     {
       "post_number": 1,
@@ -400,6 +400,24 @@
           "id": "1983037395736908"
         },
         "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0034_MENS_COACHING.mp4"
+      }
+    },
+    {
+      "post_number": 35,
+      "timestamp": "2026-05-13T15:43:47.648433",
+      "category": "COMMUNICATION",
+      "tip": "End conversations on purpose. Drifting away mid-topic teaches her that her words don't deserve closure.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0035_COMMUNICATION.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0035_COMMUNICATION_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "17859202359602105",
+          "container_id": "18535570525077598"
+        },
+        "facebook": {
+          "id": "1750998096066868"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0035_COMMUNICATION.mp4"
       }
     }
   ]
