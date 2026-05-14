@@ -1,5 +1,5 @@
 {
-  "total_posts": 35,
+  "total_posts": 36,
   "history": [
     {
       "post_number": 1,
@@ -418,6 +418,24 @@
           "id": "1750998096066868"
         },
         "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0035_COMMUNICATION.mp4"
+      }
+    },
+    {
+      "post_number": 36,
+      "timestamp": "2026-05-14T15:14:27.516532",
+      "category": "TRUST & SAFETY",
+      "tip": "Admit your part first. The man who owns his 10% disarms the fight before it escalates.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0036_TRUST_and_SAFETY.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0036_TRUST_and_SAFETY_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "17889424824527514",
+          "container_id": "18535771111077598"
+        },
+        "facebook": {
+          "id": "26073800245628831"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0036_TRUST_and_SAFETY.mp4"
       }
     }
   ]
