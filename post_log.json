@@ -1,5 +1,5 @@
 {
-  "total_posts": 37,
+  "total_posts": 38,
   "history": [
     {
       "post_number": 1,
@@ -454,6 +454,24 @@
           "id": "1279305987708536"
         },
         "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0037_MENS_COACHING.mp4"
+      }
+    },
+    {
+      "post_number": 38,
+      "timestamp": "2026-05-16T14:20:17.371931",
+      "category": "MEN'S COACHING",
+      "tip": "Remember the small details she mentioned once. Recall is the loudest form of love.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0038_MENS_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0038_MENS_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18130758052504250",
+          "container_id": "18536207950077598"
+        },
+        "facebook": {
+          "id": "1347141720669096"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0038_MENS_COACHING.mp4"
       }
     }
   ]
