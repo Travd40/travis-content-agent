@@ -37,6 +37,7 @@ sys.path.insert(0, str(Path(__file__).parent / "tools"))
 
 from generate_content import generate_content
 from render_video import render_video
+from blog_promo import get_blog_promo
 
 POST_TIME = os.getenv("POST_TIME", "10:00")
 LOG_FILE  = Path(__file__).parent / "post_log.json"
@@ -101,12 +102,23 @@ def run_pipeline():
     post_count = load_post_count()
 
     # Step 1: Generate content
-    print(f"\n[agent] Generating coaching tip #{post_count + 1}...")
-    try:
-        content = generate_content(post_count)
-    except Exception as e:
-        record_failure("generate_content", e)
-        raise
+    # Friday = blog promo day (drives traffic to /blog posts).
+    # Other days = normal coaching tip from Claude.
+    is_friday = datetime.now().weekday() == 4
+    if is_friday:
+        print(f"\n[agent] Friday → using blog promo rotation for post #{post_count + 1}...")
+        try:
+            content = get_blog_promo(post_count)
+        except Exception as e:
+            record_failure("blog_promo", e)
+            raise
+    else:
+        print(f"\n[agent] Generating coaching tip #{post_count + 1}...")
+        try:
+            content = generate_content(post_count)
+        except Exception as e:
+            record_failure("generate_content", e)
+            raise
     print(f"[agent] Category : {content['category']}")
     print(f"[agent] Tip      : {content['tip']}")
 

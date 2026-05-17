@@ -1,5 +1,5 @@
 {
-  "total_posts": 16,
+  "total_posts": 21,
   "history": [
     {
       "post_number": 1,
@@ -186,6 +186,96 @@
           "id": "953604814212811"
         },
         "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0016_TRUST_and_SAFETY.mp4"
+      }
+    },
+    {
+      "post_number": 17,
+      "timestamp": "2026-04-29T10:02:24.290020",
+      "category": "COUPLES COACHING",
+      "tip": "Apologies don't fix patterns. Change the behavior that required the apology in the first place.",
+      "video": "C:\\Users\\Travi\\Downloads\\travis-content-agent\\output\\post_0017_COUPLES_COACHING.mp4",
+      "caption_file": "C:\\Users\\Travi\\Downloads\\travis-content-agent\\output\\post_0017_COUPLES_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18199797985354054",
+          "container_id": "18532493584077598"
+        },
+        "facebook": {
+          "id": "947886291569019"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0017_COUPLES_COACHING.mp4"
+      }
+    },
+    {
+      "post_number": 18,
+      "timestamp": "2026-05-07T10:02:35.726441",
+      "category": "MEN'S COACHING",
+      "tip": "Your follow-through is her foundation. What you say means nothing until you do it twice.",
+      "video": "C:\\Users\\Travi\\Downloads\\travis-content-agent\\output\\post_0018_MENS_COACHING.mp4",
+      "caption_file": "C:\\Users\\Travi\\Downloads\\travis-content-agent\\output\\post_0018_MENS_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18115377076802001",
+          "container_id": "18534244453077598"
+        },
+        "facebook": {
+          "id": "1622253942340557"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0018_MENS_COACHING.mp4"
+      }
+    },
+    {
+      "post_number": 19,
+      "timestamp": "2026-05-10T10:01:31.954829",
+      "category": "COMMUNICATION",
+      "tip": "Ask better questions. 'What do you need from me right now?' beats guessing every single time.",
+      "video": "C:\\Users\\Travi\\Downloads\\travis-content-agent\\output\\post_0019_COMMUNICATION.mp4",
+      "caption_file": "C:\\Users\\Travi\\Downloads\\travis-content-agent\\output\\post_0019_COMMUNICATION_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18102371518821550",
+          "container_id": "18534911416077598"
+        },
+        "facebook": {
+          "id": "917737804645166"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0019_COMMUNICATION.mp4"
+      }
+    },
+    {
+      "post_number": 20,
+      "timestamp": "2026-05-11T10:34:36.286124",
+      "category": "TRUST & SAFETY",
+      "tip": "Confession beats getting caught. What she discovers destroys more than what you disclose first.",
+      "video": "C:\\Users\\Travi\\Downloads\\travis-content-agent\\output\\post_0020_TRUST_and_SAFETY.mp4",
+      "caption_file": "C:\\Users\\Travi\\Downloads\\travis-content-agent\\output\\post_0020_TRUST_and_SAFETY_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18351099289208454",
+          "container_id": "18535147333077598"
+        },
+        "facebook": {
+          "id": "1162899629276171"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0020_TRUST_and_SAFETY.mp4"
+      }
+    },
+    {
+      "post_number": 21,
+      "timestamp": "2026-05-14T10:02:45.558999",
+      "category": "COUPLES COACHING",
+      "tip": "Schedule the hard conversation. Ambush talks trigger defense; planned talks invite presence and real solutions.",
+      "video": "C:\\Users\\Travi\\Downloads\\travis-content-agent\\output\\post_0021_COUPLES_COACHING.mp4",
+      "caption_file": "C:\\Users\\Travi\\Downloads\\travis-content-agent\\output\\post_0021_COUPLES_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18088765643347576",
+          "container_id": "18535756789077598"
+        },
+        "facebook": {
+          "id": "3003413843190730"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0021_COUPLES_COACHING.mp4"
       }
     }
   ]
