@@ -72,7 +72,7 @@ def render_video(content: dict, output_filename: str = None) -> str:
         cmd,
         cwd=str(REMOTION_DIR),
         capture_output=False,   # stream output so user can see progress
-        shell=True,             # required on Windows for npx
+        shell=(os.name == "nt"),             # required on Windows for npx
         env=env,
     )
 
