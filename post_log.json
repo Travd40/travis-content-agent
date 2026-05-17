@@ -1,5 +1,5 @@
 {
-  "total_posts": 38,
+  "total_posts": 39,
   "history": [
     {
       "post_number": 1,
@@ -472,6 +472,24 @@
           "id": "1347141720669096"
         },
         "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0038_MENS_COACHING.mp4"
+      }
+    },
+    {
+      "post_number": 39,
+      "timestamp": "2026-05-17T14:22:53.802469",
+      "category": "COMMUNICATION",
+      "tip": "Translate her complaint into a request. Behind every criticism is an unmet need waiting for language.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0039_COMMUNICATION.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0039_COMMUNICATION_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "17914926324180085",
+          "container_id": "18536448241077598"
+        },
+        "facebook": {
+          "id": "4367474653466550"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0039_COMMUNICATION.mp4"
       }
     }
   ]
