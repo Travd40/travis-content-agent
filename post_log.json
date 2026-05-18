@@ -1,5 +1,5 @@
 {
-  "total_posts": 39,
+  "total_posts": 40,
   "history": [
     {
       "post_number": 1,
@@ -490,6 +490,24 @@
           "id": "4367474653466550"
         },
         "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0039_COMMUNICATION.mp4"
+      }
+    },
+    {
+      "post_number": 40,
+      "timestamp": "2026-05-18T16:19:19.423651",
+      "category": "TRUST & SAFETY",
+      "tip": "Keep your word on the small things. Reliability in tiny promises builds cathedral-level trust.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0040_TRUST_and_SAFETY.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0040_TRUST_and_SAFETY_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "17926236117316041",
+          "container_id": "18536703826077598"
+        },
+        "facebook": {
+          "id": "2099232164142252"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0040_TRUST_and_SAFETY.mp4"
       }
     }
   ]
