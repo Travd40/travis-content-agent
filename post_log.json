@@ -1,5 +1,5 @@
 {
-  "total_posts": 40,
+  "total_posts": 41,
   "history": [
     {
       "post_number": 1,
@@ -508,6 +508,24 @@
           "id": "2099232164142252"
         },
         "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0040_TRUST_and_SAFETY.mp4"
+      }
+    },
+    {
+      "post_number": 41,
+      "timestamp": "2026-05-19T16:15:30.416986",
+      "category": "COUPLES COACHING",
+      "tip": "Greet her like she matters. The first thirty seconds of reunion sets the entire evening's tone.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0041_COUPLES_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0041_COUPLES_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18089038151036150",
+          "container_id": "18536924053077598"
+        },
+        "facebook": {
+          "id": "1779395816376932"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0041_COUPLES_COACHING.mp4"
       }
     }
   ]
