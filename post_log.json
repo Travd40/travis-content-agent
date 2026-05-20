@@ -1,5 +1,5 @@
 {
-  "total_posts": 41,
+  "total_posts": 42,
   "history": [
     {
       "post_number": 1,
@@ -526,6 +526,24 @@
           "id": "1779395816376932"
         },
         "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0041_COUPLES_COACHING.mp4"
+      }
+    },
+    {
+      "post_number": 42,
+      "timestamp": "2026-05-20T16:23:50.155360",
+      "category": "MEN'S COACHING",
+      "tip": "Regulate your tone before your words. She hears the music long before she hears the lyrics.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0042_MENS_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0042_MENS_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18101437868103490",
+          "container_id": "18537155770077598"
+        },
+        "facebook": {
+          "id": "992545536502936"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0042_MENS_COACHING.mp4"
       }
     }
   ]
