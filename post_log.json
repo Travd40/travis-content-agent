@@ -1,5 +1,5 @@
 {
-  "total_posts": 42,
+  "total_posts": 43,
   "history": [
     {
       "post_number": 1,
@@ -544,6 +544,24 @@
           "id": "992545536502936"
         },
         "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0042_MENS_COACHING.mp4"
+      }
+    },
+    {
+      "post_number": 43,
+      "timestamp": "2026-05-21T16:12:50.581077",
+      "category": "COMMUNICATION",
+      "tip": "Ask 'what do you need from me right now?' before assuming she wants advice or comfort.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0043_COMMUNICATION.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0043_COMMUNICATION_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "17952822819154200",
+          "container_id": "18537386149077598"
+        },
+        "facebook": {
+          "id": "2066398673965856"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0043_COMMUNICATION.mp4"
       }
     }
   ]
