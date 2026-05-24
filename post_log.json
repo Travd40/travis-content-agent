@@ -1,5 +1,5 @@
 {
-  "total_posts": 45,
+  "total_posts": 46,
   "history": [
     {
       "post_number": 1,
@@ -597,6 +597,23 @@
           "id": "998985492913581"
         },
         "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0045_COUPLES_COACHING.mp4"
+      }
+    },
+    {
+      "post_number": 46,
+      "timestamp": "2026-05-24T14:25:41.873360",
+      "category": "MEN'S COACHING",
+      "tip": "Lead the calendar. Plan the date, book the trip. Initiative is masculine fuel she's been craving.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0046_MENS_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0046_MENS_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "error": "IG container never finished processing (last status: None)"
+        },
+        "facebook": {
+          "id": "1497172605398088"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0046_MENS_COACHING.mp4"
       }
     }
   ]
