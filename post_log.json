@@ -1,5 +1,5 @@
 {
-  "total_posts": 46,
+  "total_posts": 47,
   "history": [
     {
       "post_number": 1,
@@ -614,6 +614,23 @@
           "id": "1497172605398088"
         },
         "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0046_MENS_COACHING.mp4"
+      }
+    },
+    {
+      "post_number": 47,
+      "timestamp": "2026-05-25T15:50:56.246375",
+      "category": "COMMUNICATION",
+      "tip": "Name the emotion you see in her before naming the problem you want to solve.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0047_COMMUNICATION.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0047_COMMUNICATION_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "error": "IG container never finished processing (last status: None)"
+        },
+        "facebook": {
+          "id": "1354244706664850"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0047_COMMUNICATION.mp4"
       }
     }
   ]
