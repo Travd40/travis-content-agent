@@ -1,5 +1,5 @@
 {
-  "total_posts": 47,
+  "total_posts": 48,
   "history": [
     {
       "post_number": 1,
@@ -631,6 +631,23 @@
           "id": "1354244706664850"
         },
         "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0047_COMMUNICATION.mp4"
+      }
+    },
+    {
+      "post_number": 48,
+      "timestamp": "2026-05-26T16:42:36.198512",
+      "category": "TRUST & SAFETY",
+      "tip": "Tell her where you're going before she has to ask. Transparency removes the need for suspicion.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0048_TRUST_and_SAFETY.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0048_TRUST_and_SAFETY_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "error": "IG container never finished processing (last status: None)"
+        },
+        "facebook": {
+          "id": "866364116493441"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0048_TRUST_and_SAFETY.mp4"
       }
     }
   ]
