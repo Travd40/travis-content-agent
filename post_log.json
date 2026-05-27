@@ -1,5 +1,5 @@
 {
-  "total_posts": 48,
+  "total_posts": 49,
   "history": [
     {
       "post_number": 1,
@@ -648,6 +648,24 @@
           "id": "866364116493441"
         },
         "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0048_TRUST_and_SAFETY.mp4"
+      }
+    },
+    {
+      "post_number": 49,
+      "timestamp": "2026-05-27T16:34:05.461656",
+      "category": "COUPLES COACHING",
+      "tip": "Repair faster than you rupture. The speed of return matters more than the size of the wound.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0049_COUPLES_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0049_COUPLES_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18081461591176208",
+          "container_id": "18538814593077598"
+        },
+        "facebook": {
+          "id": "3090336947964021"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0049_COUPLES_COACHING.mp4"
       }
     }
   ]
