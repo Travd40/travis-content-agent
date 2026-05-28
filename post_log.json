@@ -1,5 +1,5 @@
 {
-  "total_posts": 49,
+  "total_posts": 50,
   "history": [
     {
       "post_number": 1,
@@ -666,6 +666,24 @@
           "id": "3090336947964021"
         },
         "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0049_COUPLES_COACHING.mp4"
+      }
+    },
+    {
+      "post_number": 50,
+      "timestamp": "2026-05-28T16:47:58.541290",
+      "category": "MEN'S COACHING",
+      "tip": "Master one skill she's been begging you to learn. Competence in her language is devotion made visible.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0050_MENS_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0050_MENS_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18118845775707458",
+          "container_id": "18539054587077598"
+        },
+        "facebook": {
+          "id": "2032047477396652"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0050_MENS_COACHING.mp4"
       }
     }
   ]
