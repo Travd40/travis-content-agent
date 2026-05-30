@@ -1,5 +1,5 @@
 {
-  "total_posts": 51,
+  "total_posts": 52,
   "history": [
     {
       "post_number": 1,
@@ -702,6 +702,24 @@
           "id": "1296274215949613"
         },
         "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0051_COUPLES_COACHING.mp4"
+      }
+    },
+    {
+      "post_number": 52,
+      "timestamp": "2026-05-30T14:25:00.241050",
+      "category": "TRUST & SAFETY",
+      "tip": "Tell her the hard thing yourself before she discovers it. Self-disclosure dissolves the foundation of suspicion.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0052_TRUST_and_SAFETY.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0052_TRUST_and_SAFETY_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18023129276835529",
+          "container_id": "18539509384077598"
+        },
+        "facebook": {
+          "id": "1026146433427997"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0052_TRUST_and_SAFETY.mp4"
       }
     }
   ]
