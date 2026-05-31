@@ -1,5 +1,5 @@
 {
-  "total_posts": 52,
+  "total_posts": 53,
   "history": [
     {
       "post_number": 1,
@@ -720,6 +720,24 @@
           "id": "1026146433427997"
         },
         "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0052_TRUST_and_SAFETY.mp4"
+      }
+    },
+    {
+      "post_number": 53,
+      "timestamp": "2026-05-31T14:26:57.544815",
+      "category": "COUPLES COACHING",
+      "tip": "Praise her in front of others. Public honor rewires how she experiences your private love.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0053_COUPLES_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0053_COUPLES_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18095892389185094",
+          "container_id": "18539768464077598"
+        },
+        "facebook": {
+          "id": "4311648745750317"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0053_COUPLES_COACHING.mp4"
       }
     }
   ]
