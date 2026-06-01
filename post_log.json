@@ -1,5 +1,5 @@
 {
-  "total_posts": 53,
+  "total_posts": 54,
   "history": [
     {
       "post_number": 1,
@@ -738,6 +738,24 @@
           "id": "4311648745750317"
         },
         "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0053_COUPLES_COACHING.mp4"
+      }
+    },
+    {
+      "post_number": 54,
+      "timestamp": "2026-06-01T18:35:03.699437",
+      "category": "MEN'S COACHING",
+      "tip": "Protect her from your stress, not with silence, but by naming it before it leaks out.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0054_MENS_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0054_MENS_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18319629577259688",
+          "container_id": "18540078211077598"
+        },
+        "facebook": {
+          "error": "FB publish failed: 500 {\"error\":{\"code\":1,\"message\":\"Please reduce the amount of data you're asking for, then retry your request\"}}"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0054_MENS_COACHING.mp4"
       }
     }
   ]
