@@ -1,5 +1,5 @@
 {
-  "total_posts": 55,
+  "total_posts": 56,
   "history": [
     {
       "post_number": 1,
@@ -774,6 +774,23 @@
           "id": "2023802891591272"
         },
         "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0055_COMMUNICATION.mp4"
+      }
+    },
+    {
+      "post_number": 56,
+      "timestamp": "2026-06-03T17:57:14.367293",
+      "category": "TRUST & SAFETY",
+      "tip": "Answer her hardest question without flinching. Steady eye contact is the body language of integrity.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0056_TRUST_and_SAFETY.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0056_TRUST_and_SAFETY_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "error": "IG container create failed: 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"AAmicg44rPhDTLQsi63ATkq\"}}"
+        },
+        "facebook": {
+          "error": "FB publish failed: 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"AzUQfrg3vjsIc7Q_7xBhFXv\"}}"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0056_TRUST_and_SAFETY.mp4"
       }
     }
   ]
