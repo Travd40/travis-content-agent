@@ -1,5 +1,5 @@
 {
-  "total_posts": 56,
+  "total_posts": 57,
   "history": [
     {
       "post_number": 1,
@@ -791,6 +791,23 @@
           "error": "FB publish failed: 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"AzUQfrg3vjsIc7Q_7xBhFXv\"}}"
         },
         "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0056_TRUST_and_SAFETY.mp4"
+      }
+    },
+    {
+      "post_number": 57,
+      "timestamp": "2026-06-04T16:17:52.004531",
+      "category": "COUPLES COACHING",
+      "tip": "Touch her without an agenda. Non-sexual contact is how she learns your love isn't transactional.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0057_COUPLES_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0057_COUPLES_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "error": "IG container create failed: 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"AxGBAV8ulLhZgvyQZkDZfox\"}}"
+        },
+        "facebook": {
+          "error": "FB publish failed: 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"A1E_51cBq9a_hZaO3VXmUDA\"}}"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0057_COUPLES_COACHING.mp4"
       }
     }
   ]
