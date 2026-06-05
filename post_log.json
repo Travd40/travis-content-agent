@@ -1,5 +1,5 @@
 {
-  "total_posts": 57,
+  "total_posts": 58,
   "history": [
     {
       "post_number": 1,
@@ -808,6 +808,23 @@
           "error": "FB publish failed: 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"A1E_51cBq9a_hZaO3VXmUDA\"}}"
         },
         "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0057_COUPLES_COACHING.mp4"
+      }
+    },
+    {
+      "post_number": 58,
+      "timestamp": "2026-06-05T15:48:32.168728",
+      "category": "COMMUNICATION",
+      "tip": "Most couples don't have a communication problem. They have a courtroom problem.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0058_COMMUNICATION.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0058_COMMUNICATION_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "error": "IG container create failed: 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"AwHluvc9wWiFbEVpr8lyLEy\"}}"
+        },
+        "facebook": {
+          "error": "FB publish failed: 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"A08uDv7I-rs81pjZYPxfprf\"}}"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0058_COMMUNICATION.mp4"
       }
     }
   ]
