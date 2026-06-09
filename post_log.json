@@ -1,5 +1,5 @@
 {
-  "total_posts": 61,
+  "total_posts": 62,
   "history": [
     {
       "post_number": 1,
@@ -876,6 +876,23 @@
           "error": "FB publish failed: 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"AEd4NVfNPrPIkNddKiZxP4g\"}}"
         },
         "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0061_COUPLES_COACHING.mp4"
+      }
+    },
+    {
+      "post_number": 62,
+      "timestamp": "2026-06-09T15:50:33.474547",
+      "category": "MEN'S COACHING",
+      "tip": "Finish what you start in front of her. Follow-through is the foundation of feminine trust.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0062_MENS_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0062_MENS_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "error": "IG container create failed: 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"AQtRKUD-ea8igd6GzSkZVyT\"}}"
+        },
+        "facebook": {
+          "error": "FB publish failed: 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"AHuRpUOnsy7LtQdXjdfyavr\"}}"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0062_MENS_COACHING.mp4"
       }
     }
   ]
