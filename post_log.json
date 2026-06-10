@@ -1,5 +1,5 @@
 {
-  "total_posts": 62,
+  "total_posts": 63,
   "history": [
     {
       "post_number": 1,
@@ -893,6 +893,23 @@
           "error": "FB publish failed: 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"AHuRpUOnsy7LtQdXjdfyavr\"}}"
         },
         "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0062_MENS_COACHING.mp4"
+      }
+    },
+    {
+      "post_number": 63,
+      "timestamp": "2026-06-10T16:30:20.828607",
+      "category": "COMMUNICATION",
+      "tip": "Repeat her words back before responding. She needs to feel heard before she can hear you.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0063_COMMUNICATION.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0063_COMMUNICATION_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "error": "IG container create failed: 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"AFX9rcP6YCP6U3x4jI5Ckqq\"}}"
+        },
+        "facebook": {
+          "error": "FB publish failed: 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"AuL2XEfDkP4E1k6cD1Az44q\"}}"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0063_COMMUNICATION.mp4"
       }
     }
   ]
