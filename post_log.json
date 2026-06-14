@@ -1,5 +1,5 @@
 {
-  "total_posts": 66,
+  "total_posts": 67,
   "history": [
     {
       "post_number": 1,
@@ -961,6 +961,23 @@
           "error": "FB publish failed: 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"ANk0SzI1J3KXLC9v06d2CrM\"}}"
         },
         "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0066_MENS_COACHING.mp4"
+      }
+    },
+    {
+      "post_number": 67,
+      "timestamp": "2026-06-14T15:04:44.746877",
+      "category": "COMMUNICATION",
+      "tip": "Ask one curious question before offering one opinion. Curiosity opens doors that judgment slams shut.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0067_COMMUNICATION.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0067_COMMUNICATION_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "error": "IG container create failed: 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"A98gR7KcJpt1amws_AKB0_Q\"}}"
+        },
+        "facebook": {
+          "error": "FB publish failed: 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"AVNosPudRC4lGKpvX6mbdvw\"}}"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0067_COMMUNICATION.mp4"
       }
     }
   ]
