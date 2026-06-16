@@ -1,5 +1,5 @@
 {
-  "total_posts": 68,
+  "total_posts": 69,
   "history": [
     {
       "post_number": 1,
@@ -995,6 +995,23 @@
           "error": "FB publish failed: 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"AMTeR6cqMdGTuv5twaVD7Y-\"}}"
         },
         "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0068_TRUST_and_SAFETY.mp4"
+      }
+    },
+    {
+      "post_number": 69,
+      "timestamp": "2026-06-16T17:54:16.463065",
+      "category": "COUPLES COACHING",
+      "tip": "Greet her first when you walk through the door. Reunion rituals reset the emotional thermostat of marriage.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0069_COUPLES_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0069_COUPLES_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "error": "IG container create failed: 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"A9eqp_y0oQfpA1dsXdnyN6Z\"}}"
+        },
+        "facebook": {
+          "error": "FB publish failed: 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"A_88537GIw8RFMynLYeA4uQ\"}}"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0069_COUPLES_COACHING.mp4"
       }
     }
   ]
