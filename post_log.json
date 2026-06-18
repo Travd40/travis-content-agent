@@ -1,5 +1,5 @@
 {
-  "total_posts": 69,
+  "total_posts": 70,
   "history": [
     {
       "post_number": 1,
@@ -1012,6 +1012,23 @@
           "error": "FB publish failed: 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"A_88537GIw8RFMynLYeA4uQ\"}}"
         },
         "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0069_COUPLES_COACHING.mp4"
+      }
+    },
+    {
+      "post_number": 70,
+      "timestamp": "2026-06-18T16:24:47.120929",
+      "category": "MEN'S COACHING",
+      "tip": "Lead the boring logistics. Handling the mundane is how a man removes invisible weight from her shoulders.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0070_MENS_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0070_MENS_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "error": "IG container create failed: 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"A9fAqGqtwGtJexRZAq8vxX3\"}}"
+        },
+        "facebook": {
+          "error": "FB publish failed: 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"AGZJv0xCJxaysBUuj28N6Jd\"}}"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0070_MENS_COACHING.mp4"
       }
     }
   ]
