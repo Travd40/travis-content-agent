@@ -1,5 +1,5 @@
 {
-  "total_posts": 70,
+  "total_posts": 71,
   "history": [
     {
       "post_number": 1,
@@ -1029,6 +1029,23 @@
           "error": "FB publish failed: 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"AGZJv0xCJxaysBUuj28N6Jd\"}}"
         },
         "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0070_MENS_COACHING.mp4"
+      }
+    },
+    {
+      "post_number": 71,
+      "timestamp": "2026-06-19T15:55:28.851512",
+      "category": "COUPLES COACHING",
+      "tip": "'I'm sorry, BUT' is not an apology. It's a defense in disguise.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0071_COUPLES_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0071_COUPLES_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "error": "IG container create failed: 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"A_HR4JPYd26aNy3o2HQ6ogd\"}}"
+        },
+        "facebook": {
+          "error": "FB publish failed: 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"A-olT-lBeX3r8tdLXMHipym\"}}"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0071_COUPLES_COACHING.mp4"
       }
     }
   ]
