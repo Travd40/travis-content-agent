@@ -1,5 +1,5 @@
 {
-  "total_posts": 74,
+  "total_posts": 75,
   "history": [
     {
       "post_number": 1,
@@ -1097,6 +1097,23 @@
           "error": "FB publish failed: 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"AftLfYaXTV8NQZFmn6bxHio\"}}"
         },
         "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0074_MENS_COACHING.mp4"
+      }
+    },
+    {
+      "post_number": 75,
+      "timestamp": "2026-06-23T15:44:31.504631",
+      "category": "COMMUNICATION",
+      "tip": "Name the emotion under her words. Translating her feelings shows you're decoding, not just hearing.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0075_COMMUNICATION.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0075_COMMUNICATION_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "error": "IG container create failed: 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"A3M6G5s4ydd6RrmzSylWqXt\"}}"
+        },
+        "facebook": {
+          "error": "FB publish failed: 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"A_T7p8e0hAINq0D2Kpa1pD4\"}}"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0075_COMMUNICATION.mp4"
       }
     }
   ]
