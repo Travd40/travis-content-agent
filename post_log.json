@@ -1,5 +1,5 @@
 {
-  "total_posts": 75,
+  "total_posts": 76,
   "history": [
     {
       "post_number": 1,
@@ -1114,6 +1114,23 @@
           "error": "FB publish failed: 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"A_T7p8e0hAINq0D2Kpa1pD4\"}}"
         },
         "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0075_COMMUNICATION.mp4"
+      }
+    },
+    {
+      "post_number": 76,
+      "timestamp": "2026-06-24T15:29:01.976810",
+      "category": "TRUST & SAFETY",
+      "tip": "Tell her the truth she won't like before she discovers it. Disclosure prevents detonation.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0076_TRUST_and_SAFETY.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0076_TRUST_and_SAFETY_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "error": "IG container create failed: 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"A-tvukZJhZizSgSpRA5Xgty\"}}"
+        },
+        "facebook": {
+          "error": "FB publish failed: 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"AmMM86zjkSJTJz4b7ZfpElV\"}}"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0076_TRUST_and_SAFETY.mp4"
       }
     }
   ]
