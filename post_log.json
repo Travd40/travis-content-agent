@@ -1,5 +1,5 @@
 {
-  "total_posts": 78,
+  "total_posts": 79,
   "history": [
     {
       "post_number": 1,
@@ -1165,6 +1165,23 @@
           "error": "FB publish failed: 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"A7qaoqok3H77fxVE0F-uM6V\"}}"
         },
         "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0078_COMMUNICATION.mp4"
+      }
+    },
+    {
+      "post_number": 79,
+      "timestamp": "2026-06-27T14:23:16.241958",
+      "category": "COMMUNICATION",
+      "tip": "Drop the scoreboard. Couples who track wins and losses are training to become opponents, not partners.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0079_COMMUNICATION.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0079_COMMUNICATION_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "error": "IG container create failed: 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"Abd-PLMNuqeGuJQs18KjHT0\"}}"
+        },
+        "facebook": {
+          "error": "FB publish failed: 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"ALW7fmX6on3x8hNhgizXivJ\"}}"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0079_COMMUNICATION.mp4"
       }
     }
   ]
