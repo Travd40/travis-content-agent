@@ -1,5 +1,5 @@
 {
-  "total_posts": 80,
+  "total_posts": 81,
   "history": [
     {
       "post_number": 1,
@@ -1199,6 +1199,23 @@
           "error": "FB publish failed: 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"AL0JcznT4Plh3UTOpp7x_QM\"}}"
         },
         "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0080_TRUST_and_SAFETY.mp4"
+      }
+    },
+    {
+      "post_number": 81,
+      "timestamp": "2026-06-29T16:33:14.192977",
+      "category": "COUPLES COACHING",
+      "tip": "Schedule the repair conversation. Unaddressed conflict doesn't dissolve \u2014 it compounds underground until it explodes.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0081_COUPLES_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0081_COUPLES_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "error": "IG container create failed: 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"AE-poxU0_p1vBHExkn1fidt\"}}"
+        },
+        "facebook": {
+          "error": "FB publish failed: 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"Ajp9NL9P9N75tbI5tNnwfvs\"}}"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0081_COUPLES_COACHING.mp4"
       }
     }
   ]
