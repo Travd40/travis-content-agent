@@ -1,5 +1,5 @@
 {
-  "total_posts": 81,
+  "total_posts": 82,
   "history": [
     {
       "post_number": 1,
@@ -1216,6 +1216,23 @@
           "error": "FB publish failed: 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"Ajp9NL9P9N75tbI5tNnwfvs\"}}"
         },
         "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0081_COUPLES_COACHING.mp4"
+      }
+    },
+    {
+      "post_number": 82,
+      "timestamp": "2026-06-30T15:22:49.804803",
+      "category": "MEN'S COACHING",
+      "tip": "Train your body before you train your mouth. Regulated men have regulated marriages.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0082_MENS_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0082_MENS_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "error": "IG container create failed: 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"ASvo9DY5jj7WfGiUm7QcfOm\"}}"
+        },
+        "facebook": {
+          "error": "FB publish failed: 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"Asl9LdOADYs0QbnwUtutFPd\"}}"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0082_MENS_COACHING.mp4"
       }
     }
   ]
