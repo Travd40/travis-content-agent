@@ -1,5 +1,5 @@
 {
-  "total_posts": 82,
+  "total_posts": 83,
   "history": [
     {
       "post_number": 1,
@@ -1233,6 +1233,23 @@
           "error": "FB publish failed: 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"Asl9LdOADYs0QbnwUtutFPd\"}}"
         },
         "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0082_MENS_COACHING.mp4"
+      }
+    },
+    {
+      "post_number": 83,
+      "timestamp": "2026-07-01T15:34:51.735728",
+      "category": "COMMUNICATION",
+      "tip": "End the conversation on purpose. Unfinished talks become tomorrow's ammunition when neither of you closed the loop.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0083_COMMUNICATION.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0083_COMMUNICATION_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "error": "IG container create failed: 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"A2pgCTqKB8T_iYNUhu69DWr\"}}"
+        },
+        "facebook": {
+          "error": "FB publish failed: 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"AVB0kdjSZZ6MF9xlKMwlvge\"}}"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0083_COMMUNICATION.mp4"
       }
     }
   ]
