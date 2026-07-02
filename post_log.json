@@ -1,5 +1,5 @@
 {
-  "total_posts": 83,
+  "total_posts": 84,
   "history": [
     {
       "post_number": 1,
@@ -1250,6 +1250,23 @@
           "error": "FB publish failed: 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"AVB0kdjSZZ6MF9xlKMwlvge\"}}"
         },
         "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0083_COMMUNICATION.mp4"
+      }
+    },
+    {
+      "post_number": 84,
+      "timestamp": "2026-07-02T15:05:10.690132",
+      "category": "TRUST & SAFETY",
+      "tip": "Consistency beats intensity. Small daily deposits build the trust grand gestures can never buy.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0084_TRUST_and_SAFETY.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0084_TRUST_and_SAFETY_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "error": "IG container create failed: 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"AVCL3hzRDJTgWkav04DqGsa\"}}"
+        },
+        "facebook": {
+          "error": "FB publish failed: 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"AP6oWJB6d4BHRsD15qZWs9b\"}}"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0084_TRUST_and_SAFETY.mp4"
       }
     }
   ]
