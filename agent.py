@@ -149,6 +149,7 @@ def run_pipeline():
 
     # Step 4: Publish to IG Reels + FB Page via Meta Graph API (non-blocking)
     meta_result = None
+    meta_error = None
     if os.getenv("META_PAGE_ACCESS_TOKEN"):
         print(f"\n[agent] Publishing to Instagram + Facebook...")
         try:
@@ -164,6 +165,17 @@ def run_pipeline():
             traceback.print_exc()
             record_failure("meta_publish", e)
             raise
+        # meta_publish reports per-platform failures as {'error': ...} values
+        # instead of raising — surface them so the workflow run goes red
+        # (an invalidated token once failed silently for a full day).
+        meta_errors = {
+            platform: result["error"]
+            for platform, result in (meta_result or {}).items()
+            if isinstance(result, dict) and result.get("error")
+        }
+        if meta_errors:
+            meta_error = RuntimeError(f"Meta publish failed: {meta_errors}")
+            record_failure("meta_publish", meta_error)
     else:
         print(f"\n[agent] No META_PAGE_ACCESS_TOKEN found — skipping auto-post.")
 
@@ -198,6 +210,8 @@ def run_pipeline():
 
     if youtube_error:
         raise youtube_error
+    if meta_error:
+        raise meta_error
 
     print(f"\n[agent] Done! Post #{new_count} ready.")
     print(f"[agent] Video  : {video_path}")
