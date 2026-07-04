@@ -64,6 +64,12 @@ jobs:
           COACHING_NAME:            ${{ secrets.COACHING_NAME }}
           BOOK_LINK:                ${{ secrets.BOOK_LINK }}
           CALENDLY_LINK:            ${{ secrets.CALENDLY_LINK }}
+          # YouTube upload (same secret values as travis_coaching_site).
+          # If these are unset the agent just skips the YouTube step.
+          YOUTUBE_CLIENT_ID:        ${{ secrets.YOUTUBE_CLIENT_ID }}
+          YOUTUBE_CLIENT_SECRET:    ${{ secrets.YOUTUBE_CLIENT_SECRET }}
+          YOUTUBE_REFRESH_TOKEN:    ${{ secrets.YOUTUBE_REFRESH_TOKEN }}
+          YOUTUBE_PLAYLIST_ID:      ${{ secrets.YOUTUBE_PLAYLIST_ID }}
         run: python agent.py --now
 
       - name: Persist post_log.json back to repo
