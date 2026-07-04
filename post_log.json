@@ -1,5 +1,5 @@
 {
-  "total_posts": 85,
+  "total_posts": 86,
   "history": [
     {
       "post_number": 1,
@@ -1284,6 +1284,27 @@
           "error": "FB publish failed: 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"AKrlRe45aFpjOuO2skGfraI\"}}"
         },
         "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0085_MENS_COACHING.mp4"
+      }
+    },
+    {
+      "post_number": 86,
+      "timestamp": "2026-07-04T14:23:16.325289",
+      "category": "MEN'S COACHING",
+      "tip": "Follow through on the small promise. Micro-commitments are how big trust gets built.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0086_MENS_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0086_MENS_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "error": "IG container create failed: 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"AlOaN0ZnUiDcAoa4UVWCU7Y\"}}"
+        },
+        "facebook": {
+          "error": "FB publish failed: 400 {\"error\":{\"message\":\"Error validating access token: The session has been invalidated because the user changed their password or Facebook has changed the session for security reasons.\",\"type\":\"OAuthException\",\"code\":190,\"error_subcode\":460,\"fbtrace_id\":\"Ad4YhFn8O0il3Cu2l1bTvio\"}}"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0086_MENS_COACHING.mp4"
+      },
+      "youtube_result": {
+        "video_id": "UnR94-hOSbk",
+        "url": "https://www.youtube.com/watch?v=UnR94-hOSbk"
       }
     }
   ]
