@@ -11,6 +11,9 @@ export const RemotionRoot = () => {
         fps={30}
         width={1080}
         height={1920}
+        calculateMetadata={({ props }) => ({
+          durationInFrames: props.durationInFrames || 210,
+        })}
         defaultProps={{
           category: 'COUPLES COACHING',
           tip: 'A trained partner listens to understand, not just to respond.',

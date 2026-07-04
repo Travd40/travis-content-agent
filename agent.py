@@ -125,12 +125,29 @@ def run_pipeline():
     print(f"[agent] Category : {content['category']}")
     print(f"[agent] Tip      : {content['tip']}")
 
+    # Step 1.5: Voiceover (tip + spoken CTA). Optional — a TTS failure or a
+    # missing ELEVENLABS_API_KEY just means the video renders silent as before.
+    voiceover_path, voiceover_duration = None, None
+    try:
+        from elevenlabs_tts import generate_voiceover
+        spoken_cta = os.getenv(
+            "VOICEOVER_CTA",
+            "If this hit home, follow for daily tips — and grab my free five day course. The link is right below.",
+        )
+        vo = generate_voiceover(f"{content['tip']} ... {spoken_cta}")
+        if vo:
+            voiceover_path, voiceover_duration = vo
+    except Exception as e:
+        print(f"[agent] Voiceover skipped ({type(e).__name__}: {e})")
+
     # Step 2: Render video
     print(f"\n[agent] Rendering video...")
     safe_cat = content['category'].replace(' ', '_').replace("'", '').replace('&', 'and').replace('/', '-')
     filename = f"post_{post_count + 1:04d}_{safe_cat}.mp4"
     try:
-        video_path = render_video(content, filename)
+        video_path = render_video(content, filename,
+                                  audio_path=voiceover_path,
+                                  audio_duration=voiceover_duration)
     except Exception as e:
         record_failure("render_video", e)
         raise

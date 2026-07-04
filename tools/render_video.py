@@ -17,7 +17,7 @@ REMOTION_DIR = Path(__file__).parent.parent / "remotion"
 OUTPUT_DIR   = Path(__file__).parent.parent / "output"
 
 
-def render_video(content: dict, output_filename: str = None) -> str:
+def render_video(content: dict, output_filename: str = None, audio_path: str = None, audio_duration: float = None) -> str:
     """
     Renders a coaching tip video using Remotion.
 
@@ -37,7 +37,22 @@ def render_video(content: dict, output_filename: str = None) -> str:
 
     output_path = OUTPUT_DIR / output_filename
 
+    # Voiceover: Remotion can only load audio from its public/ dir.
+    # Video length follows the voiceover (+1.2s tail), minimum the classic 7s.
+    audio_src = None
+    duration_frames = 210
+    if audio_path and audio_duration:
+        import shutil, math
+        public_dir = REMOTION_DIR / "public"
+        public_dir.mkdir(exist_ok=True)
+        shutil.copy(audio_path, public_dir / "voiceover.mp3")
+        audio_src = "voiceover.mp3"
+        duration_frames = max(210, math.ceil((audio_duration + 1.2) * 30))
+        print(f"[render] Voiceover: {audio_duration:.1f}s -> video {duration_frames/30:.1f}s")
+
     props = {
+        "audioSrc":         audio_src,
+        "durationInFrames": duration_frames,
         "category":     content.get("category", "COACHING TIP"),
         "tip":          content.get("tip", ""),
         "website":      os.getenv("COACHING_WEBSITE", "travis-coaching-site-1.onrender.com"),

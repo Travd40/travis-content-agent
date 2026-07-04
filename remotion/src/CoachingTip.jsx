@@ -53,9 +53,11 @@ function AnimatedWords({ text, startFrame, fps }) {
   );
 }
 
-export const CoachingTip = ({ category, tip, website, coachName, bookLink, calendlyLink }) => {
+export const CoachingTip = ({ category, tip, website, coachName, bookLink, calendlyLink, audioSrc }) => {
   const frame = useCurrentFrame();
-  const { fps } = useVideoConfig();
+  const { fps, durationInFrames } = useVideoConfig();
+  // CTA fades in ~2s before the end, whatever the video length is
+  const ctaStart = Math.max(150, durationInFrames - 60);
 
   // --- Logo ---
   const logoOpacity = interpolate(frame, [0, 25], [0, 1], {
@@ -77,12 +79,12 @@ export const CoachingTip = ({ category, tip, website, coachName, bookLink, calen
   });
 
   // --- Bottom CTA ---
-  const ctaOpacity = interpolate(frame, [160, 185], [0, 1], {
+  const ctaOpacity = interpolate(frame, [ctaStart, ctaStart + 25], [0, 1], {
     extrapolateRight: 'clamp',
   });
 
   // --- Bottom gold line ---
-  const bottomLineWidth = interpolate(frame, [155, 185], [0, 100], {
+  const bottomLineWidth = interpolate(frame, [ctaStart - 5, ctaStart + 25], [0, 100], {
     extrapolateRight: 'clamp',
   });
 
@@ -94,8 +96,11 @@ export const CoachingTip = ({ category, tip, website, coachName, bookLink, calen
         overflow: 'hidden',
       }}
     >
-      {/* Ambient music bed — swap public/music.wav for any licensed track */}
-      <Audio src={staticFile('music.wav')} volume={0.9} />
+      {/* Ambient music bed — ducked under the voiceover when one exists */}
+      <Audio src={staticFile('music.wav')} volume={audioSrc ? 0.14 : 0.9} />
+
+      {/* ElevenLabs voiceover (only when the agent generated one) */}
+      {audioSrc ? <Audio src={staticFile(audioSrc)} volume={1} /> : null}
 
       {/* Subtle gold corner accents */}
       <div style={{ position: 'absolute', top: 40, left: 40, width: 60, height: 60,
