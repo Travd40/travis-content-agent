@@ -70,7 +70,8 @@ def load_post_count() -> int:
     return 0
 
 
-def save_post_log(count: int, content: dict, video_path: str, caption_path: str, meta_result: dict | None = None):
+def save_post_log(count: int, content: dict, video_path: str, caption_path: str,
+                  meta_result: dict | None = None, youtube_result: dict | None = None):
     existing = []
     if LOG_FILE.exists():
         with open(LOG_FILE) as f:
@@ -86,6 +87,8 @@ def save_post_log(count: int, content: dict, video_path: str, caption_path: str,
     }
     if meta_result:
         entry["meta_result"] = meta_result
+    if youtube_result:
+        entry["youtube_result"] = youtube_result
 
     with open(LOG_FILE, "w") as f:
         json.dump({
@@ -164,9 +167,37 @@ def run_pipeline():
     else:
         print(f"\n[agent] No META_PAGE_ACCESS_TOKEN found — skipping auto-post.")
 
+    # Step 5: Publish the same video to YouTube as a public Short.
+    # A YouTube failure must not lose the post log (IG/FB already went out),
+    # so the error is recorded, the log is saved, THEN the run fails loudly.
+    youtube_result = None
+    youtube_error = None
+    if os.getenv("YOUTUBE_REFRESH_TOKEN"):
+        print(f"\n[agent] Publishing to YouTube...")
+        try:
+            from youtube_publish import publish as youtube_publish
+            youtube_result = youtube_publish(
+                video_path=video_path,
+                tip=content["tip"],
+                caption=content["caption"],
+                hashtags=content["hashtags"],
+            )
+            print(f"[agent] YouTube result: {youtube_result}")
+        except Exception as e:
+            print(f"[agent] ERROR: YouTube publish failed — {type(e).__name__}: {e}", flush=True)
+            traceback.print_exc()
+            record_failure("youtube_publish", e)
+            youtube_error = e
+    else:
+        print(f"\n[agent] No YOUTUBE_REFRESH_TOKEN found — skipping YouTube upload.")
+
     # Log it (including meta_result so insights can look up this post later)
     new_count = post_count + 1
-    save_post_log(new_count, content, video_path, caption_path, meta_result=meta_result)
+    save_post_log(new_count, content, video_path, caption_path,
+                  meta_result=meta_result, youtube_result=youtube_result)
+
+    if youtube_error:
+        raise youtube_error
 
     print(f"\n[agent] Done! Post #{new_count} ready.")
     print(f"[agent] Video  : {video_path}")

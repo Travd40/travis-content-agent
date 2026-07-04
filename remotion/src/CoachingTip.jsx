@@ -1,5 +1,6 @@
 import {
   AbsoluteFill,
+  Audio,
   useCurrentFrame,
   useVideoConfig,
   interpolate,
@@ -93,6 +94,9 @@ export const CoachingTip = ({ category, tip, website, coachName, bookLink, calen
         overflow: 'hidden',
       }}
     >
+      {/* Ambient music bed — swap public/music.wav for any licensed track */}
+      <Audio src={staticFile('music.wav')} volume={0.9} />
+
       {/* Subtle gold corner accents */}
       <div style={{ position: 'absolute', top: 40, left: 40, width: 60, height: 60,
         borderTop: `3px solid ${COLORS.gold}`, borderLeft: `3px solid ${COLORS.gold}`, opacity: logoOpacity }} />
