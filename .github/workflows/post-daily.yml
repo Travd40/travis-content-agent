@@ -64,6 +64,9 @@ jobs:
           COACHING_NAME:            ${{ secrets.COACHING_NAME }}
           BOOK_LINK:                ${{ secrets.BOOK_LINK }}
           CALENDLY_LINK:            ${{ secrets.CALENDLY_LINK }}
+          # ElevenLabs voiceover (optional — silent video if unset)
+          ELEVENLABS_API_KEY:       ${{ secrets.ELEVENLABS_API_KEY }}
+          ELEVENLABS_VOICE_ID:      ${{ secrets.ELEVENLABS_VOICE_ID }}
           # YouTube upload (same secret values as travis_coaching_site).
           # If these are unset the agent just skips the YouTube step.
           YOUTUBE_CLIENT_ID:        ${{ secrets.YOUTUBE_CLIENT_ID }}
