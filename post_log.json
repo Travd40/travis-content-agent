@@ -1,5 +1,5 @@
 {
-  "total_posts": 86,
+  "total_posts": 87,
   "history": [
     {
       "post_number": 1,
@@ -1305,6 +1305,27 @@
       "youtube_result": {
         "video_id": "UnR94-hOSbk",
         "url": "https://www.youtube.com/watch?v=UnR94-hOSbk"
+      }
+    },
+    {
+      "post_number": 87,
+      "timestamp": "2026-07-04T20:52:40.220245",
+      "category": "COMMUNICATION",
+      "tip": "Repeat what she said before you respond. Being understood matters more to her than being agreed with.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0087_COMMUNICATION.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0087_COMMUNICATION_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "error": "IG container create failed: 400 {\"error\":{\"message\":\"(#10) Application does not have permission for this action\",\"type\":\"OAuthException\",\"code\":10,\"fbtrace_id\":\"AOq26eSFov5kxESkmlI167V\"}}"
+        },
+        "facebook": {
+          "id": "1048283704295303"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0087_COMMUNICATION.mp4"
+      },
+      "youtube_result": {
+        "video_id": "q-GgWouO1YA",
+        "url": "https://www.youtube.com/watch?v=q-GgWouO1YA"
       }
     }
   ]
