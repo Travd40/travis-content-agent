@@ -1,5 +1,5 @@
 {
-  "total_posts": 87,
+  "total_posts": 88,
   "history": [
     {
       "post_number": 1,
@@ -1326,6 +1326,27 @@
       "youtube_result": {
         "video_id": "q-GgWouO1YA",
         "url": "https://www.youtube.com/watch?v=q-GgWouO1YA"
+      }
+    },
+    {
+      "post_number": 88,
+      "timestamp": "2026-07-05T14:25:22.956144",
+      "category": "TRUST & SAFETY",
+      "tip": "Answer her text even when you're busy. Silence feels like abandonment; a two-word reply feels like presence.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0088_TRUST_and_SAFETY.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0088_TRUST_and_SAFETY_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "error": "IG container create failed: 400 {\"error\":{\"message\":\"(#10) Application does not have permission for this action\",\"type\":\"OAuthException\",\"code\":10,\"fbtrace_id\":\"AhPm1qAZUgGiOBcyKpqJ7ci\"}}"
+        },
+        "facebook": {
+          "id": "2503139606780961"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0088_TRUST_and_SAFETY.mp4"
+      },
+      "youtube_result": {
+        "video_id": "gHW3gu1YRMM",
+        "url": "https://www.youtube.com/watch?v=gHW3gu1YRMM"
       }
     }
   ]
