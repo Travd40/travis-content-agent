@@ -1,5 +1,5 @@
 {
-  "total_posts": 88,
+  "total_posts": 89,
   "history": [
     {
       "post_number": 1,
@@ -1347,6 +1347,27 @@
       "youtube_result": {
         "video_id": "gHW3gu1YRMM",
         "url": "https://www.youtube.com/watch?v=gHW3gu1YRMM"
+      }
+    },
+    {
+      "post_number": 89,
+      "timestamp": "2026-07-06T16:12:49.785532",
+      "category": "COUPLES COACHING",
+      "tip": "Ask about her day before you download yours. Curiosity is currency in a healthy marriage.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0089_COUPLES_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0089_COUPLES_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "error": "IG container create failed: 400 {\"error\":{\"message\":\"(#10) Application does not have permission for this action\",\"type\":\"OAuthException\",\"code\":10,\"fbtrace_id\":\"AghZx04f2fGAACFSEnmF3R-\"}}"
+        },
+        "facebook": {
+          "id": "1355870603145401"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0089_COUPLES_COACHING.mp4"
+      },
+      "youtube_result": {
+        "video_id": "IlHUAIjU3ps",
+        "url": "https://www.youtube.com/watch?v=IlHUAIjU3ps"
       }
     }
   ]
