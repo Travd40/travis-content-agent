@@ -1,5 +1,5 @@
 {
-  "total_posts": 89,
+  "total_posts": 90,
   "history": [
     {
       "post_number": 1,
@@ -1368,6 +1368,27 @@
       "youtube_result": {
         "video_id": "IlHUAIjU3ps",
         "url": "https://www.youtube.com/watch?v=IlHUAIjU3ps"
+      }
+    },
+    {
+      "post_number": 90,
+      "timestamp": "2026-07-07T15:39:44.014066",
+      "category": "MEN'S COACHING",
+      "tip": "Fix it before she mentions it twice. The second ask costs ten times the first.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0090_MENS_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0090_MENS_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "error": "IG container create failed: 400 {\"error\":{\"message\":\"(#10) Application does not have permission for this action\",\"type\":\"OAuthException\",\"code\":10,\"fbtrace_id\":\"A4MWrkPhZSvgI-DVKfPCYKo\"}}"
+        },
+        "facebook": {
+          "id": "2023512791607511"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0090_MENS_COACHING.mp4"
+      },
+      "youtube_result": {
+        "video_id": "xVmyZ3vbO9g",
+        "url": "https://www.youtube.com/watch?v=xVmyZ3vbO9g"
       }
     }
   ]
