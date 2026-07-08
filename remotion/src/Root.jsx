@@ -17,7 +17,7 @@ export const RemotionRoot = () => {
         defaultProps={{
           category: 'COUPLES COACHING',
           tip: 'A trained partner listens to understand, not just to respond.',
-          website: 'travis-coaching-site-1.onrender.com',
+          website: 'travisdixoncoaching.com',
           coachName: 'Travis Dixon Coaching',
         }}
       />

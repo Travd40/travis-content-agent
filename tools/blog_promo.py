@@ -24,7 +24,7 @@ BLOG_PROMOS = [
             "I thought going quiet was maturity. It wasn't.\n\n"
             "Full breakdown of what's behind the shutdown — and how to "
             "talk to him without triggering more of it ↓\n\n"
-            "https://travis-coaching-site-1.onrender.com/blog/week-1-why-does-my-husband-shut-down\n\n"
+            "https://travisdixoncoaching.com/blog/week-1-why-does-my-husband-shut-down\n\n"
             "Free 15-min call: https://calendly.com/travd40/15-minute-strategy-call\n"
             "Book: amazon.com/dp/B0GPSNXGY8"
         ),
@@ -42,7 +42,7 @@ BLOG_PROMOS = [
             "And trials don't build relationships — they end them.\n\n"
             "Stop arguing like a lawyer. Start showing up like a teammate.\n\n"
             "Just published the full piece ↓\n\n"
-            "https://travis-coaching-site-1.onrender.com/blog/week-2-communication-isnt-a-courtroom\n\n"
+            "https://travisdixoncoaching.com/blog/week-2-communication-isnt-a-courtroom\n\n"
             "Free 15-min call: https://calendly.com/travd40/15-minute-strategy-call\n"
             "Book: amazon.com/dp/B0GPSNXGY8"
         ),
@@ -58,7 +58,7 @@ BLOG_PROMOS = [
             "you don't actually want repair. You want to win while "
             "looking like you tried.\n\n"
             "Full breakdown — how to apologize without the excuse ↓\n\n"
-            "https://travis-coaching-site-1.onrender.com/blog/week-3-how-to-apologize-without-excuses\n\n"
+            "https://travisdixoncoaching.com/blog/week-3-how-to-apologize-without-excuses\n\n"
             "Free 15-min call: https://calendly.com/travd40/15-minute-strategy-call\n"
             "Book: amazon.com/dp/B0GPSNXGY8"
         ),
@@ -74,7 +74,7 @@ BLOG_PROMOS = [
             "Real partnership is 100/100. You both bring everything you have. "
             "Every time.\n\n"
             "The full case for why 50/50 is the most common marriage trap I see ↓\n\n"
-            "https://travis-coaching-site-1.onrender.com/blog/week-4-the-50-50-marriage-myth\n\n"
+            "https://travisdixoncoaching.com/blog/week-4-the-50-50-marriage-myth\n\n"
             "Free 15-min call: https://calendly.com/travd40/15-minute-strategy-call\n"
             "Book: amazon.com/dp/B0GPSNXGY8"
         ),

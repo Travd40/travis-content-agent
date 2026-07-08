@@ -37,7 +37,7 @@ def build_title(tip: str) -> str:
 
 
 def build_description(caption: str, hashtags: str) -> str:
-    website = os.getenv("COACHING_WEBSITE", "travis-coaching-site-1.onrender.com")
+    website = os.getenv("COACHING_WEBSITE", "travisdixoncoaching.com")
     calendly = os.getenv("CALENDLY_LINK", "https://calendly.com/travd40/15-minute-strategy-call")
     book = os.getenv("BOOK_LINK", "https://www.amazon.com/dp/B0GPSNXGY8")
     site_url = website if website.startswith("http") else f"https://{website}"

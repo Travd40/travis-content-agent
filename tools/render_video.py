@@ -55,7 +55,7 @@ def render_video(content: dict, output_filename: str = None, audio_path: str = N
         "durationInFrames": duration_frames,
         "category":     content.get("category", "COACHING TIP"),
         "tip":          content.get("tip", ""),
-        "website":      os.getenv("COACHING_WEBSITE", "travis-coaching-site-1.onrender.com"),
+        "website":      os.getenv("COACHING_WEBSITE", "travisdixoncoaching.com"),
         "coachName":    os.getenv("COACHING_NAME", "Travis Dixon Coaching"),
         "bookLink":     os.getenv("BOOK_LINK", "https://www.amazon.com/dp/B0GPSNXGY8"),
         "calendlyLink": os.getenv("CALENDLY_LINK", "https://calendly.com/travd40/15-minute-strategy-call"),

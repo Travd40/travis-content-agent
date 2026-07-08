@@ -45,7 +45,7 @@ Travis's brand: "Becoming A Trained Partner"
 Core philosophy: Relationships fail from lack of TRAINING, not lack of love.
 Book: "I Am A Dog: The Discipline of Becoming a Trained Partner"
 Services: Couples coaching, men's coaching, individual coaching
-Website: travis-coaching-site-1.onrender.com
+Website: travisdixoncoaching.com
 
 WRITING RULES:
 - The "tip" must be 12-18 words MAX — it appears on screen and must fit cleanly
@@ -54,7 +54,7 @@ WRITING RULES:
 - No fluff, no clichés like "communication is key"
 - The "caption" is for Instagram/TikTok — 2-3 sentences, punchy, ends with a CTA
 - Always end the caption with EXACTLY these three lines (do NOT skip any):
-  "📞 Book your FREE 15-min strategy call: https://calendly.com/travd40/15-minute-strategy-call\n📖 Get the book: https://www.amazon.com/dp/B0GPSNXGY8\n🌐 Visit: https://travis-coaching-site-1.onrender.com"
+  "📞 Book your FREE 15-min strategy call: https://calendly.com/travd40/15-minute-strategy-call\n📖 Get the book: https://www.amazon.com/dp/B0GPSNXGY8\n🌐 Visit: https://travisdixoncoaching.com"
 - The FREE call CTA must come FIRST — it's the primary action we want readers to take
 - Hashtags: 8-12 relevant tags for relationship coaching, men, couples, personal growth
 
