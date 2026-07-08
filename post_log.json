@@ -1,5 +1,5 @@
 {
-  "total_posts": 90,
+  "total_posts": 91,
   "history": [
     {
       "post_number": 1,
@@ -1389,6 +1389,28 @@
       "youtube_result": {
         "video_id": "xVmyZ3vbO9g",
         "url": "https://www.youtube.com/watch?v=xVmyZ3vbO9g"
+      }
+    },
+    {
+      "post_number": 91,
+      "timestamp": "2026-07-08T15:09:41.809932",
+      "category": "COMMUNICATION",
+      "tip": "Give her the headline first. Burying the point makes her hunt for what you actually mean.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0091_COMMUNICATION.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0091_COMMUNICATION_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18004395419761056",
+          "container_id": "18548979430077598"
+        },
+        "facebook": {
+          "id": "2474853376355319"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0091_COMMUNICATION.mp4"
+      },
+      "youtube_result": {
+        "video_id": "1FGyBaxjfFc",
+        "url": "https://www.youtube.com/watch?v=1FGyBaxjfFc"
       }
     }
   ]
