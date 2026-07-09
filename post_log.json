@@ -1,5 +1,5 @@
 {
-  "total_posts": 91,
+  "total_posts": 92,
   "history": [
     {
       "post_number": 1,
@@ -1411,6 +1411,28 @@
       "youtube_result": {
         "video_id": "1FGyBaxjfFc",
         "url": "https://www.youtube.com/watch?v=1FGyBaxjfFc"
+      }
+    },
+    {
+      "post_number": 92,
+      "timestamp": "2026-07-09T15:53:32.324058",
+      "category": "TRUST & SAFETY",
+      "tip": "Volunteer the receipt she didn't ask for. Transparency you initiate feels safer than transparency you surrender.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0092_TRUST_and_SAFETY.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0092_TRUST_and_SAFETY_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18102488975173689",
+          "container_id": "18549206311077598"
+        },
+        "facebook": {
+          "id": "2186026942242133"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0092_TRUST_and_SAFETY.mp4"
+      },
+      "youtube_result": {
+        "video_id": "xlHUo5BhiDY",
+        "url": "https://www.youtube.com/watch?v=xlHUo5BhiDY"
       }
     }
   ]
