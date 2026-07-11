@@ -1,5 +1,5 @@
 {
-  "total_posts": 93,
+  "total_posts": 94,
   "history": [
     {
       "post_number": 1,
@@ -1455,6 +1455,28 @@
       "youtube_result": {
         "video_id": "Mkn7RKBXCzE",
         "url": "https://www.youtube.com/watch?v=Mkn7RKBXCzE"
+      }
+    },
+    {
+      "post_number": 94,
+      "timestamp": "2026-07-11T14:18:42.188673",
+      "category": "MEN'S COACHING",
+      "tip": "Own your part first in every argument. Defense mode ends the moment accountability begins.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0094_MENS_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0094_MENS_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "17978974176100299",
+          "container_id": "18549658597077598"
+        },
+        "facebook": {
+          "id": "2258340101654638"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0094_MENS_COACHING.mp4"
+      },
+      "youtube_result": {
+        "video_id": "k792Dhlam3k",
+        "url": "https://www.youtube.com/watch?v=k792Dhlam3k"
       }
     }
   ]
