@@ -1,5 +1,5 @@
 {
-  "total_posts": 94,
+  "total_posts": 95,
   "history": [
     {
       "post_number": 1,
@@ -1477,6 +1477,28 @@
       "youtube_result": {
         "video_id": "k792Dhlam3k",
         "url": "https://www.youtube.com/watch?v=k792Dhlam3k"
+      }
+    },
+    {
+      "post_number": 95,
+      "timestamp": "2026-07-12T14:23:37.872438",
+      "category": "COMMUNICATION",
+      "tip": "Ask 'what do you need from me right now?' before assuming she wants you to fix it.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0095_COMMUNICATION.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0095_COMMUNICATION_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18061010183720421",
+          "container_id": "18549917233077598"
+        },
+        "facebook": {
+          "id": "2407385543081740"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0095_COMMUNICATION.mp4"
+      },
+      "youtube_result": {
+        "video_id": "suoJJWfz4dQ",
+        "url": "https://www.youtube.com/watch?v=suoJJWfz4dQ"
       }
     }
   ]
