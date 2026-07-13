@@ -1,5 +1,5 @@
 {
-  "total_posts": 95,
+  "total_posts": 96,
   "history": [
     {
       "post_number": 1,
@@ -1499,6 +1499,28 @@
       "youtube_result": {
         "video_id": "suoJJWfz4dQ",
         "url": "https://www.youtube.com/watch?v=suoJJWfz4dQ"
+      }
+    },
+    {
+      "post_number": 96,
+      "timestamp": "2026-07-13T15:40:06.739912",
+      "category": "TRUST & SAFETY",
+      "tip": "Name the elephant she's pretending not to see. Unspoken tension erodes safety faster than hard conversations.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0096_TRUST_and_SAFETY.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0096_TRUST_and_SAFETY_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "17999735330966874",
+          "container_id": "18550184272077598"
+        },
+        "facebook": {
+          "id": "1677340800157160"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0096_TRUST_and_SAFETY.mp4"
+      },
+      "youtube_result": {
+        "video_id": "Fh8SnEMVniw",
+        "url": "https://www.youtube.com/watch?v=Fh8SnEMVniw"
       }
     }
   ]
