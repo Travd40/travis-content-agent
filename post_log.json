@@ -1,5 +1,5 @@
 {
-  "total_posts": 96,
+  "total_posts": 97,
   "history": [
     {
       "post_number": 1,
@@ -1521,6 +1521,28 @@
       "youtube_result": {
         "video_id": "Fh8SnEMVniw",
         "url": "https://www.youtube.com/watch?v=Fh8SnEMVniw"
+      }
+    },
+    {
+      "post_number": 97,
+      "timestamp": "2026-07-14T14:42:51.127725",
+      "category": "COUPLES COACHING",
+      "tip": "Praise her in public the way you critique her in private. Reputation shapes reality.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0097_COUPLES_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0097_COUPLES_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18414333805199340",
+          "container_id": "18550385503077598"
+        },
+        "facebook": {
+          "id": "1943375176370225"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0097_COUPLES_COACHING.mp4"
+      },
+      "youtube_result": {
+        "video_id": "jLLPMozusWg",
+        "url": "https://www.youtube.com/watch?v=jLLPMozusWg"
       }
     }
   ]
