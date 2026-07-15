@@ -1,5 +1,5 @@
 {
-  "total_posts": 97,
+  "total_posts": 98,
   "history": [
     {
       "post_number": 1,
@@ -1543,6 +1543,28 @@
       "youtube_result": {
         "video_id": "jLLPMozusWg",
         "url": "https://www.youtube.com/watch?v=jLLPMozusWg"
+      }
+    },
+    {
+      "post_number": 98,
+      "timestamp": "2026-07-15T14:42:54.103030",
+      "category": "MEN'S COACHING",
+      "tip": "Kill the phone during her sentence. Divided attention tells her she's optional in her own home.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0098_MENS_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0098_MENS_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18138612964560402",
+          "container_id": "18550614793077598"
+        },
+        "facebook": {
+          "id": "1506404157383024"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0098_MENS_COACHING.mp4"
+      },
+      "youtube_result": {
+        "video_id": "rqsUM5WYrBM",
+        "url": "https://www.youtube.com/watch?v=rqsUM5WYrBM"
       }
     }
   ]
