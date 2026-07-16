@@ -1,5 +1,5 @@
 {
-  "total_posts": 98,
+  "total_posts": 99,
   "history": [
     {
       "post_number": 1,
@@ -1565,6 +1565,28 @@
       "youtube_result": {
         "video_id": "rqsUM5WYrBM",
         "url": "https://www.youtube.com/watch?v=rqsUM5WYrBM"
+      }
+    },
+    {
+      "post_number": 99,
+      "timestamp": "2026-07-16T14:53:39.090941",
+      "category": "COMMUNICATION",
+      "tip": "Say the thing you're editing in your head. The unsaid version becomes resentment by Friday.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0099_COMMUNICATION.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0099_COMMUNICATION_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "17873395485625954",
+          "container_id": "18550853317077598"
+        },
+        "facebook": {
+          "id": "4057756357692081"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0099_COMMUNICATION.mp4"
+      },
+      "youtube_result": {
+        "video_id": "uJzkzaOpfIM",
+        "url": "https://www.youtube.com/watch?v=uJzkzaOpfIM"
       }
     }
   ]
