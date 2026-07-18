@@ -1,5 +1,5 @@
 {
-  "total_posts": 100,
+  "total_posts": 101,
   "history": [
     {
       "post_number": 1,
@@ -1609,6 +1609,28 @@
       "youtube_result": {
         "video_id": "FfrOO0sFtH0",
         "url": "https://www.youtube.com/watch?v=FfrOO0sFtH0"
+      }
+    },
+    {
+      "post_number": 101,
+      "timestamp": "2026-07-18T14:15:58.903790",
+      "category": "COUPLES COACHING",
+      "tip": "Debrief the win, not just the wound. Couples who celebrate together survive the storms together.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0101_COUPLES_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0101_COUPLES_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18129675298627378",
+          "container_id": "18551341168077598"
+        },
+        "facebook": {
+          "id": "1525738339251683"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0101_COUPLES_COACHING.mp4"
+      },
+      "youtube_result": {
+        "video_id": "KnJMoZYEw5I",
+        "url": "https://www.youtube.com/watch?v=KnJMoZYEw5I"
       }
     }
   ]
