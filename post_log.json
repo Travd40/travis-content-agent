@@ -1,5 +1,5 @@
 {
-  "total_posts": 101,
+  "total_posts": 102,
   "history": [
     {
       "post_number": 1,
@@ -1631,6 +1631,28 @@
       "youtube_result": {
         "video_id": "KnJMoZYEw5I",
         "url": "https://www.youtube.com/watch?v=KnJMoZYEw5I"
+      }
+    },
+    {
+      "post_number": 102,
+      "timestamp": "2026-07-19T14:21:06.462866",
+      "category": "MEN'S COACHING",
+      "tip": "Lead the calendar. If you don't plan the date, the marriage runs on leftovers.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0102_MENS_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0102_MENS_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18085620890641821",
+          "container_id": "18551605846077598"
+        },
+        "facebook": {
+          "id": "1366836085557825"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0102_MENS_COACHING.mp4"
+      },
+      "youtube_result": {
+        "video_id": "IUGIAfKKVsQ",
+        "url": "https://www.youtube.com/watch?v=IUGIAfKKVsQ"
       }
     }
   ]
