@@ -1,5 +1,5 @@
 {
-  "total_posts": 102,
+  "total_posts": 103,
   "history": [
     {
       "post_number": 1,
@@ -1653,6 +1653,28 @@
       "youtube_result": {
         "video_id": "IUGIAfKKVsQ",
         "url": "https://www.youtube.com/watch?v=IUGIAfKKVsQ"
+      }
+    },
+    {
+      "post_number": 103,
+      "timestamp": "2026-07-20T15:02:06.231733",
+      "category": "COMMUNICATION",
+      "tip": "Match her tone before you match her logic. Emotions land before arguments do.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0103_COMMUNICATION.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0103_COMMUNICATION_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18418261243199166",
+          "container_id": "18551896057077598"
+        },
+        "facebook": {
+          "id": "1037050625643878"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0103_COMMUNICATION.mp4"
+      },
+      "youtube_result": {
+        "video_id": "xGCFqDMN1ek",
+        "url": "https://www.youtube.com/watch?v=xGCFqDMN1ek"
       }
     }
   ]
