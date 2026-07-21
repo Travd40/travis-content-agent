@@ -1,5 +1,5 @@
 {
-  "total_posts": 103,
+  "total_posts": 104,
   "history": [
     {
       "post_number": 1,
@@ -1675,6 +1675,28 @@
       "youtube_result": {
         "video_id": "xGCFqDMN1ek",
         "url": "https://www.youtube.com/watch?v=xGCFqDMN1ek"
+      }
+    },
+    {
+      "post_number": 104,
+      "timestamp": "2026-07-21T14:55:47.869739",
+      "category": "TRUST & SAFETY",
+      "tip": "Tell her the bad news yourself. Trust dies when she finds out from someone else.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0104_TRUST_and_SAFETY.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0104_TRUST_and_SAFETY_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "17891013963394131",
+          "container_id": "18552127642077598"
+        },
+        "facebook": {
+          "id": "4375663282707823"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0104_TRUST_and_SAFETY.mp4"
+      },
+      "youtube_result": {
+        "video_id": "uGUnLm2f1DA",
+        "url": "https://www.youtube.com/watch?v=uGUnLm2f1DA"
       }
     }
   ]
