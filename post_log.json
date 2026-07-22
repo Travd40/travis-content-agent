@@ -1,5 +1,5 @@
 {
-  "total_posts": 104,
+  "total_posts": 105,
   "history": [
     {
       "post_number": 1,
@@ -1697,6 +1697,28 @@
       "youtube_result": {
         "video_id": "uGUnLm2f1DA",
         "url": "https://www.youtube.com/watch?v=uGUnLm2f1DA"
+      }
+    },
+    {
+      "post_number": 105,
+      "timestamp": "2026-07-22T14:56:24.581424",
+      "category": "COUPLES COACHING",
+      "tip": "Sit next to her in the hard moment. Presence heals what advice cannot reach.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0105_COUPLES_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0105_COUPLES_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18087865364138746",
+          "container_id": "18552352363077598"
+        },
+        "facebook": {
+          "id": "1524402142280553"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0105_COUPLES_COACHING.mp4"
+      },
+      "youtube_result": {
+        "video_id": "o6fPbWmiOHg",
+        "url": "https://www.youtube.com/watch?v=o6fPbWmiOHg"
       }
     }
   ]
