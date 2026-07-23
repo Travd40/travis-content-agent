@@ -1,5 +1,5 @@
 {
-  "total_posts": 105,
+  "total_posts": 106,
   "history": [
     {
       "post_number": 1,
@@ -1719,6 +1719,28 @@
       "youtube_result": {
         "video_id": "o6fPbWmiOHg",
         "url": "https://www.youtube.com/watch?v=o6fPbWmiOHg"
+      }
+    },
+    {
+      "post_number": 106,
+      "timestamp": "2026-07-23T15:01:54.224582",
+      "category": "MEN'S COACHING",
+      "tip": "Guard her name when she's not in the room. Loyalty is proven where she can't hear it.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0106_MENS_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0106_MENS_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18015337178914272",
+          "container_id": "18552598924077598"
+        },
+        "facebook": {
+          "id": "1036778192089132"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0106_MENS_COACHING.mp4"
+      },
+      "youtube_result": {
+        "video_id": "qRyr5aKEUI8",
+        "url": "https://www.youtube.com/watch?v=qRyr5aKEUI8"
       }
     }
   ]
