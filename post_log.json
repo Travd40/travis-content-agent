@@ -1,5 +1,5 @@
 {
-  "total_posts": 107,
+  "total_posts": 108,
   "history": [
     {
       "post_number": 1,
@@ -1763,6 +1763,28 @@
       "youtube_result": {
         "video_id": "zb6s-NUWzHo",
         "url": "https://www.youtube.com/watch?v=zb6s-NUWzHo"
+      }
+    },
+    {
+      "post_number": 108,
+      "timestamp": "2026-07-25T14:27:35.666549",
+      "category": "TRUST & SAFETY",
+      "tip": "Keep the small promises. The coffee run you swore you'd remember is the whole marriage.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0108_TRUST_and_SAFETY.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0108_TRUST_and_SAFETY_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18122998870739935",
+          "container_id": "18553087825077598"
+        },
+        "facebook": {
+          "id": "1346089617701218"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0108_TRUST_and_SAFETY.mp4"
+      },
+      "youtube_result": {
+        "video_id": "5q3K8V3lALA",
+        "url": "https://www.youtube.com/watch?v=5q3K8V3lALA"
       }
     }
   ]
