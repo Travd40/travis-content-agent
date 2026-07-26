@@ -1,5 +1,5 @@
 {
-  "total_posts": 108,
+  "total_posts": 109,
   "history": [
     {
       "post_number": 1,
@@ -1785,6 +1785,28 @@
       "youtube_result": {
         "video_id": "5q3K8V3lALA",
         "url": "https://www.youtube.com/watch?v=5q3K8V3lALA"
+      }
+    },
+    {
+      "post_number": 109,
+      "timestamp": "2026-07-26T14:24:35.557987",
+      "category": "COUPLES COACHING",
+      "tip": "Repeat her words back before you respond. Understanding proven beats understanding assumed every time.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0109_COUPLES_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0109_COUPLES_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18353754544300118",
+          "container_id": "18553356250077598"
+        },
+        "facebook": {
+          "id": "3025472817794608"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0109_COUPLES_COACHING.mp4"
+      },
+      "youtube_result": {
+        "video_id": "Az2UYnogkGw",
+        "url": "https://www.youtube.com/watch?v=Az2UYnogkGw"
       }
     }
   ]
