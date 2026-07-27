@@ -1,5 +1,5 @@
 {
-  "total_posts": 109,
+  "total_posts": 110,
   "history": [
     {
       "post_number": 1,
@@ -1807,6 +1807,28 @@
       "youtube_result": {
         "video_id": "Az2UYnogkGw",
         "url": "https://www.youtube.com/watch?v=Az2UYnogkGw"
+      }
+    },
+    {
+      "post_number": 110,
+      "timestamp": "2026-07-27T15:37:21.887005",
+      "category": "MEN'S COACHING",
+      "tip": "Regulate your body before you open your mouth. A flooded nervous system cannot lead a conversation.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0110_MENS_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0110_MENS_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "17890018164420743",
+          "container_id": "18553622410077598"
+        },
+        "facebook": {
+          "id": "4449749101965535"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0110_MENS_COACHING.mp4"
+      },
+      "youtube_result": {
+        "video_id": "1sPzCOMHUbI",
+        "url": "https://www.youtube.com/watch?v=1sPzCOMHUbI"
       }
     }
   ]
