@@ -1,5 +1,5 @@
 {
-  "total_posts": 111,
+  "total_posts": 112,
   "history": [
     {
       "post_number": 1,
@@ -1851,6 +1851,28 @@
       "youtube_result": {
         "video_id": "w77UJw3esuc",
         "url": "https://www.youtube.com/watch?v=w77UJw3esuc"
+      }
+    },
+    {
+      "post_number": 112,
+      "timestamp": "2026-07-29T15:27:12.787189",
+      "category": "TRUST & SAFETY",
+      "tip": "Answer the hard question the first time she asks it. Deflection today becomes interrogation tomorrow.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0112_TRUST_and_SAFETY.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0112_TRUST_and_SAFETY_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "17859144060677971",
+          "container_id": "18554098297077598"
+        },
+        "facebook": {
+          "id": "2026711647986016"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0112_TRUST_and_SAFETY.mp4"
+      },
+      "youtube_result": {
+        "video_id": "9AF7pe01scs",
+        "url": "https://www.youtube.com/watch?v=9AF7pe01scs"
       }
     }
   ]
