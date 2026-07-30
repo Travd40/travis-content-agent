@@ -1,5 +1,5 @@
 {
-  "total_posts": 112,
+  "total_posts": 113,
   "history": [
     {
       "post_number": 1,
@@ -1873,6 +1873,28 @@
       "youtube_result": {
         "video_id": "9AF7pe01scs",
         "url": "https://www.youtube.com/watch?v=9AF7pe01scs"
+      }
+    },
+    {
+      "post_number": 113,
+      "timestamp": "2026-07-30T15:01:56.775801",
+      "category": "COUPLES COACHING",
+      "tip": "Schedule the repair conversation. Unresolved fights don't disappear \u2014 they hibernate and grow teeth.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0113_COUPLES_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0113_COUPLES_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18116799676904602",
+          "container_id": "18554328136077598"
+        },
+        "facebook": {
+          "id": "1930026177630533"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0113_COUPLES_COACHING.mp4"
+      },
+      "youtube_result": {
+        "video_id": "NtKKI7uCT6I",
+        "url": "https://www.youtube.com/watch?v=NtKKI7uCT6I"
       }
     }
   ]
