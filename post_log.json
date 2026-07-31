@@ -1,5 +1,5 @@
 {
-  "total_posts": 113,
+  "total_posts": 114,
   "history": [
     {
       "post_number": 1,
@@ -1895,6 +1895,28 @@
       "youtube_result": {
         "video_id": "NtKKI7uCT6I",
         "url": "https://www.youtube.com/watch?v=NtKKI7uCT6I"
+      }
+    },
+    {
+      "post_number": 114,
+      "timestamp": "2026-07-31T15:13:48.850453",
+      "category": "COMMUNICATION",
+      "tip": "Most couples don't have a communication problem. They have a courtroom problem.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0114_COMMUNICATION.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0114_COMMUNICATION_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "17906401881456232",
+          "container_id": "18554571745077598"
+        },
+        "facebook": {
+          "id": "1676546810120654"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0114_COMMUNICATION.mp4"
+      },
+      "youtube_result": {
+        "video_id": "SsyqU4BDAu8",
+        "url": "https://www.youtube.com/watch?v=SsyqU4BDAu8"
       }
     }
   ]
