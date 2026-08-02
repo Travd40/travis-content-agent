@@ -1,5 +1,5 @@
 {
-  "total_posts": 115,
+  "total_posts": 116,
   "history": [
     {
       "post_number": 1,
@@ -1939,6 +1939,28 @@
       "youtube_result": {
         "video_id": "5N7dgtFvhwA",
         "url": "https://www.youtube.com/watch?v=5N7dgtFvhwA"
+      }
+    },
+    {
+      "post_number": 116,
+      "timestamp": "2026-08-02T14:24:36.226185",
+      "category": "TRUST & SAFETY",
+      "tip": "Tell her where you'll be before she has to ask. Transparency prevents the questions that feel like accusations.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0116_TRUST_and_SAFETY.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0116_TRUST_and_SAFETY_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18331749202287716",
+          "container_id": "18555094105077598"
+        },
+        "facebook": {
+          "id": "1071733165587423"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0116_TRUST_and_SAFETY.mp4"
+      },
+      "youtube_result": {
+        "video_id": "J4UJpeOW2mI",
+        "url": "https://www.youtube.com/watch?v=J4UJpeOW2mI"
       }
     }
   ]
