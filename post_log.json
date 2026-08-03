@@ -1,5 +1,5 @@
 {
-  "total_posts": 116,
+  "total_posts": 117,
   "history": [
     {
       "post_number": 1,
@@ -1961,6 +1961,28 @@
       "youtube_result": {
         "video_id": "J4UJpeOW2mI",
         "url": "https://www.youtube.com/watch?v=J4UJpeOW2mI"
+      }
+    },
+    {
+      "post_number": 117,
+      "timestamp": "2026-08-03T15:37:34.949343",
+      "category": "COUPLES COACHING",
+      "tip": "Name the emotion before you solve the problem. Feelings acknowledged shrink. Feelings dismissed multiply.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0117_COUPLES_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0117_COUPLES_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "17904324411524083",
+          "container_id": "18555350626077598"
+        },
+        "facebook": {
+          "id": "1460374189232719"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0117_COUPLES_COACHING.mp4"
+      },
+      "youtube_result": {
+        "video_id": "K3FSMAebmhA",
+        "url": "https://www.youtube.com/watch?v=K3FSMAebmhA"
       }
     }
   ]
