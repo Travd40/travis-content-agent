@@ -1,5 +1,5 @@
 {
-  "total_posts": 118,
+  "total_posts": 119,
   "history": [
     {
       "post_number": 1,
@@ -2005,6 +2005,28 @@
       "youtube_result": {
         "video_id": "3FLFdOdLCYU",
         "url": "https://www.youtube.com/watch?v=3FLFdOdLCYU"
+      }
+    },
+    {
+      "post_number": 119,
+      "timestamp": "2026-08-05T15:09:38.823638",
+      "category": "COMMUNICATION",
+      "tip": "Announce the shift before you take it. 'I need ten minutes' beats disappearing into your phone.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0119_COMMUNICATION.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0119_COMMUNICATION_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18386518609205267",
+          "container_id": "18555848311077598"
+        },
+        "facebook": {
+          "id": "1696721408257603"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0119_COMMUNICATION.mp4"
+      },
+      "youtube_result": {
+        "video_id": "v9TXv-b9fe0",
+        "url": "https://www.youtube.com/watch?v=v9TXv-b9fe0"
       }
     }
   ]
