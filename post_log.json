@@ -1,5 +1,5 @@
 {
-  "total_posts": 119,
+  "total_posts": 120,
   "history": [
     {
       "post_number": 1,
@@ -2027,6 +2027,28 @@
       "youtube_result": {
         "video_id": "v9TXv-b9fe0",
         "url": "https://www.youtube.com/watch?v=v9TXv-b9fe0"
+      }
+    },
+    {
+      "post_number": 120,
+      "timestamp": "2026-08-06T15:07:03.760733",
+      "category": "TRUST & SAFETY",
+      "tip": "Show her your phone before she wonders about it. Volunteered access dissolves suspicion faster than proof.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0120_TRUST_and_SAFETY.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0120_TRUST_and_SAFETY_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18126106720604618",
+          "container_id": "18556077745077598"
+        },
+        "facebook": {
+          "id": "4286810331536502"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0120_TRUST_and_SAFETY.mp4"
+      },
+      "youtube_result": {
+        "video_id": "RYZZdBnZK1A",
+        "url": "https://www.youtube.com/watch?v=RYZZdBnZK1A"
       }
     }
   ]
