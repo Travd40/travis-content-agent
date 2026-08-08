@@ -1,5 +1,5 @@
 {
-  "total_posts": 121,
+  "total_posts": 122,
   "history": [
     {
       "post_number": 1,
@@ -2071,6 +2071,28 @@
       "youtube_result": {
         "video_id": "gaIO5Kdv5ec",
         "url": "https://www.youtube.com/watch?v=gaIO5Kdv5ec"
+      }
+    },
+    {
+      "post_number": 122,
+      "timestamp": "2026-08-08T13:38:45.863568",
+      "category": "MEN'S COACHING",
+      "tip": "Fund the friendship. Money spent on her joy is not spending \u2014 it's infrastructure.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0122_MENS_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0122_MENS_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18094013012312115",
+          "container_id": "18556551316077598"
+        },
+        "facebook": {
+          "id": "1404128634929545"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0122_MENS_COACHING.mp4"
+      },
+      "youtube_result": {
+        "video_id": "TyiUkylnaxw",
+        "url": "https://www.youtube.com/watch?v=TyiUkylnaxw"
       }
     }
   ]
