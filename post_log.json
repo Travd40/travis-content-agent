@@ -1,5 +1,5 @@
 {
-  "total_posts": 122,
+  "total_posts": 123,
   "history": [
     {
       "post_number": 1,
@@ -2093,6 +2093,28 @@
       "youtube_result": {
         "video_id": "TyiUkylnaxw",
         "url": "https://www.youtube.com/watch?v=TyiUkylnaxw"
+      }
+    },
+    {
+      "post_number": 123,
+      "timestamp": "2026-08-09T13:42:12.332880",
+      "category": "COMMUNICATION",
+      "tip": "Text her the hard thing before you say it. Written words give her time to breathe.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0123_COMMUNICATION.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0123_COMMUNICATION_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18424267990176378",
+          "container_id": "18556810321077598"
+        },
+        "facebook": {
+          "id": "4621356978096383"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0123_COMMUNICATION.mp4"
+      },
+      "youtube_result": {
+        "video_id": "ldN30T6QhvQ",
+        "url": "https://www.youtube.com/watch?v=ldN30T6QhvQ"
       }
     }
   ]
