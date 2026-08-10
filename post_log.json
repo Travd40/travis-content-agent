@@ -1,5 +1,5 @@
 {
-  "total_posts": 123,
+  "total_posts": 124,
   "history": [
     {
       "post_number": 1,
@@ -2115,6 +2115,28 @@
       "youtube_result": {
         "video_id": "ldN30T6QhvQ",
         "url": "https://www.youtube.com/watch?v=ldN30T6QhvQ"
+      }
+    },
+    {
+      "post_number": 124,
+      "timestamp": "2026-08-10T14:14:19.027852",
+      "category": "TRUST & SAFETY",
+      "tip": "Match your private words to your public ones. Consistency between rooms is what safety actually feels like.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0124_TRUST_and_SAFETY.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0124_TRUST_and_SAFETY_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18465824833112499",
+          "container_id": "18557077459077598"
+        },
+        "facebook": {
+          "id": "1413033574054380"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0124_TRUST_and_SAFETY.mp4"
+      },
+      "youtube_result": {
+        "video_id": "P01NSL0ovEI",
+        "url": "https://www.youtube.com/watch?v=P01NSL0ovEI"
       }
     }
   ]
