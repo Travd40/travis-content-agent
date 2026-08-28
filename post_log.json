@@ -1,5 +1,5 @@
 {
-  "total_posts": 126,
+  "total_posts": 127,
   "history": [
     {
       "post_number": 1,
@@ -2181,6 +2181,28 @@
       "youtube_result": {
         "video_id": "Xn-RiS7N7I4",
         "url": "https://www.youtube.com/watch?v=Xn-RiS7N7I4"
+      }
+    },
+    {
+      "post_number": 127,
+      "timestamp": "2026-08-28T22:47:59.165904",
+      "category": "COUPLES COACHING",
+      "tip": "'I'm sorry, BUT' is not an apology. It's a defense in disguise.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0127_COUPLES_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0127_COUPLES_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18111878255018932",
+          "container_id": "18562197721077598"
+        },
+        "facebook": {
+          "id": "886039881044314"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0127_COUPLES_COACHING.mp4"
+      },
+      "youtube_result": {
+        "video_id": "K8Ig6tKtCks",
+        "url": "https://www.youtube.com/watch?v=K8Ig6tKtCks"
       }
     }
   ]
