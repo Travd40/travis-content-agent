@@ -1,5 +1,5 @@
 {
-  "total_posts": 130,
+  "total_posts": 131,
   "history": [
     {
       "post_number": 1,
@@ -2269,6 +2269,28 @@
       "youtube_result": {
         "video_id": "NfrXTXukZbs",
         "url": "https://www.youtube.com/watch?v=NfrXTXukZbs"
+      }
+    },
+    {
+      "post_number": 131,
+      "timestamp": "2026-09-12T15:57:18.015751",
+      "category": "COMMUNICATION",
+      "tip": "Repeat her words back before you respond. Understanding proven beats understanding assumed every time.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0131_COMMUNICATION.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0131_COMMUNICATION_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18131435797656998",
+          "container_id": "18566020939077598"
+        },
+        "facebook": {
+          "id": "1421871056555488"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0131_COMMUNICATION.mp4"
+      },
+      "youtube_result": {
+        "video_id": "j6qD_cqTyLw",
+        "url": "https://www.youtube.com/watch?v=j6qD_cqTyLw"
       }
     }
   ]
