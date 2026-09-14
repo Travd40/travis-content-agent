@@ -1,5 +1,5 @@
 {
-  "total_posts": 132,
+  "total_posts": 133,
   "history": [
     {
       "post_number": 1,
@@ -2313,6 +2313,28 @@
       "youtube_result": {
         "video_id": "de1M8DtjXRk",
         "url": "https://www.youtube.com/watch?v=de1M8DtjXRk"
+      }
+    },
+    {
+      "post_number": 133,
+      "timestamp": "2026-09-14T18:17:47.533731",
+      "category": "COUPLES COACHING",
+      "tip": "Compliment the effort, not just the outcome. She's showing up \u2014 make sure she knows you noticed.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0133_COUPLES_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0133_COUPLES_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "17931725379395309",
+          "container_id": "18566598337077598"
+        },
+        "facebook": {
+          "id": "1060328913642026"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0133_COUPLES_COACHING.mp4"
+      },
+      "youtube_result": {
+        "video_id": "8EXiUKDxEuA",
+        "url": "https://www.youtube.com/watch?v=8EXiUKDxEuA"
       }
     }
   ]
