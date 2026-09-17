@@ -1,5 +1,5 @@
 {
-  "total_posts": 135,
+  "total_posts": 136,
   "history": [
     {
       "post_number": 1,
@@ -2379,6 +2379,28 @@
       "youtube_result": {
         "video_id": "wIEV36P5xLw",
         "url": "https://www.youtube.com/watch?v=wIEV36P5xLw"
+      }
+    },
+    {
+      "post_number": 136,
+      "timestamp": "2026-09-17T17:22:57.611083",
+      "category": "TRUST & SAFETY",
+      "tip": "Keep the promises you made about small things. Trust is built in the receipts, not the speeches.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0136_TRUST_and_SAFETY.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0136_TRUST_and_SAFETY_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18408267715091907",
+          "container_id": "18567278941077598"
+        },
+        "facebook": {
+          "id": "1412599700835136"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0136_TRUST_and_SAFETY.mp4"
+      },
+      "youtube_result": {
+        "video_id": "DtvjAZsUkTQ",
+        "url": "https://www.youtube.com/watch?v=DtvjAZsUkTQ"
       }
     }
   ]
