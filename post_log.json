@@ -1,5 +1,5 @@
 {
-  "total_posts": 138,
+  "total_posts": 139,
   "history": [
     {
       "post_number": 1,
@@ -2445,6 +2445,28 @@
       "youtube_result": {
         "video_id": "-THj2kMu0uk",
         "url": "https://www.youtube.com/watch?v=-THj2kMu0uk"
+      }
+    },
+    {
+      "post_number": 139,
+      "timestamp": "2026-09-20T16:38:43.336892",
+      "category": "COMMUNICATION",
+      "tip": "Name the emotion before you name the problem. Feelings first, facts second \u2014 always.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0139_COMMUNICATION.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0139_COMMUNICATION_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18109858373592942",
+          "container_id": "18568034824077598"
+        },
+        "facebook": {
+          "id": "2886205451754555"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0139_COMMUNICATION.mp4"
+      },
+      "youtube_result": {
+        "video_id": "IAo9znAn7es",
+        "url": "https://www.youtube.com/watch?v=IAo9znAn7es"
       }
     }
   ]
