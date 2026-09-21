@@ -1,5 +1,5 @@
 {
-  "total_posts": 139,
+  "total_posts": 140,
   "history": [
     {
       "post_number": 1,
@@ -2467,6 +2467,28 @@
       "youtube_result": {
         "video_id": "IAo9znAn7es",
         "url": "https://www.youtube.com/watch?v=IAo9znAn7es"
+      }
+    },
+    {
+      "post_number": 140,
+      "timestamp": "2026-09-21T18:24:09.839566",
+      "category": "TRUST & SAFETY",
+      "tip": "Tell her where you'll be before she asks. Transparency without prompting is the loudest form of loyalty.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0140_TRUST_and_SAFETY.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0140_TRUST_and_SAFETY_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18081380657701645",
+          "container_id": "18568298335077598"
+        },
+        "facebook": {
+          "id": "1659379252864974"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0140_TRUST_and_SAFETY.mp4"
+      },
+      "youtube_result": {
+        "video_id": "Ubo7GAM_Y4A",
+        "url": "https://www.youtube.com/watch?v=Ubo7GAM_Y4A"
       }
     }
   ]
