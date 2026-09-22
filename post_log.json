@@ -1,5 +1,5 @@
 {
-  "total_posts": 140,
+  "total_posts": 141,
   "history": [
     {
       "post_number": 1,
@@ -2489,6 +2489,28 @@
       "youtube_result": {
         "video_id": "Ubo7GAM_Y4A",
         "url": "https://www.youtube.com/watch?v=Ubo7GAM_Y4A"
+      }
+    },
+    {
+      "post_number": 141,
+      "timestamp": "2026-09-22T17:27:45.634775",
+      "category": "COUPLES COACHING",
+      "tip": "Protect her from your mother. Loyalty means she never has to defend her place in your life.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0141_COUPLES_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0141_COUPLES_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18027674681884490",
+          "container_id": "18568526875077598"
+        },
+        "facebook": {
+          "id": "1723335568756694"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0141_COUPLES_COACHING.mp4"
+      },
+      "youtube_result": {
+        "video_id": "1FW_lHMzeaE",
+        "url": "https://www.youtube.com/watch?v=1FW_lHMzeaE"
       }
     }
   ]
