@@ -1,5 +1,5 @@
 {
-  "total_posts": 141,
+  "total_posts": 142,
   "history": [
     {
       "post_number": 1,
@@ -2511,6 +2511,28 @@
       "youtube_result": {
         "video_id": "1FW_lHMzeaE",
         "url": "https://www.youtube.com/watch?v=1FW_lHMzeaE"
+      }
+    },
+    {
+      "post_number": 142,
+      "timestamp": "2026-09-23T17:34:16.273252",
+      "category": "MEN'S COACHING",
+      "tip": "Lead the logistics. If she's the default planner for your life, you've outsourced your leadership.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0142_MENS_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0142_MENS_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "17906496051556110",
+          "container_id": "18568767754077598"
+        },
+        "facebook": {
+          "id": "3288749614647391"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0142_MENS_COACHING.mp4"
+      },
+      "youtube_result": {
+        "video_id": "_z7_g0fCvtU",
+        "url": "https://www.youtube.com/watch?v=_z7_g0fCvtU"
       }
     }
   ]
