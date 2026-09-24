@@ -1,5 +1,5 @@
 {
-  "total_posts": 142,
+  "total_posts": 143,
   "history": [
     {
       "post_number": 1,
@@ -2533,6 +2533,28 @@
       "youtube_result": {
         "video_id": "_z7_g0fCvtU",
         "url": "https://www.youtube.com/watch?v=_z7_g0fCvtU"
+      }
+    },
+    {
+      "post_number": 143,
+      "timestamp": "2026-09-24T17:39:16.527597",
+      "category": "COMMUNICATION",
+      "tip": "Drop the tone before you drop the truth. How you say it is half the message.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0143_COMMUNICATION.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0143_COMMUNICATION_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18069296729775189",
+          "container_id": "18569012290077598"
+        },
+        "facebook": {
+          "id": "1743903846871109"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0143_COMMUNICATION.mp4"
+      },
+      "youtube_result": {
+        "video_id": "WgpAQ84r9Wc",
+        "url": "https://www.youtube.com/watch?v=WgpAQ84r9Wc"
       }
     }
   ]
