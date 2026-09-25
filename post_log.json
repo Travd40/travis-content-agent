@@ -1,5 +1,5 @@
 {
-  "total_posts": 143,
+  "total_posts": 144,
   "history": [
     {
       "post_number": 1,
@@ -2555,6 +2555,28 @@
       "youtube_result": {
         "video_id": "WgpAQ84r9Wc",
         "url": "https://www.youtube.com/watch?v=WgpAQ84r9Wc"
+      }
+    },
+    {
+      "post_number": 144,
+      "timestamp": "2026-09-25T17:38:45.166458",
+      "category": "COUPLES COACHING",
+      "tip": "50/50 marriages don't work. The math sounds fair. The math kills relationships.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0144_COUPLES_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0144_COUPLES_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18061976231788974",
+          "container_id": "18569263540077598"
+        },
+        "facebook": {
+          "id": "1743830243588013"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0144_COUPLES_COACHING.mp4"
+      },
+      "youtube_result": {
+        "video_id": "T10tjGnPsWk",
+        "url": "https://www.youtube.com/watch?v=T10tjGnPsWk"
       }
     }
   ]
