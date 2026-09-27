@@ -1,5 +1,5 @@
 {
-  "total_posts": 145,
+  "total_posts": 146,
   "history": [
     {
       "post_number": 1,
@@ -2599,6 +2599,28 @@
       "youtube_result": {
         "video_id": "TgkCjWzKN60",
         "url": "https://www.youtube.com/watch?v=TgkCjWzKN60"
+      }
+    },
+    {
+      "post_number": 146,
+      "timestamp": "2026-09-27T17:22:31.297359",
+      "category": "MEN'S COACHING",
+      "tip": "Initiate non-sexual touch daily. A hand on her back builds more safety than a hundred words.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0146_MENS_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0146_MENS_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18105700685615277",
+          "container_id": "18569810440077598"
+        },
+        "facebook": {
+          "id": "1087711820335956"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0146_MENS_COACHING.mp4"
+      },
+      "youtube_result": {
+        "video_id": "Tkxq5rt_vwc",
+        "url": "https://www.youtube.com/watch?v=Tkxq5rt_vwc"
       }
     }
   ]
