@@ -1,5 +1,5 @@
 {
-  "total_posts": 146,
+  "total_posts": 147,
   "history": [
     {
       "post_number": 1,
@@ -2621,6 +2621,28 @@
       "youtube_result": {
         "video_id": "Tkxq5rt_vwc",
         "url": "https://www.youtube.com/watch?v=Tkxq5rt_vwc"
+      }
+    },
+    {
+      "post_number": 147,
+      "timestamp": "2026-09-28T19:55:26.587865",
+      "category": "COMMUNICATION",
+      "tip": "Answer the question she actually asked. Deflecting to a related topic feels like dishonesty to her.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0147_COMMUNICATION.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0147_COMMUNICATION_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18106216067227498",
+          "container_id": "18570092896077598"
+        },
+        "facebook": {
+          "id": "1735170397764665"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0147_COMMUNICATION.mp4"
+      },
+      "youtube_result": {
+        "video_id": "9spbj6xFxGQ",
+        "url": "https://www.youtube.com/watch?v=9spbj6xFxGQ"
       }
     }
   ]
