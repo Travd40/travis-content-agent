@@ -26,7 +26,29 @@ CATEGORIES = [
 ]
 
 LOG_FILE = Path(__file__).parent.parent / "post_log.json"
+TOPIC_QUEUE = Path(__file__).parent.parent / "topic_queue.json"
 RECENT_LOOKBACK = 20
+
+
+def _pop_queued_topic() -> str | None:
+    """Return the next queued topic (and consume it), or None if the queue is
+    empty/missing/invalid. topic_queue.json is a JSON list of topic strings;
+    the daily workflow commits the consumed queue back to the repo."""
+    if not TOPIC_QUEUE.exists():
+        return None
+    try:
+        with open(TOPIC_QUEUE) as f:
+            queue = json.load(f)
+        if not isinstance(queue, list) or not queue:
+            return None
+        topic = queue.pop(0)
+        with open(TOPIC_QUEUE, "w", encoding="utf-8") as f:
+            json.dump(queue, f, indent=2)
+        if isinstance(topic, str) and topic.strip():
+            return topic.strip()
+        return None
+    except Exception:
+        return None
 
 
 def _recent_tips(n: int = RECENT_LOOKBACK) -> list[str]:
@@ -109,12 +131,24 @@ def generate_content(post_number: int = 0) -> dict:
             f"If you are tempted to write 'Stop [doing X]...' and X appears above, pick a different X or a different frame entirely."
         )
 
-    user_prompt = (
-        f"Generate a {category} coaching tip. "
-        f"This is post #{post_number + 1} — make it fresh and distinct."
-        f"{avoid_block}\n\n"
-        f"Return valid JSON only, no markdown, no extra text."
-    )
+    queued_topic = _pop_queued_topic()
+    if queued_topic:
+        print(f"[generate_content] Using queued topic: {queued_topic[:80]}...", flush=True)
+        user_prompt = (
+            f"Generate a {category} coaching tip on this REQUIRED topic:\n\n{queued_topic}\n\n"
+            f"The tip, caption, and hashtags must all be about this topic. "
+            f"This topic was deliberately chosen, so cover it even if it resembles a past tip, "
+            f"but phrase the on-screen tip with fresh wording. "
+            f"This is post #{post_number + 1}.\n\n"
+            f"Return valid JSON only, no markdown, no extra text."
+        )
+    else:
+        user_prompt = (
+            f"Generate a {category} coaching tip. "
+            f"This is post #{post_number + 1} — make it fresh and distinct."
+            f"{avoid_block}\n\n"
+            f"Return valid JSON only, no markdown, no extra text."
+        )
 
     message = _call_claude_with_retry(client, user_prompt)
 

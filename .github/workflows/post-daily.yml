@@ -75,17 +75,17 @@ jobs:
           YOUTUBE_PLAYLIST_ID:      ${{ secrets.YOUTUBE_PLAYLIST_ID }}
         run: python agent.py --now
 
-      - name: Persist post_log.json back to repo
+      - name: Persist post_log.json and topic_queue.json back to repo
         if: always()  # commit even if upstream steps had warnings, so dedup memory updates
         run: |
-          if [ -n "$(git status --porcelain post_log.json)" ]; then
+          if [ -n "$(git status --porcelain post_log.json topic_queue.json)" ]; then
             git config user.name  "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
-            git add post_log.json
-            git commit -m "Update post log [skip ci]"
+            git add post_log.json topic_queue.json
+            git commit -m "Update post log and topic queue [skip ci]"
             git push
           else
-            echo "post_log.json unchanged — nothing to commit"
+            echo "post_log.json and topic_queue.json unchanged — nothing to commit"
           fi
 
       - name: Upload last-failure log as artifact
