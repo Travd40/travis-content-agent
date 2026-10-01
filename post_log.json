@@ -1,5 +1,5 @@
 {
-  "total_posts": 149,
+  "total_posts": 150,
   "history": [
     {
       "post_number": 1,
@@ -2687,6 +2687,28 @@
       "youtube_result": {
         "video_id": "tttJS4SntFU",
         "url": "https://www.youtube.com/watch?v=tttJS4SntFU"
+      }
+    },
+    {
+      "post_number": 150,
+      "timestamp": "2026-10-01T18:40:35.249370",
+      "category": "MEN'S COACHING",
+      "tip": "Train your nervous system before the fight. You can't learn calm mid-argument.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0150_MENS_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0150_MENS_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18100610558378717",
+          "container_id": "18570846556077598"
+        },
+        "facebook": {
+          "id": "1492726922701050"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0150_MENS_COACHING.mp4"
+      },
+      "youtube_result": {
+        "video_id": "lhRCikooZFg",
+        "url": "https://www.youtube.com/watch?v=lhRCikooZFg"
       }
     }
   ]
