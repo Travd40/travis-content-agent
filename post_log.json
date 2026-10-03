@@ -1,5 +1,5 @@
 {
-  "total_posts": 151,
+  "total_posts": 152,
   "history": [
     {
       "post_number": 1,
@@ -2731,6 +2731,28 @@
       "youtube_result": {
         "video_id": "gMmwUtyTr8Y",
         "url": "https://www.youtube.com/watch?v=gMmwUtyTr8Y"
+      }
+    },
+    {
+      "post_number": 152,
+      "timestamp": "2026-10-03T16:53:06.187039",
+      "category": "TRUST & SAFETY",
+      "tip": "Tell her the hard truth before she discovers it. Confession beats detection every single time.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0152_TRUST_and_SAFETY.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0152_TRUST_and_SAFETY_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18109688876333640",
+          "container_id": "18571345882077598"
+        },
+        "facebook": {
+          "id": "3645830495565465"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0152_TRUST_and_SAFETY.mp4"
+      },
+      "youtube_result": {
+        "video_id": "3SxpHuw-Ous",
+        "url": "https://www.youtube.com/watch?v=3SxpHuw-Ous"
       }
     }
   ]
