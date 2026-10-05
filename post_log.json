@@ -1,5 +1,5 @@
 {
-  "total_posts": 153,
+  "total_posts": 154,
   "history": [
     {
       "post_number": 1,
@@ -2775,6 +2775,28 @@
       "youtube_result": {
         "video_id": "R3DUey4lCmE",
         "url": "https://www.youtube.com/watch?v=R3DUey4lCmE"
+      }
+    },
+    {
+      "post_number": 154,
+      "timestamp": "2026-10-05T20:53:54.520852",
+      "category": "MEN'S COACHING",
+      "tip": "Walk through the door like you missed her. The first 60 seconds set the whole night.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0154_MENS_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0154_MENS_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18118009487075215",
+          "container_id": "18571923538077598"
+        },
+        "facebook": {
+          "id": "1399551672166346"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0154_MENS_COACHING.mp4"
+      },
+      "youtube_result": {
+        "video_id": "630Mj1HfL0A",
+        "url": "https://www.youtube.com/watch?v=630Mj1HfL0A"
       }
     }
   ]
