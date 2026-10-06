@@ -1,5 +1,5 @@
 {
-  "total_posts": 154,
+  "total_posts": 155,
   "history": [
     {
       "post_number": 1,
@@ -2797,6 +2797,28 @@
       "youtube_result": {
         "video_id": "630Mj1HfL0A",
         "url": "https://www.youtube.com/watch?v=630Mj1HfL0A"
+      }
+    },
+    {
+      "post_number": 155,
+      "timestamp": "2026-10-06T18:43:00.359040",
+      "category": "COMMUNICATION",
+      "tip": "Ask one more question before you give your opinion. Curiosity disarms what defensiveness escalates.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0155_COMMUNICATION.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0155_COMMUNICATION_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18252364324308398",
+          "container_id": "18572155360077598"
+        },
+        "facebook": {
+          "id": "1672352397641632"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0155_COMMUNICATION.mp4"
+      },
+      "youtube_result": {
+        "video_id": "nuJMKUs1AyI",
+        "url": "https://www.youtube.com/watch?v=nuJMKUs1AyI"
       }
     }
   ]
