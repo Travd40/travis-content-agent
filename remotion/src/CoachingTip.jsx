@@ -88,6 +88,20 @@ export const CoachingTip = ({ category, tip, website, coachName, bookLink, calen
     extrapolateRight: 'clamp',
   });
 
+  // --- Coach Tee figure (bottom right) ---
+  const teeEnter = spring({ fps, frame: frame - 40, from: 0, to: 1, config: { damping: 14, stiffness: 90 } });
+  const teeBob = 6 * Math.sin(frame / 20);
+  const teeY = interpolate(teeEnter, [0, 1], [280, 0]) + teeBob;
+  const teeRot = 1.4 * Math.sin(frame / 26);
+  const teeOpacity = interpolate(frame, [40, 62], [0, 1], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+  const tagOpacity = interpolate(frame, [70, 90], [0, 1], {
+    extrapolateLeft: 'clamp',
+    extrapolateRight: 'clamp',
+  });
+
   return (
     <AbsoluteFill
       style={{
@@ -197,12 +211,47 @@ export const CoachingTip = ({ category, tip, website, coachName, bookLink, calen
         backgroundColor: COLORS.gold,
       }} />
 
-      {/* CTA */}
+      {/* Coach Tee figure */}
+      <div style={{
+        position: 'absolute',
+        right: -36,
+        bottom: -24,
+        opacity: teeOpacity,
+        transform: `translateY(${teeY}px) rotate(${teeRot}deg)`,
+        transformOrigin: 'bottom center',
+      }}>
+        <Img src={staticFile('coach-tee-full.png')} style={{ width: 340, height: 'auto', display: 'block' }} />
+      </div>
+
+      {/* Coach Tee name tag */}
+      <div style={{
+        position: 'absolute',
+        right: 96,
+        bottom: 452,
+        opacity: tagOpacity,
+        transform: `translateY(${teeBob}px)`,
+      }}>
+        <div style={{
+          backgroundColor: COLORS.gold,
+          color: COLORS.bg,
+          fontFamily: '"Arial", sans-serif',
+          fontSize: 22,
+          fontWeight: 800,
+          letterSpacing: 3,
+          padding: '6px 16px',
+          borderRadius: 999,
+          textTransform: 'uppercase',
+        }}>
+          Coach Tee
+        </div>
+      </div>
+
+      {/* CTA — shifted left so Coach Tee has his corner */}
       <div style={{
         position: 'absolute',
         bottom: 110,
         left: 0,
-        right: 0,
+        right: 270,
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
