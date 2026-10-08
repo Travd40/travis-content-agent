@@ -1,5 +1,5 @@
 {
-  "total_posts": 155,
+  "total_posts": 156,
   "history": [
     {
       "post_number": 1,
@@ -2819,6 +2819,28 @@
       "youtube_result": {
         "video_id": "nuJMKUs1AyI",
         "url": "https://www.youtube.com/watch?v=nuJMKUs1AyI"
+      }
+    },
+    {
+      "post_number": 156,
+      "timestamp": "2026-10-08T19:05:11.612661",
+      "category": "TRUST & SAFETY",
+      "tip": "Introduce her to the people who shape you. Hiding her from your inner circle creates doubt.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0156_TRUST_and_SAFETY.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0156_TRUST_and_SAFETY_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "17965622322237110",
+          "container_id": "18572689981077598"
+        },
+        "facebook": {
+          "id": "1468253145209782"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0156_TRUST_and_SAFETY.mp4"
+      },
+      "youtube_result": {
+        "video_id": "IHJTxo-B0qk",
+        "url": "https://www.youtube.com/watch?v=IHJTxo-B0qk"
       }
     }
   ]
