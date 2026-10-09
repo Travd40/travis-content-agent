@@ -1,5 +1,5 @@
 {
-  "total_posts": 156,
+  "total_posts": 157,
   "history": [
     {
       "post_number": 1,
@@ -2841,6 +2841,28 @@
       "youtube_result": {
         "video_id": "IHJTxo-B0qk",
         "url": "https://www.youtube.com/watch?v=IHJTxo-B0qk"
+      }
+    },
+    {
+      "post_number": 157,
+      "timestamp": "2026-10-09T18:49:37.774976",
+      "category": "MEN'S COACHING",
+      "tip": "When he goes silent, he isn't punishing you \u2014 he's protecting himself.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0157_MENS_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0157_MENS_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "17905368201604424",
+          "container_id": "18572950153077598"
+        },
+        "facebook": {
+          "id": "4069133006725593"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0157_MENS_COACHING.mp4"
+      },
+      "youtube_result": {
+        "video_id": "u76IkIdjfPw",
+        "url": "https://www.youtube.com/watch?v=u76IkIdjfPw"
       }
     }
   ]
