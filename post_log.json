@@ -1,5 +1,5 @@
 {
-  "total_posts": 157,
+  "total_posts": 158,
   "history": [
     {
       "post_number": 1,
@@ -2863,6 +2863,28 @@
       "youtube_result": {
         "video_id": "u76IkIdjfPw",
         "url": "https://www.youtube.com/watch?v=u76IkIdjfPw"
+      }
+    },
+    {
+      "post_number": 158,
+      "timestamp": "2026-10-10T17:32:45.107717",
+      "category": "MEN'S COACHING",
+      "tip": "Finish what you started before she notices. Half-done projects tell her you can't be trusted with bigger things.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0158_MENS_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0158_MENS_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "17901770739606302",
+          "container_id": "18573211111077598"
+        },
+        "facebook": {
+          "id": "1851962986176735"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0158_MENS_COACHING.mp4"
+      },
+      "youtube_result": {
+        "video_id": "-1xBYSaQcOc",
+        "url": "https://www.youtube.com/watch?v=-1xBYSaQcOc"
       }
     }
   ]
