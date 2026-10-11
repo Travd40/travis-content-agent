@@ -1,5 +1,5 @@
 {
-  "total_posts": 158,
+  "total_posts": 159,
   "history": [
     {
       "post_number": 1,
@@ -2885,6 +2885,28 @@
       "youtube_result": {
         "video_id": "-1xBYSaQcOc",
         "url": "https://www.youtube.com/watch?v=-1xBYSaQcOc"
+      }
+    },
+    {
+      "post_number": 159,
+      "timestamp": "2026-10-11T17:52:02.489973",
+      "category": "COMMUNICATION",
+      "tip": "Say the thing you're afraid to say. Avoidance isn't peace \u2014 it's a slow leak.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0159_COMMUNICATION.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0159_COMMUNICATION_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18106511717343286",
+          "container_id": "18573530464077598"
+        },
+        "facebook": {
+          "id": "2109261589695404"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0159_COMMUNICATION.mp4"
+      },
+      "youtube_result": {
+        "video_id": "S-NPqAeQnNo",
+        "url": "https://www.youtube.com/watch?v=S-NPqAeQnNo"
       }
     }
   ]
