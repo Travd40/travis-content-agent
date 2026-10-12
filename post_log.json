@@ -1,5 +1,5 @@
 {
-  "total_posts": 159,
+  "total_posts": 160,
   "history": [
     {
       "post_number": 1,
@@ -2907,6 +2907,28 @@
       "youtube_result": {
         "video_id": "S-NPqAeQnNo",
         "url": "https://www.youtube.com/watch?v=S-NPqAeQnNo"
+      }
+    },
+    {
+      "post_number": 160,
+      "timestamp": "2026-10-12T21:29:27.126708",
+      "category": "TRUST & SAFETY",
+      "tip": "Keep the small promises. Showing up for the little things builds the vault for the big ones.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0160_TRUST_and_SAFETY.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0160_TRUST_and_SAFETY_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18341537731272566",
+          "container_id": "18573860536077598"
+        },
+        "facebook": {
+          "id": "1972356950598254"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0160_TRUST_and_SAFETY.mp4"
+      },
+      "youtube_result": {
+        "video_id": "UgoerjMLhlk",
+        "url": "https://www.youtube.com/watch?v=UgoerjMLhlk"
       }
     }
   ]
