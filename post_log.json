@@ -1,5 +1,5 @@
 {
-  "total_posts": 160,
+  "total_posts": 161,
   "history": [
     {
       "post_number": 1,
@@ -2929,6 +2929,28 @@
       "youtube_result": {
         "video_id": "UgoerjMLhlk",
         "url": "https://www.youtube.com/watch?v=UgoerjMLhlk"
+      }
+    },
+    {
+      "post_number": 161,
+      "timestamp": "2026-10-13T19:39:20.294479",
+      "category": "COUPLES COACHING",
+      "tip": "Give her the last 10% of the story. Half-truths feel like full lies when discovered later.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0161_COUPLES_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0161_COUPLES_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18116109260096301",
+          "container_id": "18574105246077598"
+        },
+        "facebook": {
+          "id": "2073713819922898"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0161_COUPLES_COACHING.mp4"
+      },
+      "youtube_result": {
+        "video_id": "kx3JJlHOV6k",
+        "url": "https://www.youtube.com/watch?v=kx3JJlHOV6k"
       }
     }
   ]
