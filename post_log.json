@@ -1,5 +1,5 @@
 {
-  "total_posts": 161,
+  "total_posts": 162,
   "history": [
     {
       "post_number": 1,
@@ -2951,6 +2951,28 @@
       "youtube_result": {
         "video_id": "kx3JJlHOV6k",
         "url": "https://www.youtube.com/watch?v=kx3JJlHOV6k"
+      }
+    },
+    {
+      "post_number": 162,
+      "timestamp": "2026-10-14T17:42:47.837958",
+      "category": "MEN'S COACHING",
+      "tip": "Protect her from your bad day. Your stress at work isn't her welcome home.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0162_MENS_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0162_MENS_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18140087860567172",
+          "container_id": "18574360729077598"
+        },
+        "facebook": {
+          "id": "2219001058665886"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0162_MENS_COACHING.mp4"
+      },
+      "youtube_result": {
+        "video_id": "oa0TisaE7Ck",
+        "url": "https://www.youtube.com/watch?v=oa0TisaE7Ck"
       }
     }
   ]
