@@ -1,5 +1,5 @@
 {
-  "total_posts": 162,
+  "total_posts": 163,
   "history": [
     {
       "post_number": 1,
@@ -2973,6 +2973,28 @@
       "youtube_result": {
         "video_id": "oa0TisaE7Ck",
         "url": "https://www.youtube.com/watch?v=oa0TisaE7Ck"
+      }
+    },
+    {
+      "post_number": 163,
+      "timestamp": "2026-10-15T17:29:21.598145",
+      "category": "COMMUNICATION",
+      "tip": "Name the emotion before you explain the situation. Feelings first, facts second \u2014 that's the order she hears.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0163_COMMUNICATION.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0163_COMMUNICATION_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "17987636979116765",
+          "container_id": "18574676422077598"
+        },
+        "facebook": {
+          "id": "2323944118372773"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0163_COMMUNICATION.mp4"
+      },
+      "youtube_result": {
+        "video_id": "3xDLxOCbZPA",
+        "url": "https://www.youtube.com/watch?v=3xDLxOCbZPA"
       }
     }
   ]
