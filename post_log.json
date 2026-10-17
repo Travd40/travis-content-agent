@@ -1,5 +1,5 @@
 {
-  "total_posts": 164,
+  "total_posts": 165,
   "history": [
     {
       "post_number": 1,
@@ -3017,6 +3017,28 @@
       "youtube_result": {
         "video_id": "LxLiqrpIlx0",
         "url": "https://www.youtube.com/watch?v=LxLiqrpIlx0"
+      }
+    },
+    {
+      "post_number": 165,
+      "timestamp": "2026-10-17T16:03:36.041812",
+      "category": "COUPLES COACHING",
+      "tip": "Schedule the hard conversation. Ambushing her with heavy topics guarantees she'll defend before she listens.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0165_COUPLES_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0165_COUPLES_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18079388723399210",
+          "container_id": "18575238103077598"
+        },
+        "facebook": {
+          "id": "1129832393011372"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0165_COUPLES_COACHING.mp4"
+      },
+      "youtube_result": {
+        "video_id": "geot4vEpy-Y",
+        "url": "https://www.youtube.com/watch?v=geot4vEpy-Y"
       }
     }
   ]
