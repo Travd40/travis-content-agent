@@ -1,5 +1,5 @@
 {
-  "total_posts": 165,
+  "total_posts": 166,
   "history": [
     {
       "post_number": 1,
@@ -3039,6 +3039,28 @@
       "youtube_result": {
         "video_id": "geot4vEpy-Y",
         "url": "https://www.youtube.com/watch?v=geot4vEpy-Y"
+      }
+    },
+    {
+      "post_number": 166,
+      "timestamp": "2026-10-18T16:13:40.186268",
+      "category": "MEN'S COACHING",
+      "tip": "Lead the logistics. Planning the date, the trip, the weekend \u2014 that's masculine care in action.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0166_MENS_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0166_MENS_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18116151691816080",
+          "container_id": "18575539834077598"
+        },
+        "facebook": {
+          "id": "1859140042120118"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0166_MENS_COACHING.mp4"
+      },
+      "youtube_result": {
+        "video_id": "Flt1TBgFu60",
+        "url": "https://www.youtube.com/watch?v=Flt1TBgFu60"
       }
     }
   ]
