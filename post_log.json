@@ -1,5 +1,5 @@
 {
-  "total_posts": 166,
+  "total_posts": 167,
   "history": [
     {
       "post_number": 1,
@@ -3061,6 +3061,28 @@
       "youtube_result": {
         "video_id": "Flt1TBgFu60",
         "url": "https://www.youtube.com/watch?v=Flt1TBgFu60"
+      }
+    },
+    {
+      "post_number": 167,
+      "timestamp": "2026-10-19T18:55:10.457265",
+      "category": "COMMUNICATION",
+      "tip": "Drop the volume when the tension rises. Soft voice in a loud moment resets the room.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0167_COMMUNICATION.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0167_COMMUNICATION_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18224965711337546",
+          "container_id": "18575857555077598"
+        },
+        "facebook": {
+          "id": "1753195542624875"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0167_COMMUNICATION.mp4"
+      },
+      "youtube_result": {
+        "video_id": "WuMlywphYQ4",
+        "url": "https://www.youtube.com/watch?v=WuMlywphYQ4"
       }
     }
   ]
