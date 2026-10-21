@@ -1,5 +1,5 @@
 {
-  "total_posts": 168,
+  "total_posts": 169,
   "history": [
     {
       "post_number": 1,
@@ -3105,6 +3105,28 @@
       "youtube_result": {
         "video_id": "9W3OITCZ6Ec",
         "url": "https://www.youtube.com/watch?v=9W3OITCZ6Ec"
+      }
+    },
+    {
+      "post_number": 169,
+      "timestamp": "2026-10-21T17:46:37.670088",
+      "category": "COUPLES COACHING",
+      "tip": "Thank her for the thing you expect her to do. Appreciation turns duty into devotion.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0169_COUPLES_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0169_COUPLES_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "17955672876271261",
+          "container_id": "18576371728077598"
+        },
+        "facebook": {
+          "id": "2600800197035532"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0169_COUPLES_COACHING.mp4"
+      },
+      "youtube_result": {
+        "video_id": "0ROAbdowLGo",
+        "url": "https://www.youtube.com/watch?v=0ROAbdowLGo"
       }
     }
   ]
