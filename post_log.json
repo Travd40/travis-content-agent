@@ -1,5 +1,5 @@
 {
-  "total_posts": 169,
+  "total_posts": 170,
   "history": [
     {
       "post_number": 1,
@@ -3127,6 +3127,28 @@
       "youtube_result": {
         "video_id": "0ROAbdowLGo",
         "url": "https://www.youtube.com/watch?v=0ROAbdowLGo"
+      }
+    },
+    {
+      "post_number": 170,
+      "timestamp": "2026-10-22T17:45:48.697721",
+      "category": "MEN'S COACHING",
+      "tip": "Fix your posture before you fix her mood. Your body tells her if you're safe.",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0170_MENS_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0170_MENS_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18125549819301375",
+          "container_id": "18576621520077598"
+        },
+        "facebook": {
+          "id": "1053752081019598"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0170_MENS_COACHING.mp4"
+      },
+      "youtube_result": {
+        "video_id": "oo6YusntnoY",
+        "url": "https://www.youtube.com/watch?v=oo6YusntnoY"
       }
     }
   ]
