@@ -37,7 +37,8 @@ concurrency:
 jobs:
   publish:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    # Room for all 5 Anthropic attempts (300s each plus backoff, ~26 min) plus setup.
+    timeout-minutes: 30
     env:
       PUBLISH: ${{ github.event_name == 'schedule' || inputs.dry_run == false }}
 
