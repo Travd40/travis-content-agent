@@ -1,0 +1,138 @@
+name: Weekly Blog Post
+
+# Every Tuesday morning: write one SEO article for people struggling in their
+# relationship and publish it to travisdixoncoaching.com/blog by pushing a
+# single markdown file to Travd40/travis_coaching_site (main deploys to Render).
+#
+# Secrets used:
+#   ANTHROPIC_API_KEY  already used by the daily post workflow
+#   SITE_PUSH_TOKEN    GitHub token with Contents read+write on travis_coaching_site
+#
+# To queue a topic, add a string to blog_topic_queue.json. Otherwise Claude picks
+# a search question the existing posts don't cover yet.
+
+on:
+  schedule:
+    # 12:00 UTC on Tuesdays = 8 AM Eastern in summer (EDT), 7 AM in winter (EST).
+    # An hour ahead of the daily post so the two runs don't push at once.
+    - cron: '0 12 * * 2'
+  workflow_dispatch:
+    inputs:
+      topic:
+        description: 'Optional topic for this post (leave blank to use the queue)'
+        required: false
+        default: ''
+      dry_run:
+        description: 'Test only: write the article but do not publish it (download it from this run)'
+        type: boolean
+        default: true
+
+permissions:
+  contents: write   # to commit the consumed topic queue back
+
+concurrency:
+  group: weekly-blog
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    # Room for all 5 Anthropic attempts (300s each plus backoff, ~26 min) plus setup.
+    timeout-minutes: 30
+    env:
+      PUBLISH: ${{ github.event_name == 'schedule' || inputs.dry_run == false }}
+
+    steps:
+      - name: Check secrets
+        env:
+          SITE_PUSH_TOKEN:   ${{ secrets.SITE_PUSH_TOKEN }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          missing=0
+          if [ -z "$SITE_PUSH_TOKEN" ]; then
+            echo "::error::SITE_PUSH_TOKEN secret is missing. Add it in this repo: Settings > Secrets and variables > Actions."
+            missing=1
+          fi
+          if [ -z "$ANTHROPIC_API_KEY" ]; then
+            echo "::error::ANTHROPIC_API_KEY secret is missing."
+            missing=1
+          fi
+          exit $missing
+
+      - name: Checkout content agent
+        uses: actions/checkout@v4
+
+      - name: Checkout website
+        uses: actions/checkout@v4
+        with:
+          repository: Travd40/travis_coaching_site
+          ref: main
+          path: site
+          token: ${{ secrets.SITE_PUSH_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install deps
+        run: pip install "anthropic>=0.40.0"
+
+      - name: Write article
+        id: gen
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          TOPIC: ${{ inputs.topic }}
+        run: python tools/generate_blog_post.py --site-dir site --topic "$TOPIC"
+
+      - name: Save article as a run artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: blog-post-${{ steps.gen.outputs.slug }}
+          path: ${{ steps.gen.outputs.path }}
+          retention-days: 30
+
+      - name: Publish to the website
+        if: env.PUBLISH == 'true'
+        working-directory: site
+        env:
+          TITLE: ${{ steps.gen.outputs.title }}
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add blog/
+          git commit -m "Add blog post: $TITLE"
+          for i in 1 2 3; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            sleep $((i * 5))
+          done
+          exit 1
+
+      - name: Persist consumed topic queue
+        if: env.PUBLISH == 'true'
+        run: |
+          if [ -n "$(git status --porcelain blog_topic_queue.json)" ]; then
+            git config user.name  "github-actions[bot]"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add blog_topic_queue.json
+            git commit -m "Update blog topic queue [skip ci]"
+            for i in 1 2 3; do
+              git pull --rebase origin main && git push && exit 0
+              sleep $((i * 5))
+            done
+            exit 1
+          else
+            echo "blog_topic_queue.json unchanged, nothing to commit"
+          fi
+
+      - name: Summary
+        if: always()
+        env:
+          TITLE: ${{ steps.gen.outputs.title }}
+          SLUG:  ${{ steps.gen.outputs.slug }}
+        run: |
+          if [ "$PUBLISH" = "true" ]; then
+            echo "Published: [$TITLE](https://travisdixoncoaching.com/blog/$SLUG) (live once Render finishes deploying)" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "Test run, not published: $TITLE. Download the article from this run's artifacts." >> "$GITHUB_STEP_SUMMARY"
+          fi
