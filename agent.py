@@ -35,7 +35,7 @@ load_dotenv(override=True)
 
 sys.path.insert(0, str(Path(__file__).parent / "tools"))
 
-from generate_content import generate_content
+from generate_content import generate_content, headline_already_posted
 from render_video import render_video
 from blog_promo import get_blog_promo
 
@@ -112,6 +112,15 @@ def run_pipeline():
         print(f"\n[agent] Friday → using blog promo rotation for post #{post_count + 1}...")
         try:
             content = get_blog_promo(post_count)
+            # The promos rotate, so their on-screen tip had been reposted word
+            # for word every month. Keep the blog caption, but give the video a
+            # fresh tip line on the same idea once that exact tip has run.
+            if headline_already_posted(content["tip"]):
+                fresh = generate_content(
+                    post_count,
+                    topic=f"The same idea as this tip, said a completely new way: {content['tip']}",
+                )
+                content["tip"] = fresh["tip"]
         except Exception as e:
             record_failure("blog_promo", e)
             raise
