@@ -23,7 +23,7 @@ on:
         required: false
         default: ''
       dry_run:
-        description: 'Test only: write the article but do not publish it (download it from this run)'
+        description: 'Test only: write the article but do not publish it (read it on the run page)'
         type: boolean
         default: true
 
@@ -130,9 +130,18 @@ jobs:
         env:
           TITLE: ${{ steps.gen.outputs.title }}
           SLUG:  ${{ steps.gen.outputs.slug }}
+          ARTICLE: ${{ steps.gen.outputs.path }}
         run: |
           if [ "$PUBLISH" = "true" ]; then
             echo "Published: [$TITLE](https://travisdixoncoaching.com/blog/$SLUG) (live once Render finishes deploying)" >> "$GITHUB_STEP_SUMMARY"
           else
-            echo "Test run, not published: $TITLE. Download the article from this run's artifacts." >> "$GITHUB_STEP_SUMMARY"
+            echo "Test run, not published. The article is below, so it can be read right on this page." >> "$GITHUB_STEP_SUMMARY"
+          fi
+          # Show the article itself on the run page and in the log, so it can
+          # be read without downloading the artifact zip.
+          if [ -n "$ARTICLE" ] && [ -f "$ARTICLE" ]; then
+            { echo; echo "---"; echo; sed '/^<!-- date:/d' "$ARTICLE"; } >> "$GITHUB_STEP_SUMMARY"
+            echo "::group::Article text"
+            cat "$ARTICLE"
+            echo "::endgroup::"
           fi
