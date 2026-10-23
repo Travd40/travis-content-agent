@@ -17,6 +17,7 @@ export const RemotionRoot = () => {
         defaultProps={{
           category: 'COUPLES COACHING',
           tip: 'A trained partner listens to understand, not just to respond.',
+          hook: 'Why does it feel like they never hear me?',
           website: 'travisdixoncoaching.com',
           coachName: 'Travis Dixon Coaching',
         }}

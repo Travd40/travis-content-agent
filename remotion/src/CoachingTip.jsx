@@ -53,11 +53,21 @@ function AnimatedWords({ text, startFrame, fps }) {
   );
 }
 
-export const CoachingTip = ({ category, tip, website, coachName, bookLink, calendlyLink, audioSrc }) => {
+export const CoachingTip = ({ category, tip, hook, website, coachName, bookLink, calendlyLink, audioSrc }) => {
   const frame = useCurrentFrame();
   const { fps, durationInFrames } = useVideoConfig();
   // CTA fades in ~2s before the end, whatever the video length is
   const ctaStart = Math.max(150, durationInFrames - 60);
+
+  // --- Hook question: owns the first ~2s, then the tip animates in ---
+  const tipStart = hook ? 75 : 55;
+  const hookOpacity = hook
+    ? interpolate(frame, [0, 8, 58, 70], [0, 1, 1, 0], {
+        extrapolateLeft: 'clamp',
+        extrapolateRight: 'clamp',
+      })
+    : 0;
+  const hookScale = spring({ fps, frame, from: 0.92, to: 1, config: { damping: 16, stiffness: 140 } });
 
   // --- Logo ---
   const logoOpacity = interpolate(frame, [0, 25], [0, 1], {
@@ -197,9 +207,37 @@ export const CoachingTip = ({ category, tip, website, coachName, bookLink, calen
           margin: 0,
           fontStyle: 'italic',
         }}>
-          <AnimatedWords text={tip} startFrame={55} fps={fps} />
+          <AnimatedWords text={tip} startFrame={tipStart} fps={fps} />
         </p>
       </div>
+
+      {/* Hook question (first ~2 seconds) */}
+      {hook ? (
+        <div style={{
+          position: 'absolute',
+          top: 470,
+          left: 70,
+          right: 70,
+          bottom: 320,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          opacity: hookOpacity,
+          transform: `scale(${hookScale})`,
+        }}>
+          <p style={{
+            color: COLORS.goldLight,
+            fontFamily: '"Arial", sans-serif',
+            fontSize: 72,
+            fontWeight: 800,
+            lineHeight: 1.25,
+            textAlign: 'center',
+            margin: 0,
+          }}>
+            {hook}
+          </p>
+        </div>
+      ) : null}
 
       {/* Bottom gold divider */}
       <div style={{

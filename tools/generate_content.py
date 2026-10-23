@@ -110,10 +110,14 @@ WRITING RULES:
   "📞 Book your FREE 15-min strategy call: https://calendly.com/travd40/15-minute-strategy-call\n📖 Get the book: https://www.amazon.com/dp/B0GPSNXGY8\n🌐 Visit: https://travisdixoncoaching.com"
 - The FREE call CTA must come FIRST — it's the primary action we want readers to take
 - Hashtags: 8-12 relevant tags for relationship coaching, men, couples, personal growth
+- The "hook" is the first thing spoken in the video (about 2 seconds): ONE short question, 10 words or fewer,
+  in the voice of someone struggling in their relationship, that the tip answers.
+  Examples: "Why does he shut down every time we argue?" / "Why does she bring up old fights?"
 
 Return ONLY valid JSON in this exact format, no extra text:
 {
   "category": "CATEGORY NAME",
+  "hook": "Question a struggling partner would ask, 10 words max?",
   "tip": "The short tip that appears on video (12-18 words)",
   "caption": "Instagram/TikTok caption with CTA",
   "hashtags": "#tag1 #tag2 #tag3"
@@ -144,6 +148,16 @@ def _call_claude_with_retry(client, user_prompt: str):
             print(f"[generate_content] {type(e).__name__} on attempt {attempt}/{MAX_ATTEMPTS} — retrying in {wait}s...", flush=True)
             time.sleep(wait)
     raise last_err
+
+
+def clean_hook(hook) -> str | None:
+    """A usable opening question, or None so the video simply starts on the tip."""
+    if not isinstance(hook, str):
+        return None
+    hook = hook.strip().strip('"').strip()
+    if not hook.endswith("?") or len(hook.split()) > 12:
+        return None
+    return hook
 
 
 def headline_already_posted(tip: str) -> bool:
@@ -218,6 +232,8 @@ def generate_content(post_number: int = 0, topic: str | None = None) -> dict:
     words = content.get("tip", "").split()
     if len(words) > 20:
         content["tip"] = " ".join(words[:18])
+
+    content["hook"] = clean_hook(content.get("hook"))
 
     return content
 

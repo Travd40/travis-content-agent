@@ -38,6 +38,7 @@ sys.path.insert(0, str(Path(__file__).parent / "tools"))
 from generate_content import generate_content, headline_already_posted
 from render_video import render_video
 from blog_promo import get_blog_promo
+from spoken_cta import voiceover_script
 
 POST_TIME = os.getenv("POST_TIME", "10:00")
 LOG_FILE  = Path(__file__).parent / "post_log.json"
@@ -82,6 +83,7 @@ def save_post_log(count: int, content: dict, video_path: str, caption_path: str,
         "timestamp": datetime.now().isoformat(),
         "category": content.get("category"),
         "tip": content.get("tip"),
+        "hook": content.get("hook"),
         "video": video_path,
         "caption_file": caption_path,
     }
@@ -121,6 +123,7 @@ def run_pipeline():
                     topic=f"The same idea as this tip, said a completely new way: {content['tip']}",
                 )
                 content["tip"] = fresh["tip"]
+                content["hook"] = fresh.get("hook")
         except Exception as e:
             record_failure("blog_promo", e)
             raise
@@ -134,16 +137,12 @@ def run_pipeline():
     print(f"[agent] Category : {content['category']}")
     print(f"[agent] Tip      : {content['tip']}")
 
-    # Step 1.5: Voiceover (tip + spoken CTA). Optional — a TTS failure or a
+    # Step 1.5: Voiceover (hook question + tip + spoken CTA). Optional — a TTS failure or a
     # missing ELEVENLABS_API_KEY just means the video renders silent as before.
     voiceover_path, voiceover_duration = None, None
     try:
         from elevenlabs_tts import generate_voiceover
-        spoken_cta = os.getenv(
-            "VOICEOVER_CTA",
-            "If this hit home, follow for daily tips — and grab my free five day course. The link is right below.",
-        )
-        vo = generate_voiceover(f"{content['tip']} ... {spoken_cta}")
+        vo = generate_voiceover(voiceover_script(content, post_count))
         if vo:
             voiceover_path, voiceover_duration = vo
     except Exception as e:
