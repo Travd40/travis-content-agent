@@ -1,5 +1,5 @@
 {
-  "total_posts": 170,
+  "total_posts": 171,
   "history": [
     {
       "post_number": 1,
@@ -3149,6 +3149,29 @@
       "youtube_result": {
         "video_id": "oo6YusntnoY",
         "url": "https://www.youtube.com/watch?v=oo6YusntnoY"
+      }
+    },
+    {
+      "post_number": 171,
+      "timestamp": "2026-10-23T23:28:52.305501",
+      "category": "COUPLES COACHING",
+      "tip": "The word 'but' deletes every word before it. A real apology ends at the period.",
+      "hook": "Why doesn't she accept my apology anymore?",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0171_COUPLES_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0171_COUPLES_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18353831278269951",
+          "container_id": "18576922051077598"
+        },
+        "facebook": {
+          "id": "1345828257536614"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0171_COUPLES_COACHING.mp4"
+      },
+      "youtube_result": {
+        "video_id": "2kUef00hvic",
+        "url": "https://www.youtube.com/watch?v=2kUef00hvic"
       }
     }
   ]
