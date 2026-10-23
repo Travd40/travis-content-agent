@@ -18,7 +18,7 @@ concurrency:
 jobs:
   post:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 30
 
     steps:
       - name: Checkout repo
@@ -44,8 +44,26 @@ jobs:
         working-directory: remotion
         run: npm ci
 
+      # A slow Ubuntu package mirror once stalled this step past the job
+      # timeout, so no video posted that day. Pull a prebuilt ffmpeg from
+      # GitHub releases first (fast), and only fall back to apt if that fails.
       - name: Install ffmpeg
-        run: sudo apt-get update && sudo apt-get install -y ffmpeg
+        timeout-minutes: 8
+        run: |
+          if command -v ffprobe >/dev/null 2>&1; then
+            echo "ffmpeg already on the runner"; exit 0
+          fi
+          mkdir -p "$RUNNER_TEMP/ffmpeg"
+          if curl -fsSL --retry 3 --max-time 180 \
+               https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-linux64-gpl.tar.xz \
+             | tar -xJ -C "$RUNNER_TEMP/ffmpeg" --strip-components=1; then
+            echo "$RUNNER_TEMP/ffmpeg/bin" >> "$GITHUB_PATH"
+            "$RUNNER_TEMP/ffmpeg/bin/ffprobe" -version | head -1
+          else
+            echo "Prebuilt download failed, falling back to apt"
+            sudo apt-get update -o Acquire::Retries=3
+            sudo apt-get install -y --no-install-recommends -o Acquire::Retries=3 ffmpeg
+          fi
 
       - name: Run agent
         env:
