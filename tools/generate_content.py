@@ -5,6 +5,7 @@ Returns: { category, tip, caption, hashtags }
 """
 
 import os
+import re
 import json
 import time
 import anthropic
@@ -28,6 +29,7 @@ CATEGORIES = [
 LOG_FILE = Path(__file__).parent.parent / "post_log.json"
 TOPIC_QUEUE = Path(__file__).parent.parent / "topic_queue.json"
 RECENT_LOOKBACK = 20
+MAX_FRESH_TRIES = 3  # regenerate when the headline repeats a past post
 
 
 def _pop_queued_topic() -> str | None:
@@ -60,6 +62,35 @@ def _recent_tips(n: int = RECENT_LOOKBACK) -> list[str]:
         return [h.get("tip", "") for h in history[-n:] if h.get("tip")]
     except Exception:
         return []
+
+
+def _headline(tip: str) -> str:
+    """First sentence of a tip: what the video shows and the website page title."""
+    return re.split(r"(?<=[.!?])\s", tip.strip(), maxsplit=1)[0].rstrip(".")
+
+
+def _headline_key(tip: str) -> str:
+    return re.sub(r"[^a-z0-9]", "", _headline(tip).lower())
+
+
+def _past_headlines() -> list[str]:
+    """Every distinct headline ever posted, oldest first. Tips repeated well
+    outside the RECENT_LOOKBACK window, so the whole log is checked."""
+    if not LOG_FILE.exists():
+        return []
+    try:
+        with open(LOG_FILE) as f:
+            history = json.load(f).get("history", [])
+    except Exception:
+        return []
+    seen, out = set(), []
+    for h in history:
+        tip = h.get("tip") or ""
+        key = _headline_key(tip)
+        if key and key not in seen:
+            seen.add(key)
+            out.append(_headline(tip))
+    return out
 
 SYSTEM_PROMPT = """You are a content writer for Travis Dixon, a relationship coach.
 
@@ -115,7 +146,12 @@ def _call_claude_with_retry(client, user_prompt: str):
     raise last_err
 
 
-def generate_content(post_number: int = 0) -> dict:
+def headline_already_posted(tip: str) -> bool:
+    return _headline_key(tip) in {_headline_key(h) for h in _past_headlines()}
+
+
+def generate_content(post_number: int = 0, topic: str | None = None) -> dict:
+    """topic, when given, is used in place of the next queued topic."""
     client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
 
     category = CATEGORIES[post_number % len(CATEGORIES)]
@@ -131,7 +167,7 @@ def generate_content(post_number: int = 0) -> dict:
             f"If you are tempted to write 'Stop [doing X]...' and X appears above, pick a different X or a different frame entirely."
         )
 
-    queued_topic = _pop_queued_topic()
+    queued_topic = topic or _pop_queued_topic()
     if queued_topic:
         print(f"[generate_content] Using queued topic: {queued_topic[:80]}...", flush=True)
         user_prompt = (
@@ -150,13 +186,33 @@ def generate_content(post_number: int = 0) -> dict:
             f"Return valid JSON only, no markdown, no extra text."
         )
 
-    message = _call_claude_with_retry(client, user_prompt)
+    past = _past_headlines()
+    if past:
+        used = "\n".join(f"  - {h}" for h in past)
+        user_prompt += (
+            f"\n\nThese headlines have ALREADY been posted. The first sentence of the new tip "
+            f"must not match or lightly reword any of them:\n{used}"
+        )
+    used_keys = {_headline_key(h) for h in past}
 
-    raw = message.content[0].text.strip()
-    # Strip markdown fences if present
-    if raw.startswith("```"):
-        raw = raw.split("\n", 1)[1].rsplit("```", 1)[0].strip()
-    content = json.loads(raw, strict=False)
+    for attempt in range(1, MAX_FRESH_TRIES + 1):
+        message = _call_claude_with_retry(client, user_prompt)
+
+        raw = message.content[0].text.strip()
+        # Strip markdown fences if present
+        if raw.startswith("```"):
+            raw = raw.split("\n", 1)[1].rsplit("```", 1)[0].strip()
+        content = json.loads(raw, strict=False)
+
+        headline = _headline(content.get("tip", ""))
+        if _headline_key(headline) not in used_keys:
+            break
+        print(f"[generate_content] Headline already posted ({headline!r}), regenerating "
+              f"({attempt}/{MAX_FRESH_TRIES})...", flush=True)
+        user_prompt += (
+            f"\n\nYour last answer opened with \"{headline}\", which was already posted. "
+            f"Write a different first sentence."
+        )
 
     # Trim tip if too long
     words = content.get("tip", "").split()
