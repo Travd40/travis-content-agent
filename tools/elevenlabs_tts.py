@@ -108,33 +108,45 @@ def generate_voiceover(text: str, filename: str = "voiceover.mp3"):
     OUTPUT_DIR.mkdir(exist_ok=True)
     out_path = OUTPUT_DIR / filename
 
+    body = {
+        "text": text,
+        "model_id": MODEL_ID,
+        "voice_settings": {
+            "stability": 0.55,
+            "similarity_boost": 0.8,
+            "style": 0.25,
+        },
+    }
+    headers = {"xi-api-key": api_key, "Content-Type": "application/json"}
+    base_url = f"https://api.elevenlabs.io/v1/text-to-speech/{voice_id}"
+    print(f"[tts] Generating voiceover ({len(text)} chars, voice {voice_id[:8]}...)")
+
+    # Timed audio first, so the video can caption each phrase as it is spoken
     try:
-        print(f"[tts] Generating voiceover ({len(text)} chars, voice {voice_id[:8]}...)")
-        r = requests.post(
-            f"https://api.elevenlabs.io/v1/text-to-speech/{voice_id}/with-timestamps",
-            headers={"xi-api-key": api_key, "Content-Type": "application/json"},
-            json={
-                "text": text,
-                "model_id": MODEL_ID,
-                "voice_settings": {
-                    "stability": 0.55,
-                    "similarity_boost": 0.8,
-                    "style": 0.25,
-                },
-            },
-            timeout=120,
-        )
+        r = requests.post(f"{base_url}/with-timestamps", headers=headers, json=body, timeout=120)
+        if r.ok:
+            data = r.json()
+            out_path.write_bytes(base64.b64decode(data["audio_base64"]))
+            duration = _audio_duration_seconds(out_path)
+            captions = captions_from_alignment(data.get("alignment"))
+            print(f"[tts] Voiceover ready: {out_path} ({duration:.1f}s, "
+                  f"{len(captions) if captions else 0} caption phrases)")
+            return str(out_path), duration, captions
+        print(f"[tts] Timed voiceover error {r.status_code}: {r.text[:200]} - trying plain audio.")
+    except Exception as e:
+        print(f"[tts] Timed voiceover failed ({type(e).__name__}: {e}) - trying plain audio.")
+
+    # Plain audio: no captions, but the video still has Travis's voice
+    try:
+        r = requests.post(base_url, headers=headers, json=body, timeout=120)
         if not r.ok:
             print(f"[tts] ElevenLabs error {r.status_code}: {r.text[:200]}")
             return None
 
-        data = r.json()
-        out_path.write_bytes(base64.b64decode(data["audio_base64"]))
+        out_path.write_bytes(r.content)
         duration = _audio_duration_seconds(out_path)
-        captions = captions_from_alignment(data.get("alignment"))
-        print(f"[tts] Voiceover ready: {out_path} ({duration:.1f}s, "
-              f"{len(captions) if captions else 0} caption phrases)")
-        return str(out_path), duration, captions
+        print(f"[tts] Voiceover ready: {out_path} ({duration:.1f}s, no captions)")
+        return str(out_path), duration, None
     except Exception as e:
         print(f"[tts] Voiceover failed ({type(e).__name__}: {e}) - continuing silent.")
         return None
