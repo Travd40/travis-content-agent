@@ -1,5 +1,5 @@
 {
-  "total_posts": 171,
+  "total_posts": 172,
   "history": [
     {
       "post_number": 1,
@@ -3172,6 +3172,29 @@
       "youtube_result": {
         "video_id": "2kUef00hvic",
         "url": "https://www.youtube.com/watch?v=2kUef00hvic"
+      }
+    },
+    {
+      "post_number": 172,
+      "timestamp": "2026-10-24T16:27:48.752131",
+      "category": "TRUST & SAFETY",
+      "tip": "Change the behavior faster than you repeat the apology. Pattern replaces promise in her nervous system.",
+      "hook": "Why does she still bring up something I apologized for?",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0172_TRUST_and_SAFETY.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0172_TRUST_and_SAFETY_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18098435543380957",
+          "container_id": "18577135411077598"
+        },
+        "facebook": {
+          "id": "1883628079324553"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0172_TRUST_and_SAFETY.mp4"
+      },
+      "youtube_result": {
+        "video_id": "rqd83ntigzo",
+        "url": "https://www.youtube.com/watch?v=rqd83ntigzo"
       }
     }
   ]
