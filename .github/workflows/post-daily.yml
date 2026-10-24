@@ -95,7 +95,9 @@ jobs:
           # as CONTENT_VIDEOS_TOKEN in GitHub but exposed to the agent as GITHUB_TOKEN:
           GITHUB_TOKEN:             ${{ secrets.CONTENT_VIDEOS_TOKEN }}
           GITHUB_USERNAME:          ${{ secrets.GH_USERNAME }}
-          COACHING_WEBSITE:         ${{ secrets.COACHING_WEBSITE }}
+          # Set here, not as a secret: the old secret still held the retired
+          # travis-coaching-site-1.onrender.com domain, which showed on every video.
+          COACHING_WEBSITE:         travisdixoncoaching.com
           COACHING_NAME:            ${{ secrets.COACHING_NAME }}
           BOOK_LINK:                ${{ secrets.BOOK_LINK }}
           CALENDLY_LINK:            ${{ secrets.CALENDLY_LINK }}
