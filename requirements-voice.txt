@@ -1,0 +1,3 @@
+# Free voice cloning for the daily voiceover (tools/chatterbox_tts.py).
+# Installed after CPU-only torch in the workflow, so pip doesn't pull CUDA.
+chatterbox-tts==0.1.7

@@ -1,0 +1,61 @@
+name: Voice test (Chatterbox)
+
+# Speaks one sample line in Travis's cloned voice so voice changes can be
+# checked before they reach the daily post. Download the MP3 from the run's
+# artifacts to listen.
+on:
+  pull_request:
+    paths:
+      - tools/chatterbox_tts.py
+      - voice/**
+      - requirements-voice.txt
+      - .github/workflows/voice-test.yml
+  workflow_dispatch:
+    inputs:
+      line:
+        description: Line to speak (blank = default sample)
+        required: false
+
+jobs:
+  speak:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Install ffmpeg
+        run: command -v ffmpeg || (sudo apt-get update && sudo apt-get install -y --no-install-recommends ffmpeg)
+
+      - name: Install voice cloning (Chatterbox)
+        run: |
+          pip install torch==2.6.0 torchaudio==2.6.0 --index-url https://download.pytorch.org/whl/cpu
+          pip install -r requirements-voice.txt
+
+      - name: Cache voice model
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/huggingface
+          key: hf-chatterbox-${{ hashFiles('requirements-voice.txt') }}
+
+      - name: Speak a sample line
+        env:
+          LINE: ${{ github.event.inputs.line }}
+        run: |
+          python tools/chatterbox_tts.py $LINE | tee speak.log
+          test -s output/chatterbox_test.mp3
+          ffprobe -v error -show_entries format=duration -of csv=p=0 output/chatterbox_test.mp3
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: chatterbox-sample
+          path: |
+            output/chatterbox_test.mp3
+            speak.log
+          if-no-files-found: ignore
+          retention-days: 14
