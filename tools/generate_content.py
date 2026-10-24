@@ -1,7 +1,7 @@
 """
 generate_content.py
 Uses Claude (Anthropic) to generate a branded coaching tip for Travis Dixon.
-Returns: { category, tip, caption, hashtags }
+Returns: { category, hook, tip, script, caption, hashtags }
 """
 
 import os
@@ -107,18 +107,24 @@ WRITING RULES:
 - No fluff, no clichés like "communication is key"
 - The "caption" is for Instagram/TikTok — 2-3 sentences, punchy, ends with a CTA
 - Always end the caption with EXACTLY these three lines (do NOT skip any):
-  "📞 Book your FREE 15-min strategy call: https://calendly.com/travd40/15-minute-strategy-call\n📖 Get the book: https://www.amazon.com/dp/B0GPSNXGY8\n🌐 Visit: https://travisdixoncoaching.com"
+  "📞 Book your FREE 15-min strategy call: https://travisdixoncoaching.com/freecall\n📖 Get the book: https://www.amazon.com/dp/B0GPSNXGY8\n🌐 Visit: https://travisdixoncoaching.com"
 - The FREE call CTA must come FIRST — it's the primary action we want readers to take
 - Hashtags: 8-12 relevant tags for relationship coaching, men, couples, personal growth
 - The "hook" is the first thing spoken in the video (about 2 seconds): ONE short question, 10 words or fewer,
   in the voice of someone struggling in their relationship, that the tip answers.
   Examples: "Why does he shut down every time we argue?" / "Why does she bring up old fights?"
+- The "script" is what Travis SAYS in the video right after the hook: 55-85 words, 4-6 short spoken
+  sentences, first person, plain talk. Structure: name the real moment the viewer lives through,
+  say why it happens, then give ONE specific thing a trained partner does instead. It must expand
+  the tip, not repeat it word for word. No hashtags, emojis, links, or sign-off — the call to action
+  is added separately.
 
 Return ONLY valid JSON in this exact format, no extra text:
 {
   "category": "CATEGORY NAME",
   "hook": "Question a struggling partner would ask, 10 words max?",
   "tip": "The short tip that appears on video (12-18 words)",
+  "script": "What Travis says after the hook (55-85 words)",
   "caption": "Instagram/TikTok caption with CTA",
   "hashtags": "#tag1 #tag2 #tag3"
 }"""
@@ -130,7 +136,7 @@ def _call_claude_with_retry(client, user_prompt: str):
         try:
             return client.messages.create(
                 model=MODEL,
-                max_tokens=512,
+                max_tokens=1024,
                 system=SYSTEM_PROMPT,
                 messages=[{"role": "user", "content": user_prompt}],
                 timeout=REQUEST_TIMEOUT_S,
@@ -158,6 +164,19 @@ def clean_hook(hook) -> str | None:
     if not hook.endswith("?") or len(hook.split()) > 12:
         return None
     return hook
+
+
+def clean_script(script) -> str | None:
+    """The spoken body, or None so the voiceover falls back to the short tip."""
+    if not isinstance(script, str):
+        return None
+    script = " ".join(script.split())
+    if len(script.split()) < 25:
+        return None
+    words = script.split()
+    if len(words) > 110:
+        script = " ".join(words[:110]).rstrip(",;:") + "."
+    return script
 
 
 def headline_already_posted(tip: str) -> bool:
@@ -234,6 +253,7 @@ def generate_content(post_number: int = 0, topic: str | None = None) -> dict:
         content["tip"] = " ".join(words[:18])
 
     content["hook"] = clean_hook(content.get("hook"))
+    content["script"] = clean_script(content.get("script"))
 
     return content
 

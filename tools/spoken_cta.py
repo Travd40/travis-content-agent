@@ -23,8 +23,10 @@ def spoken_cta(post_number: int) -> str:
 
 
 def voiceover_script(content: dict, post_number: int) -> str:
-    """Hook question first (the first ~2 seconds), then the tip, then the ask."""
-    parts = [content.get("hook"), content["tip"], spoken_cta(post_number)]
+    """Hook question first (the first ~2 seconds), then the spoken script (or the
+    short tip when there is none), then the ask."""
+    body = content.get("script") or content["tip"]
+    parts = [content.get("hook"), body, spoken_cta(post_number)]
     return " ... ".join(p for p in parts if p)
 
 

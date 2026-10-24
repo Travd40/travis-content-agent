@@ -139,12 +139,12 @@ def run_pipeline():
 
     # Step 1.5: Voiceover (hook question + tip + spoken CTA). Optional — a TTS failure or a
     # missing ELEVENLABS_API_KEY just means the video renders silent as before.
-    voiceover_path, voiceover_duration = None, None
+    voiceover_path, voiceover_duration, captions = None, None, None
     try:
         from elevenlabs_tts import generate_voiceover
         vo = generate_voiceover(voiceover_script(content, post_count))
         if vo:
-            voiceover_path, voiceover_duration = vo
+            voiceover_path, voiceover_duration, captions = vo
     except Exception as e:
         print(f"[agent] Voiceover skipped ({type(e).__name__}: {e})")
 
@@ -155,7 +155,8 @@ def run_pipeline():
     try:
         video_path = render_video(content, filename,
                                   audio_path=voiceover_path,
-                                  audio_duration=voiceover_duration)
+                                  audio_duration=voiceover_duration,
+                                  captions=captions)
     except Exception as e:
         record_failure("render_video", e)
         raise
@@ -206,6 +207,7 @@ def run_pipeline():
                 tip=content["tip"],
                 caption=content["caption"],
                 hashtags=content["hashtags"],
+                hook=content.get("hook"),
             )
             print(f"[agent] YouTube result: {youtube_result}")
         except Exception as e:

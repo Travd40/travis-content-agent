@@ -1,8 +1,9 @@
 """
 youtube_publish.py
 Uploads the day's rendered video to YouTube as a public Short, right after
-the Meta (IG/FB) publish. Title comes from the tip, description from the
-caption + Travis's funnel CTAs, tags from the hashtags.
+the Meta (IG/FB) publish. Title comes from the hook question (the tip when
+there is none), description from the caption + Travis's funnel CTAs, tags
+from the hashtags.
 
 Env vars required (GitHub Actions secrets, same values as the
 travis_coaching_site repo):
@@ -25,9 +26,10 @@ MAX_TITLE = 100
 # ---------------------------------------------------------------------------
 # Metadata builders — pure functions so they're trivially unit-testable.
 # ---------------------------------------------------------------------------
-def build_title(tip: str) -> str:
-    """Tip → YouTube title, capped at 100 chars on a word boundary."""
-    t = " ".join(tip.split())
+def build_title(tip: str, hook: str | None = None) -> str:
+    """Hook question (what a struggling viewer would search) → YouTube title,
+    falling back to the tip; capped at 100 chars on a word boundary."""
+    t = " ".join((hook or tip).split())
     if len(t) <= MAX_TITLE:
         return t
     cut = t[: MAX_TITLE - 1]
@@ -38,15 +40,14 @@ def build_title(tip: str) -> str:
 
 def build_description(caption: str, hashtags: str) -> str:
     website = os.getenv("COACHING_WEBSITE", "travisdixoncoaching.com")
-    calendly = os.getenv("CALENDLY_LINK", "https://calendly.com/travd40/15-minute-strategy-call")
     book = os.getenv("BOOK_LINK", "https://www.amazon.com/dp/B0GPSNXGY8")
     site_url = website if website.startswith("http") else f"https://{website}"
     funnel = (
         "——————————\n\n"
+        "📅 BOOK A FREE 15-MIN STRATEGY CALL:\n"
+        f"{site_url}/freecall?utm_source=youtube&utm_medium=shorts\n\n"
         '📧 FREE 5-DAY EMAIL COURSE — "From Stray to Trained":\n'
         f"{site_url}/5days\n\n"
-        "📅 BOOK A FREE 15-MIN STRATEGY CALL:\n"
-        f"{calendly}\n\n"
         "📖 GET THE BOOK — I Am A Dog:\n"
         f"{book}\n\n"
         f"🌐 {website}"
@@ -94,7 +95,7 @@ def _build_credentials():
     return creds
 
 
-def publish(video_path: str, tip: str, caption: str, hashtags: str) -> dict:
+def publish(video_path: str, tip: str, caption: str, hashtags: str, hook: str | None = None) -> dict:
     """Uploads the video. Returns {'video_id': ..., 'url': ...}."""
     from googleapiclient.discovery import build
     from googleapiclient.errors import HttpError
@@ -104,7 +105,7 @@ def publish(video_path: str, tip: str, caption: str, hashtags: str) -> dict:
     if not video.exists():
         raise FileNotFoundError(f"video not found: {video}")
 
-    title = build_title(tip)
+    title = build_title(tip, hook)
     description = build_description(caption, hashtags)
     tags = extract_tags(hashtags)
 

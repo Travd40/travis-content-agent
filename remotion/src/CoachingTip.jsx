@@ -53,15 +53,51 @@ function AnimatedWords({ text, startFrame, fps }) {
   );
 }
 
-export const CoachingTip = ({ category, tip, hook, website, coachName, bookLink, calendlyLink, audioSrc }) => {
+// Voiceover captions: the phrase being spoken right now, popping in as it starts
+function SpokenCaption({ captions, fps }) {
+  const frame = useCurrentFrame();
+  const t = frame / fps;
+  let idx = -1;
+  for (let i = 0; i < captions.length; i++) {
+    if (captions[i].start <= t) idx = i;
+  }
+  if (idx < 0) return null;
+  const cap = captions[idx];
+  // Hold each phrase until the next one starts, but clear it after a long silence
+  const next = captions[idx + 1];
+  const holdUntil = next ? next.start : cap.end + 1.5;
+  if (t > holdUntil) return null;
+  const local = frame - Math.round(cap.start * fps);
+  const pop = spring({ fps, frame: local, from: 0.85, to: 1, config: { damping: 14, stiffness: 180 } });
+  const opacity = interpolate(local, [0, 4], [0, 1], { extrapolateRight: 'clamp' });
+  return (
+    <p style={{
+      color: idx === 0 ? COLORS.goldLight : COLORS.white,
+      fontFamily: '"Arial", sans-serif',
+      fontSize: 76,
+      fontWeight: 800,
+      lineHeight: 1.2,
+      textAlign: 'center',
+      margin: 0,
+      opacity,
+      transform: `scale(${pop})`,
+      textShadow: '0 4px 18px rgba(0,0,0,0.6)',
+    }}>
+      {cap.text}
+    </p>
+  );
+}
+
+export const CoachingTip = ({ category, tip, hook, website, coachName, bookLink, calendlyLink, audioSrc, captions }) => {
   const frame = useCurrentFrame();
   const { fps, durationInFrames } = useVideoConfig();
+  const hasCaptions = Array.isArray(captions) && captions.length > 0;
   // CTA fades in ~2s before the end, whatever the video length is
   const ctaStart = Math.max(150, durationInFrames - 60);
 
   // --- Hook question: owns the first ~2s, then the tip animates in ---
   const tipStart = hook ? 75 : 55;
-  const hookOpacity = hook
+  const hookOpacity = hook && !hasCaptions
     ? interpolate(frame, [0, 8, 58, 70], [0, 1, 1, 0], {
         extrapolateLeft: 'clamp',
         extrapolateRight: 'clamp',
@@ -98,7 +134,7 @@ export const CoachingTip = ({ category, tip, hook, website, coachName, bookLink,
     extrapolateRight: 'clamp',
   });
 
-  // --- Coach Tee figure (bottom right) ---
+  // --- Travis's photo (bottom right) ---
   const teeEnter = spring({ fps, frame: frame - 40, from: 0, to: 1, config: { damping: 14, stiffness: 90 } });
   const teeBob = 6 * Math.sin(frame / 20);
   const teeY = interpolate(teeEnter, [0, 1], [280, 0]) + teeBob;
@@ -199,20 +235,24 @@ export const CoachingTip = ({ category, tip, hook, website, coachName, bookLink,
         alignItems: 'center',
         justifyContent: 'center',
       }}>
-        <p style={{
-          color: COLORS.offWhite,
-          fontSize: 58,
-          lineHeight: 1.45,
-          textAlign: 'center',
-          margin: 0,
-          fontStyle: 'italic',
-        }}>
-          <AnimatedWords text={tip} startFrame={tipStart} fps={fps} />
-        </p>
+        {hasCaptions ? (
+          <SpokenCaption captions={captions} fps={fps} />
+        ) : (
+          <p style={{
+            color: COLORS.offWhite,
+            fontSize: 58,
+            lineHeight: 1.45,
+            textAlign: 'center',
+            margin: 0,
+            fontStyle: 'italic',
+          }}>
+            <AnimatedWords text={tip} startFrame={tipStart} fps={fps} />
+          </p>
+        )}
       </div>
 
       {/* Hook question (first ~2 seconds) */}
-      {hook ? (
+      {hook && !hasCaptions ? (
         <div style={{
           position: 'absolute',
           top: 470,
@@ -249,23 +289,30 @@ export const CoachingTip = ({ category, tip, hook, website, coachName, bookLink,
         backgroundColor: COLORS.gold,
       }} />
 
-      {/* Coach Tee figure */}
+      {/* Travis's photo — viewers should see the real coach behind the voice */}
       <div style={{
         position: 'absolute',
-        right: -36,
-        bottom: -24,
+        right: 40,
+        bottom: 96,
+        width: 250,
+        height: 250,
+        borderRadius: '50%',
+        overflow: 'hidden',
+        border: `6px solid ${COLORS.gold}`,
+        boxShadow: '0 12px 40px rgba(0,0,0,0.6)',
+        backgroundColor: COLORS.white,
         opacity: teeOpacity,
         transform: `translateY(${teeY}px) rotate(${teeRot}deg)`,
         transformOrigin: 'bottom center',
       }}>
-        <Img src={staticFile('coach-tee-full.png')} style={{ width: 340, height: 'auto', display: 'block' }} />
+        <Img src={staticFile('travis.jpg')} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
       </div>
 
-      {/* Coach Tee name tag */}
+      {/* Name tag */}
       <div style={{
         position: 'absolute',
-        right: 96,
-        bottom: 452,
+        right: 70,
+        bottom: 362,
         opacity: tagOpacity,
         transform: `translateY(${teeBob}px)`,
       }}>
@@ -280,11 +327,11 @@ export const CoachingTip = ({ category, tip, hook, website, coachName, bookLink,
           borderRadius: 999,
           textTransform: 'uppercase',
         }}>
-          Coach Tee
+          Travis Dixon
         </div>
       </div>
 
-      {/* CTA — shifted left so Coach Tee has his corner */}
+      {/* CTA — shifted left so the photo has its corner */}
       <div style={{
         position: 'absolute',
         bottom: 110,
@@ -330,7 +377,7 @@ export const CoachingTip = ({ category, tip, hook, website, coachName, bookLink,
           fontSize: 20,
           opacity: 0.9,
         }}>
-          calendly.com/travd40/15-minute-strategy-call
+          travisdixoncoaching.com/freecall
         </div>
         {bookLink && (
           <div style={{
