@@ -1,7 +1,8 @@
 """
 render_video.py
 Triggers Remotion CLI to render a branded coaching tip video.
-Output: MP4 file at the specified path (1080x1920, 30fps, 7 seconds)
+Output: MP4 file at the specified path (1080x1920, 30fps; at least 7 seconds,
+longer when a voiceover sets the length)
 """
 
 import os
@@ -17,13 +18,16 @@ REMOTION_DIR = Path(__file__).parent.parent / "remotion"
 OUTPUT_DIR   = Path(__file__).parent.parent / "output"
 
 
-def render_video(content: dict, output_filename: str = None, audio_path: str = None, audio_duration: float = None) -> str:
+def render_video(content: dict, output_filename: str = None, audio_path: str = None,
+                 audio_duration: float = None, captions: list | None = None) -> str:
     """
     Renders a coaching tip video using Remotion.
 
     Args:
         content: dict with keys: category, tip (website/coachName pulled from env)
         output_filename: optional filename; auto-generated if not provided
+        captions: optional [{"text", "start", "end"}] phrases (seconds) shown in
+            sync with the voiceover; without them the video shows the tip
 
     Returns:
         Absolute path to the rendered MP4 file
@@ -52,6 +56,7 @@ def render_video(content: dict, output_filename: str = None, audio_path: str = N
 
     props = {
         "audioSrc":         audio_src,
+        "captions":         captions if audio_src else None,
         "durationInFrames": duration_frames,
         "category":     content.get("category", "COACHING TIP"),
         "tip":          content.get("tip", ""),

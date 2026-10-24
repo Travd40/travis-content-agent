@@ -137,16 +137,24 @@ def run_pipeline():
     print(f"[agent] Category : {content['category']}")
     print(f"[agent] Tip      : {content['tip']}")
 
-    # Step 1.5: Voiceover (hook question + tip + spoken CTA). Optional — a TTS failure or a
-    # missing ELEVENLABS_API_KEY just means the video renders silent as before.
-    voiceover_path, voiceover_duration = None, None
-    try:
-        from elevenlabs_tts import generate_voiceover
-        vo = generate_voiceover(voiceover_script(content, post_count))
-        if vo:
-            voiceover_path, voiceover_duration = vo
-    except Exception as e:
-        print(f"[agent] Voiceover skipped ({type(e).__name__}: {e})")
+    # Step 1.5: Voiceover (hook question + script + spoken CTA). VOICE_ENGINE=chatterbox
+    # speaks in Travis's cloned voice for free; otherwise (or if that fails) ElevenLabs.
+    # Optional either way — with no voice the video renders silent as before.
+    voiceover_path, voiceover_duration, captions = None, None, None
+    script = voiceover_script(content, post_count)
+    engines = ["chatterbox", "elevenlabs"] if os.getenv("VOICE_ENGINE") == "chatterbox" else ["elevenlabs"]
+    for engine in engines:
+        try:
+            if engine == "chatterbox":
+                from chatterbox_tts import generate_voiceover
+            else:
+                from elevenlabs_tts import generate_voiceover
+            vo = generate_voiceover(script)
+            if vo:
+                voiceover_path, voiceover_duration, captions = vo
+                break
+        except Exception as e:
+            print(f"[agent] {engine} voiceover skipped ({type(e).__name__}: {e})")
 
     # Step 2: Render video
     print(f"\n[agent] Rendering video...")
@@ -155,7 +163,8 @@ def run_pipeline():
     try:
         video_path = render_video(content, filename,
                                   audio_path=voiceover_path,
-                                  audio_duration=voiceover_duration)
+                                  audio_duration=voiceover_duration,
+                                  captions=captions)
     except Exception as e:
         record_failure("render_video", e)
         raise
@@ -206,6 +215,7 @@ def run_pipeline():
                 tip=content["tip"],
                 caption=content["caption"],
                 hashtags=content["hashtags"],
+                hook=content.get("hook"),
             )
             print(f"[agent] YouTube result: {youtube_result}")
         except Exception as e:
