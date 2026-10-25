@@ -1,5 +1,5 @@
 {
-  "total_posts": 172,
+  "total_posts": 173,
   "history": [
     {
       "post_number": 1,
@@ -3195,6 +3195,29 @@
       "youtube_result": {
         "video_id": "rqd83ntigzo",
         "url": "https://www.youtube.com/watch?v=rqd83ntigzo"
+      }
+    },
+    {
+      "post_number": 173,
+      "timestamp": "2026-10-25T17:03:20.705609",
+      "category": "COUPLES COACHING",
+      "tip": "Close the loop out loud. Unfinished conversations don't disappear \u2014 they get filed and reopened later.",
+      "hook": "Why does she keep bringing up the same fight?",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0173_COUPLES_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0173_COUPLES_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "17929531554177953",
+          "container_id": "18577455361077598"
+        },
+        "facebook": {
+          "id": "1104035428891122"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0173_COUPLES_COACHING.mp4"
+      },
+      "youtube_result": {
+        "video_id": "qYXhJuTttt4",
+        "url": "https://www.youtube.com/watch?v=qYXhJuTttt4"
       }
     }
   ]
