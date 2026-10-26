@@ -1,5 +1,5 @@
 {
-  "total_posts": 173,
+  "total_posts": 174,
   "history": [
     {
       "post_number": 1,
@@ -3218,6 +3218,29 @@
       "youtube_result": {
         "video_id": "qYXhJuTttt4",
         "url": "https://www.youtube.com/watch?v=qYXhJuTttt4"
+      }
+    },
+    {
+      "post_number": 174,
+      "timestamp": "2026-10-26T19:04:59.589859",
+      "category": "MEN'S COACHING",
+      "tip": "Guard the connection after the win. Most men disconnect the moment things feel good again.",
+      "hook": "Why does she pull away right after we get close?",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0174_MENS_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0174_MENS_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "17921879238445042",
+          "container_id": "18577804108077598"
+        },
+        "facebook": {
+          "id": "1457405726492200"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0174_MENS_COACHING.mp4"
+      },
+      "youtube_result": {
+        "video_id": "e6YhCE-B0uM",
+        "url": "https://www.youtube.com/watch?v=e6YhCE-B0uM"
       }
     }
   ]
