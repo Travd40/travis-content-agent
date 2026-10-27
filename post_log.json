@@ -1,5 +1,5 @@
 {
-  "total_posts": 174,
+  "total_posts": 175,
   "history": [
     {
       "post_number": 1,
@@ -3241,6 +3241,29 @@
       "youtube_result": {
         "video_id": "e6YhCE-B0uM",
         "url": "https://www.youtube.com/watch?v=e6YhCE-B0uM"
+      }
+    },
+    {
+      "post_number": 175,
+      "timestamp": "2026-10-27T18:38:30.572367",
+      "category": "COMMUNICATION",
+      "tip": "Argue the problem, not the person. The second you attack character, she stops hearing the complaint.",
+      "hook": "Why does every disagreement with her feel like a trial?",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0175_COMMUNICATION.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0175_COMMUNICATION_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18082177883357855",
+          "container_id": "18578089186077598"
+        },
+        "facebook": {
+          "id": "1103806035876141"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0175_COMMUNICATION.mp4"
+      },
+      "youtube_result": {
+        "video_id": "l-UVoDXOH0E",
+        "url": "https://www.youtube.com/watch?v=l-UVoDXOH0E"
       }
     }
   ]
