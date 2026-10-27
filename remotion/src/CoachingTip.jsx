@@ -377,7 +377,7 @@ export const CoachingTip = ({ category, tip, hook, website, coachName, bookLink,
           fontSize: 20,
           opacity: 0.9,
         }}>
-          travisdixoncoaching.com/freecall
+          travisdixoncoaching.com/call
         </div>
         {bookLink && (
           <div style={{

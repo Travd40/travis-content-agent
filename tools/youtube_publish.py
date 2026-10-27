@@ -150,6 +150,32 @@ def publish(video_path: str, tip: str, caption: str, hashtags: str, hook: str | 
     url = f"https://www.youtube.com/watch?v={video_id}"
     print(f"[youtube] ✓ Uploaded: {url}")
 
+    # Best-effort CTA comment: Shorts have no clickable buttons, so a comment
+    # from the channel carrying the booking link is the next best tap target.
+    # Needs the youtube.force-ssl scope on the refresh token; if the token
+    # lacks it, log and move on — a comment failure must never block the post.
+    try:
+        youtube.commentThreads().insert(
+            part="snippet",
+            body={
+                "snippet": {
+                    "videoId": video_id,
+                    "topLevelComment": {
+                        "snippet": {
+                            "textOriginal": (
+                                "📅 Book your FREE 15-minute call with Travis: "
+                                "https://travisdixoncoaching.com/call\n"
+                                "📧 Free 5-day course: https://travisdixoncoaching.com/5days"
+                            )
+                        }
+                    },
+                }
+            },
+        ).execute()
+        print("[youtube] ✓ Posted CTA comment")
+    except Exception as exc:
+        print(f"[youtube] CTA comment skipped ({exc}); pin one manually if wanted")
+
     playlist_id = os.getenv("YOUTUBE_PLAYLIST_ID", "").strip()
     if playlist_id:
         youtube.playlistItems().insert(
