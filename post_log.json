@@ -1,5 +1,5 @@
 {
-  "total_posts": 175,
+  "total_posts": 176,
   "history": [
     {
       "post_number": 1,
@@ -3264,6 +3264,29 @@
       "youtube_result": {
         "video_id": "l-UVoDXOH0E",
         "url": "https://www.youtube.com/watch?v=l-UVoDXOH0E"
+      }
+    },
+    {
+      "post_number": 176,
+      "timestamp": "2026-10-28T18:45:54.828323",
+      "category": "TRUST & SAFETY",
+      "tip": "Make your private self match your public self. She's watching for the gap, and the gap is the lie.",
+      "hook": "Why doesn't she believe me even when I'm telling the truth?",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0176_TRUST_and_SAFETY.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0176_TRUST_and_SAFETY_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18047808233830193",
+          "container_id": "18578387467077598"
+        },
+        "facebook": {
+          "id": "2605951733175010"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0176_TRUST_and_SAFETY.mp4"
+      },
+      "youtube_result": {
+        "video_id": "K8mi-rGKOTg",
+        "url": "https://www.youtube.com/watch?v=K8mi-rGKOTg"
       }
     }
   ]
