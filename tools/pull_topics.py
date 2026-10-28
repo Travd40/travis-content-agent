@@ -32,15 +32,23 @@ def _load_list(path: Path) -> list[str]:
 
 def merge(incoming: list[str], queue: list[str], seen: list[str]) -> tuple[list[str], list[str], int]:
     """Pure: append unseen incoming topics to queue; return (queue, seen, added)."""
-    known = {t.strip() for t in queue} | {t.strip() for t in seen}
+    queued = {t.strip() for t in queue}
+    known = queued | {t.strip() for t in seen}
+    seen_set = {t.strip() for t in seen}
     added = 0
     for t in incoming:
         t = t.strip()
-        if t and t not in known:
+        if not t:
+            continue
+        if t not in known:
             queue.append(t)
-            seen.append(t)
             known.add(t)
             added += 1
+        if t not in seen_set:
+            # Record every incoming topic, even one already queued by hand, so a
+            # consumed queue entry is never re-imported from the unchanged source.
+            seen.append(t)
+            seen_set.add(t)
     return queue, seen, added
 
 
