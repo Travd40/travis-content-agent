@@ -9,6 +9,8 @@ import re
 import json
 import time
 import anthropic
+
+from brand_caption import brand_caption, strip_dashes
 from pathlib import Path
 from dotenv import load_dotenv
 
@@ -105,11 +107,13 @@ WRITING RULES:
 - Tone: direct, structured, authoritative but warm — like a coach, not a therapist
 - Use the "trained partner" framework naturally (don't force it every time)
 - No fluff, no clichés like "communication is key"
+- Never use em dashes or en dashes anywhere. Use a comma, a period, or two sentences instead.
+- The caption's first line is exactly "Travis Dixon Coaching | Relationship coach" so searches for the name find the post
 - The "caption" is for Instagram/TikTok — 2-3 sentences, punchy, ends with a CTA
 - Always end the caption with EXACTLY these three lines (do NOT skip any):
   "📞 Book your FREE 15-min strategy call: https://travisdixoncoaching.com/freecall\n📖 Get the book: https://www.amazon.com/dp/B0GPSNXGY8\n🌐 Visit: https://travisdixoncoaching.com"
 - The FREE call CTA must come FIRST — it's the primary action we want readers to take
-- Hashtags: 8-12 relevant tags for relationship coaching, men, couples, personal growth
+- Hashtags: 8-12 relevant tags for relationship coaching, men, couples, personal growth. Always include #TravisDixonCoaching #CoachTee #TrainedPartner #RelationshipCoach #CharlotteNC first
 - The "hook" is the first thing spoken in the video (about 2 seconds): ONE short question, 10 words or fewer,
   in the voice of someone struggling in their relationship, that the tip answers.
   Examples: "Why does he shut down every time we argue?" / "Why does she bring up old fights?"
@@ -254,6 +258,10 @@ def generate_content(post_number: int = 0, topic: str | None = None) -> dict:
 
     content["hook"] = clean_hook(content.get("hook"))
     content["script"] = clean_script(content.get("script"))
+    content["tip"] = strip_dashes(content.get("tip", ""))
+    if content["script"]:
+        content["script"] = strip_dashes(content["script"])
+    content["caption"], content["hashtags"] = brand_caption(content.get("caption", ""), content.get("hashtags", ""))
 
     return content
 

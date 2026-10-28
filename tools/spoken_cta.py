@@ -9,6 +9,8 @@ Set VOICEOVER_CTA to override the rotation with one fixed line.
 
 import os
 
+BRAND_INTRO = "Coach Tee here from Travis Dixon Coaching."
+
 SPOKEN_CTAS = [
     "Follow so you don't miss tomorrow's tip.",
     "Want help with this? The free call link is on my channel.",
@@ -26,7 +28,8 @@ def voiceover_script(content: dict, post_number: int) -> str:
     """Hook question first (the first ~2 seconds), then the spoken script (or the
     short tip when there is none), then the ask."""
     body = content.get("script") or content["tip"]
-    parts = [content.get("hook"), body, spoken_cta(post_number)]
+    # The name is spoken in the first seconds so Reels transcription indexes it.
+    parts = [content.get("hook"), BRAND_INTRO, body, spoken_cta(post_number)]
     return " ... ".join(p for p in parts if p)
 
 

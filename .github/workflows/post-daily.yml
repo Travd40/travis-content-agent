@@ -82,6 +82,9 @@ jobs:
             sudo apt-get install -y --no-install-recommends -o Acquire::Retries=3 ffmpeg
           fi
 
+      - name: Pull topics queued by the YouTube agent (coaching site repo)
+        run: python tools/pull_topics.py
+
       - name: Run agent
         env:
           ANTHROPIC_API_KEY:        ${{ secrets.ANTHROPIC_API_KEY }}
@@ -117,10 +120,10 @@ jobs:
       - name: Persist post_log.json and topic_queue.json back to repo
         if: always()  # commit even if upstream steps had warnings, so dedup memory updates
         run: |
-          if [ -n "$(git status --porcelain post_log.json topic_queue.json)" ]; then
+          if [ -n "$(git status --porcelain post_log.json topic_queue.json topics_seen.json)" ]; then
             git config user.name  "github-actions[bot]"
             git config user.email "github-actions[bot]@users.noreply.github.com"
-            git add post_log.json topic_queue.json
+            git add post_log.json topic_queue.json topics_seen.json
             git commit -m "Update post log and topic queue [skip ci]"
             git push
           else
