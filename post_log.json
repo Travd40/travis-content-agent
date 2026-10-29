@@ -1,5 +1,5 @@
 {
-  "total_posts": 176,
+  "total_posts": 177,
   "history": [
     {
       "post_number": 1,
@@ -3287,6 +3287,29 @@
       "youtube_result": {
         "video_id": "K8mi-rGKOTg",
         "url": "https://www.youtube.com/watch?v=K8mi-rGKOTg"
+      }
+    },
+    {
+      "post_number": 177,
+      "timestamp": "2026-10-29T18:49:40.051412",
+      "category": "COUPLES COACHING",
+      "tip": "Address the first flinch, not the fifth fight. Small friction ignored becomes big rupture rehearsed.",
+      "hook": "Why does every small issue turn into a huge fight?",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0177_COUPLES_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0177_COUPLES_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18076188188569744",
+          "container_id": "18578714944077598"
+        },
+        "facebook": {
+          "id": "1100810312560949"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0177_COUPLES_COACHING.mp4"
+      },
+      "youtube_result": {
+        "video_id": "wupmHxdsWaY",
+        "url": "https://www.youtube.com/watch?v=wupmHxdsWaY"
       }
     }
   ]
