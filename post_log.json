@@ -1,5 +1,5 @@
 {
-  "total_posts": 177,
+  "total_posts": 178,
   "history": [
     {
       "post_number": 1,
@@ -3310,6 +3310,29 @@
       "youtube_result": {
         "video_id": "wupmHxdsWaY",
         "url": "https://www.youtube.com/watch?v=wupmHxdsWaY"
+      }
+    },
+    {
+      "post_number": 178,
+      "timestamp": "2026-10-30T18:24:00.295181",
+      "category": "COMMUNICATION",
+      "tip": "You're not fighting to connect. You're fighting to win the verdict. Drop the case.",
+      "hook": "Why do our fights feel like a trial every time?",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0178_COMMUNICATION.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0178_COMMUNICATION_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18080418116725286",
+          "container_id": "18578971588077598"
+        },
+        "facebook": {
+          "id": "1144384567967607"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0178_COMMUNICATION.mp4"
+      },
+      "youtube_result": {
+        "video_id": "zboDG6OK4sM",
+        "url": "https://www.youtube.com/watch?v=zboDG6OK4sM"
       }
     }
   ]
