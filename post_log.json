@@ -1,5 +1,5 @@
 {
-  "total_posts": 178,
+  "total_posts": 179,
   "history": [
     {
       "post_number": 1,
@@ -3333,6 +3333,29 @@
       "youtube_result": {
         "video_id": "zboDG6OK4sM",
         "url": "https://www.youtube.com/watch?v=zboDG6OK4sM"
+      }
+    },
+    {
+      "post_number": 179,
+      "timestamp": "2026-10-31T17:32:49.673798",
+      "category": "COMMUNICATION",
+      "tip": "State your goal before you state your grievance. She needs to know where the conversation is heading.",
+      "hook": "Why does every serious talk turn into a fight?",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0179_COMMUNICATION.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0179_COMMUNICATION_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18497674579097061",
+          "container_id": "18579221842077598"
+        },
+        "facebook": {
+          "id": "1614003297081121"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0179_COMMUNICATION.mp4"
+      },
+      "youtube_result": {
+        "video_id": "gAOnh8BZX20",
+        "url": "https://www.youtube.com/watch?v=gAOnh8BZX20"
       }
     }
   ]
