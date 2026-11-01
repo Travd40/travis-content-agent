@@ -1,5 +1,5 @@
 {
-  "total_posts": 179,
+  "total_posts": 180,
   "history": [
     {
       "post_number": 1,
@@ -3356,6 +3356,29 @@
       "youtube_result": {
         "video_id": "gAOnh8BZX20",
         "url": "https://www.youtube.com/watch?v=gAOnh8BZX20"
+      }
+    },
+    {
+      "post_number": 180,
+      "timestamp": "2026-11-01T18:24:28.035556",
+      "category": "TRUST & SAFETY",
+      "tip": "Credit the repair she gave you. Unacknowledged forgiveness quietly becomes the resentment you'll meet later.",
+      "hook": "Why does she still bring up things I already apologized for?",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0180_TRUST_and_SAFETY.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0180_TRUST_and_SAFETY_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "17906450607354652",
+          "container_id": "18579522142077598"
+        },
+        "facebook": {
+          "id": "1542234861296019"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0180_TRUST_and_SAFETY.mp4"
+      },
+      "youtube_result": {
+        "video_id": "naltHrLuLhc",
+        "url": "https://www.youtube.com/watch?v=naltHrLuLhc"
       }
     }
   ]
