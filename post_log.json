@@ -1,5 +1,5 @@
 {
-  "total_posts": 182,
+  "total_posts": 183,
   "history": [
     {
       "post_number": 1,
@@ -3425,6 +3425,28 @@
       "youtube_result": {
         "video_id": "GYm9cXGfvEI",
         "url": "https://www.youtube.com/watch?v=GYm9cXGfvEI"
+      }
+    },
+    {
+      "post_number": 183,
+      "timestamp": "2026-11-04T20:17:13.579588",
+      "category": "COMMUNICATION",
+      "tip": "Narrate what you're doing in the conversation. Meta-talk breaks the loop before it becomes a fight.",
+      "hook": "Why does every conversation turn into a fight?",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0183_COMMUNICATION.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0183_COMMUNICATION_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "error": "IG container errored: {'id': '18580308628077598', 'status': 'Error: Media upload has failed with error code 2207077', 'status_code': 'ERROR'}"
+        },
+        "facebook": {
+          "id": "1687968569718617"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0183_COMMUNICATION.mp4"
+      },
+      "youtube_result": {
+        "video_id": "lyciESuQQVo",
+        "url": "https://www.youtube.com/watch?v=lyciESuQQVo"
       }
     }
   ]
