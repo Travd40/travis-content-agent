@@ -1,6 +1,6 @@
 """
 generate_content.py
-Uses Claude (Anthropic) to generate a branded coaching tip for Travis Dixon.
+Uses an AI model (free Gemini by default, see llm.py) to generate a branded coaching tip for Travis Dixon.
 Returns: { category, hook, tip, script, caption, hashtags }
 """
 
@@ -8,13 +8,12 @@ import os
 import re
 import json
 import time
-import anthropic
+import llm
 from pathlib import Path
 from dotenv import load_dotenv
 
 load_dotenv(override=True)
 
-MODEL = "claude-opus-4-7"
 REQUEST_TIMEOUT_S = 60.0
 MAX_ATTEMPTS = 5
 BACKOFF_BASE_S = 4  # 4s, 8s, 16s, 32s between attempts 1→5
@@ -130,32 +129,6 @@ Return ONLY valid JSON in this exact format, no extra text:
 }"""
 
 
-def _call_claude_with_retry(client, user_prompt: str):
-    last_err = None
-    for attempt in range(1, MAX_ATTEMPTS + 1):
-        try:
-            return client.messages.create(
-                model=MODEL,
-                max_tokens=1024,
-                system=SYSTEM_PROMPT,
-                messages=[{"role": "user", "content": user_prompt}],
-                timeout=REQUEST_TIMEOUT_S,
-            )
-        except (
-            anthropic.APITimeoutError,
-            anthropic.APIConnectionError,
-            anthropic.RateLimitError,
-            anthropic.InternalServerError,
-        ) as e:
-            last_err = e
-            if attempt == MAX_ATTEMPTS:
-                break
-            wait = BACKOFF_BASE_S * (2 ** (attempt - 1))
-            print(f"[generate_content] {type(e).__name__} on attempt {attempt}/{MAX_ATTEMPTS} — retrying in {wait}s...", flush=True)
-            time.sleep(wait)
-    raise last_err
-
-
 def clean_hook(hook) -> str | None:
     """A usable opening question, or None so the video simply starts on the tip."""
     if not isinstance(hook, str):
@@ -185,8 +158,6 @@ def headline_already_posted(tip: str) -> bool:
 
 def generate_content(post_number: int = 0, topic: str | None = None) -> dict:
     """topic, when given, is used in place of the next queued topic."""
-    client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
-
     category = CATEGORIES[post_number % len(CATEGORIES)]
 
     recent = _recent_tips()
@@ -229,9 +200,8 @@ def generate_content(post_number: int = 0, topic: str | None = None) -> dict:
     used_keys = {_headline_key(h) for h in past}
 
     for attempt in range(1, MAX_FRESH_TRIES + 1):
-        message = _call_claude_with_retry(client, user_prompt)
-
-        raw = message.content[0].text.strip()
+        raw = llm.complete(SYSTEM_PROMPT, user_prompt, max_tokens=1024,
+                           timeout=REQUEST_TIMEOUT_S, tag="generate_content")
         # Strip markdown fences if present
         if raw.startswith("```"):
             raw = raw.split("\n", 1)[1].rsplit("```", 1)[0].strip()
