@@ -1,5 +1,5 @@
 {
-  "total_posts": 183,
+  "total_posts": 184,
   "history": [
     {
       "post_number": 1,
@@ -3447,6 +3447,29 @@
       "youtube_result": {
         "video_id": "lyciESuQQVo",
         "url": "https://www.youtube.com/watch?v=lyciESuQQVo"
+      }
+    },
+    {
+      "post_number": 184,
+      "timestamp": "2026-11-12T20:44:23.603589",
+      "category": "TRUST & SAFETY",
+      "tip": "Put the commitment in writing. Verbal promises evaporate \u2014 written ones become proof she can hold.",
+      "hook": "Why does she keep bringing up what I promised?",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0184_TRUST_and_SAFETY.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0184_TRUST_and_SAFETY_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "17956607565337292",
+          "container_id": "18582482995077598"
+        },
+        "facebook": {
+          "id": "1667013828103397"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0184_TRUST_and_SAFETY.mp4"
+      },
+      "youtube_result": {
+        "video_id": "XhJmTHUpujM",
+        "url": "https://www.youtube.com/watch?v=XhJmTHUpujM"
       }
     }
   ]
