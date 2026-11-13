@@ -1,5 +1,5 @@
 {
-  "total_posts": 184,
+  "total_posts": 185,
   "history": [
     {
       "post_number": 1,
@@ -3470,6 +3470,29 @@
       "youtube_result": {
         "video_id": "XhJmTHUpujM",
         "url": "https://www.youtube.com/watch?v=XhJmTHUpujM"
+      }
+    },
+    {
+      "post_number": 185,
+      "timestamp": "2026-11-13T20:14:16.485507",
+      "category": "MEN'S COACHING",
+      "tip": "His silence isn't a weapon against you \u2014 it's armor he learned to wear young.",
+      "hook": "Why does he stop talking the second things get hard?",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0185_MENS_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0185_MENS_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "17967188544211417",
+          "container_id": "18582724981077598"
+        },
+        "facebook": {
+          "id": "2107216370157175"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0185_MENS_COACHING.mp4"
+      },
+      "youtube_result": {
+        "video_id": "yL1pGmSeZLg",
+        "url": "https://www.youtube.com/watch?v=yL1pGmSeZLg"
       }
     }
   ]
