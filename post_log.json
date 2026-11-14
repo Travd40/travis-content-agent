@@ -1,5 +1,5 @@
 {
-  "total_posts": 185,
+  "total_posts": 186,
   "history": [
     {
       "post_number": 1,
@@ -3493,6 +3493,29 @@
       "youtube_result": {
         "video_id": "yL1pGmSeZLg",
         "url": "https://www.youtube.com/watch?v=yL1pGmSeZLg"
+      }
+    },
+    {
+      "post_number": 186,
+      "timestamp": "2026-11-14T18:41:51.897311",
+      "category": "MEN'S COACHING",
+      "tip": "Ask permission before you problem-solve. Unrequested advice feels like judgment, not love.",
+      "hook": "Why does she get upset when I try to help?",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0186_MENS_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0186_MENS_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "17970515490210073",
+          "container_id": "18582990367077598"
+        },
+        "facebook": {
+          "id": "2332177834238197"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0186_MENS_COACHING.mp4"
+      },
+      "youtube_result": {
+        "video_id": "bYdYcdD0v5I",
+        "url": "https://www.youtube.com/watch?v=bYdYcdD0v5I"
       }
     }
   ]
