@@ -1,5 +1,5 @@
 {
-  "total_posts": 186,
+  "total_posts": 187,
   "history": [
     {
       "post_number": 1,
@@ -3516,6 +3516,29 @@
       "youtube_result": {
         "video_id": "bYdYcdD0v5I",
         "url": "https://www.youtube.com/watch?v=bYdYcdD0v5I"
+      }
+    },
+    {
+      "post_number": 187,
+      "timestamp": "2026-11-15T19:16:59.123459",
+      "category": "COMMUNICATION",
+      "tip": "Name the stakes before you open the subject. She needs to know what you're protecting, not attacking.",
+      "hook": "Why does every serious talk turn into a fight?",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0187_COMMUNICATION.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0187_COMMUNICATION_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "17899626573415479",
+          "container_id": "18583317019077598"
+        },
+        "facebook": {
+          "id": "1926432435435421"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0187_COMMUNICATION.mp4"
+      },
+      "youtube_result": {
+        "video_id": "vbDUhKcT0zA",
+        "url": "https://www.youtube.com/watch?v=vbDUhKcT0zA"
       }
     }
   ]
