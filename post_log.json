@@ -1,5 +1,5 @@
 {
-  "total_posts": 188,
+  "total_posts": 189,
   "history": [
     {
       "post_number": 1,
@@ -3562,6 +3562,29 @@
       "youtube_result": {
         "video_id": "NeclVqtK2B0",
         "url": "https://www.youtube.com/watch?v=NeclVqtK2B0"
+      }
+    },
+    {
+      "post_number": 189,
+      "timestamp": "2026-11-17T21:33:09.278748",
+      "category": "COUPLES COACHING",
+      "tip": "Validate the feeling before you challenge the facts. Logic lands only after she feels seen.",
+      "hook": "Why does she get upset when I try to help?",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0189_COUPLES_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0189_COUPLES_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18104914481535818",
+          "container_id": "18583914982077598"
+        },
+        "facebook": {
+          "id": "1146975271662870"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0189_COUPLES_COACHING.mp4"
+      },
+      "youtube_result": {
+        "video_id": "eciGuV0wcpQ",
+        "url": "https://www.youtube.com/watch?v=eciGuV0wcpQ"
       }
     }
   ]
