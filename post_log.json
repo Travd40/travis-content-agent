@@ -1,5 +1,5 @@
 {
-  "total_posts": 189,
+  "total_posts": 190,
   "history": [
     {
       "post_number": 1,
@@ -3585,6 +3585,29 @@
       "youtube_result": {
         "video_id": "eciGuV0wcpQ",
         "url": "https://www.youtube.com/watch?v=eciGuV0wcpQ"
+      }
+    },
+    {
+      "post_number": 190,
+      "timestamp": "2026-11-18T21:10:40.306035",
+      "category": "MEN'S COACHING",
+      "tip": "Mirror her energy before you lower it. She needs to feel met, not managed.",
+      "hook": "Why does she get upset when I try to help?",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0190_MENS_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0190_MENS_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18103264280194935",
+          "container_id": "18584130460077598"
+        },
+        "facebook": {
+          "id": "1162007542939532"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0190_MENS_COACHING.mp4"
+      },
+      "youtube_result": {
+        "video_id": "7-1FaImgzcs",
+        "url": "https://www.youtube.com/watch?v=7-1FaImgzcs"
       }
     }
   ]
