@@ -88,10 +88,120 @@ function SpokenCaption({ captions, fps }) {
   );
 }
 
-export const CoachingTip = ({ category, tip, hook, website, coachName, bookLink, calendlyLink, audioSrc, captions }) => {
+// Logic and Harmony open the video in a coaching session. Each portrait starts
+// as a large card, and when Coach Tee takes over it shrinks to a small circle
+// beside the logo so the couple stay in view while he gives the tip.
+const COUPLE = {
+  logic:   { name: 'Logic',   src: 'logic.jpg',   bigLeft: 50,  smallLeft: 230 },
+  harmony: { name: 'Harmony', src: 'harmony.jpg', bigLeft: 560, smallLeft: 700 },
+};
+const CARD = { bigTop: 650, bigW: 470, bigH: 588, smallTop: 115, smallSize: 150 };
+
+function CouplePortrait({ who, speaking, shrink, enter }) {
+  const frame = useCurrentFrame();
+  const c = COUPLE[who];
+  const mix = (a, b) => a + (b - a) * shrink;
+  const width = mix(CARD.bigW, CARD.smallSize);
+  const height = mix(CARD.bigH, CARD.smallSize);
+  const lift = speaking && shrink === 0 ? 1.035 : 1;
+  const sway = shrink === 0 ? 3 * Math.sin(frame / 22 + (who === 'logic' ? 0 : 2)) : 0;
+  return (
+    <div style={{
+      position: 'absolute',
+      left: mix(c.bigLeft, c.smallLeft),
+      top: mix(CARD.bigTop, CARD.smallTop) + sway + (1 - enter) * 120,
+      width,
+      height,
+      borderRadius: mix(28, 75),
+      overflow: 'hidden',
+      border: `${mix(5, 4)}px solid ${speaking || shrink > 0 ? COLORS.goldLight : COLORS.gold}`,
+      boxShadow: speaking && shrink === 0 ? '0 0 46px rgba(232,201,106,0.45)' : '0 12px 40px rgba(0,0,0,0.6)',
+      opacity: enter * (speaking || shrink > 0 ? 1 : mix(0.6, 1)),
+      transform: `scale(${lift})`,
+      backgroundColor: '#1c1c1c',
+    }}>
+      <Img src={staticFile(c.src)} style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center 18%', display: 'block' }} />
+      <div style={{
+        position: 'absolute', left: 0, right: 0, bottom: 0,
+        padding: '34px 0 16px',
+        background: 'linear-gradient(to top, rgba(0,0,0,0.85), rgba(0,0,0,0))',
+        textAlign: 'center',
+        color: COLORS.goldLight,
+        fontFamily: '"Arial", sans-serif',
+        fontSize: 34,
+        fontWeight: 800,
+        letterSpacing: 4,
+        textTransform: 'uppercase',
+        opacity: 1 - shrink,
+      }}>
+        {c.name}
+      </div>
+    </div>
+  );
+}
+
+// What Logic or Harmony is saying right now, in a bubble that points at them
+function SceneBubble({ line, fps }) {
+  const frame = useCurrentFrame();
+  if (!line) return null;
+  const local = frame - Math.round(line.start * fps);
+  const pop = spring({ fps, frame: local, from: 0.9, to: 1, config: { damping: 14, stiffness: 180 } });
+  const opacity = interpolate(local, [0, 4], [0, 1], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
+  const tailX = COUPLE[line.speaker].bigLeft + CARD.bigW / 2 - 50;
+  return (
+    <div style={{
+      position: 'absolute', left: 50, right: 50, top: 440, height: 180,
+      display: 'flex', alignItems: 'flex-end', justifyContent: line.speaker === 'logic' ? 'flex-start' : 'flex-end',
+      opacity, transform: `scale(${pop})`, transformOrigin: `${tailX}px 100%`,
+    }}>
+      <div style={{
+        backgroundColor: COLORS.offWhite,
+        color: COLORS.bg,
+        fontFamily: '"Arial", sans-serif',
+        fontSize: 54,
+        fontWeight: 800,
+        lineHeight: 1.18,
+        textAlign: 'center',
+        padding: '22px 38px',
+        minWidth: 380,
+        borderRadius: 30,
+        maxWidth: 980,
+        boxShadow: '0 10px 30px rgba(0,0,0,0.5)',
+      }}>
+        {line.text}
+      </div>
+      <div style={{
+        position: 'absolute', left: tailX - 22, bottom: -24, width: 0, height: 0,
+        borderLeft: '22px solid transparent', borderRight: '22px solid transparent',
+        borderTop: `26px solid ${COLORS.offWhite}`,
+      }} />
+    </div>
+  );
+}
+
+export const CoachingTip = ({ category, tip, hook, website, coachName, bookLink, calendlyLink, audioSrc, captions, sceneEnd }) => {
   const frame = useCurrentFrame();
   const { fps, durationInFrames } = useVideoConfig();
-  const hasCaptions = Array.isArray(captions) && captions.length > 0;
+  const allCaptions = Array.isArray(captions) ? captions : [];
+  // With a scene, the couple's lines show in speech bubbles and only Coach
+  // Tee's words use the big center captions.
+  const hasScene = typeof sceneEnd === 'number' && sceneEnd > 0
+    && allCaptions.some((c) => c.speaker === 'logic' || c.speaker === 'harmony');
+  const sceneLines = hasScene ? allCaptions.filter((c) => c.speaker === 'logic' || c.speaker === 'harmony') : [];
+  captions = hasScene ? allCaptions.filter((c) => c.speaker === 'coach') : allCaptions;
+  const hasCaptions = captions.length > 0;
+  const tNow = frame / fps;
+  let sceneLine = null;
+  for (const l of sceneLines) {
+    if (l.start <= tNow && tNow < sceneEnd) sceneLine = l;
+  }
+  // The couple stay "speaking" through the short pause after each line
+  const speakingNow = sceneLine ? sceneLine.speaker : null;
+  const sceneEndFrame = hasScene ? Math.round(sceneEnd * fps) : 0;
+  const shrink = hasScene
+    ? interpolate(frame, [sceneEndFrame - 8, sceneEndFrame + 10], [0, 1], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' })
+    : 1;
+  const coupleEnter = spring({ fps, frame: frame - 4, from: 0, to: 1, config: { damping: 16, stiffness: 110 } });
   // CTA fades in ~2s before the end, whatever the video length is
   const ctaStart = Math.max(150, durationInFrames - 60);
 
@@ -220,9 +330,18 @@ export const CoachingTip = ({ category, tip, hook, website, coachName, bookLink,
           padding: '10px 32px',
           textTransform: 'uppercase',
         }}>
-          {category}
+          {hasScene && shrink < 0.5 ? 'In session with Coach Tee' : category}
         </div>
       </div>
+
+      {/* Logic and Harmony: the opening scene, then small beside the logo */}
+      {hasScene ? (
+        <>
+          <CouplePortrait who="logic" speaking={speakingNow === 'logic'} shrink={shrink} enter={coupleEnter} />
+          <CouplePortrait who="harmony" speaking={speakingNow === 'harmony'} shrink={shrink} enter={coupleEnter} />
+          {shrink < 0.5 ? <SceneBubble line={sceneLine} fps={fps} /> : null}
+        </>
+      ) : null}
 
       {/* Main tip text */}
       <div style={{
@@ -305,7 +424,9 @@ export const CoachingTip = ({ category, tip, hook, website, coachName, bookLink,
         transform: `translateY(${teeY}px) rotate(${teeRot}deg)`,
         transformOrigin: 'bottom center',
       }}>
-        <Img src={staticFile('travis.jpg')} style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+        <Img src={staticFile(hasScene ? 'coach-tee-full.png' : 'travis.jpg')}
+          style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: hasScene ? 'center 8%' : 'center', display: 'block',
+            backgroundColor: hasScene ? '#2a1a12' : undefined }} />
       </div>
 
       {/* Name tag */}
@@ -327,7 +448,7 @@ export const CoachingTip = ({ category, tip, hook, website, coachName, bookLink,
           borderRadius: 999,
           textTransform: 'uppercase',
         }}>
-          Travis Dixon
+          {hasScene ? 'Coach Tee' : 'Travis Dixon'}
         </div>
       </div>
 

@@ -50,6 +50,23 @@ jobs:
           path: ~/.cache/huggingface
           key: hf-chatterbox-${{ hashFiles('requirements-voice.txt') }}
 
+      # Logic and Harmony's voices (tools/scene_voice.py). Kokoro needs numpy 2
+      # and Chatterbox needs numpy 1, so Kokoro gets its own virtual environment.
+      # If this fails the video is simply made without the couple's scene.
+      - name: Install the couple's voices (Kokoro)
+        continue-on-error: true
+        timeout-minutes: 6
+        run: |
+          python -m venv "$RUNNER_TEMP/kokoro-venv"
+          "$RUNNER_TEMP/kokoro-venv/bin/pip" install -r requirements-scene.txt
+          echo "KOKORO_PYTHON=$RUNNER_TEMP/kokoro-venv/bin/python" >> "$GITHUB_ENV"
+
+      - name: Cache the couple's voice model
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/kokoro
+          key: kokoro-v1.0-int8
+
       - name: Set up Node
         uses: actions/setup-node@v4
         with:
