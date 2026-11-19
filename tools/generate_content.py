@@ -91,6 +91,31 @@ def _past_headlines() -> list[str]:
             out.append(_headline(tip))
     return out
 
+
+def _hook_key(hook: str) -> str:
+    return re.sub(r"[^a-z0-9]", "", (hook or "").lower())
+
+
+def _past_hooks() -> list[str]:
+    """Every distinct opening question ever posted, oldest first. The hook is
+    spoken first and becomes the YouTube title, so a repeat reads as a rerun
+    even when the tip under it is new."""
+    if not LOG_FILE.exists():
+        return []
+    try:
+        with open(LOG_FILE) as f:
+            history = json.load(f).get("history", [])
+    except Exception:
+        return []
+    seen, out = set(), []
+    for h in history:
+        hook = h.get("hook") or ""
+        key = _hook_key(hook)
+        if key and key not in seen:
+            seen.add(key)
+            out.append(hook.strip())
+    return out
+
 SYSTEM_PROMPT = """You are a content writer for Travis Dixon, a relationship coach.
 
 Travis's brand: "Becoming A Trained Partner"
@@ -199,6 +224,15 @@ def generate_content(post_number: int = 0, topic: str | None = None) -> dict:
         )
     used_keys = {_headline_key(h) for h in past}
 
+    past_hooks = _past_hooks()
+    if past_hooks:
+        asked = "\n".join(f"  - {h}" for h in past_hooks)
+        user_prompt += (
+            f"\n\nThese hook questions have ALREADY opened a video. The new hook must ask "
+            f"something different, not the same question reworded:\n{asked}"
+        )
+    used_hook_keys = {_hook_key(h) for h in past_hooks}
+
     for attempt in range(1, MAX_FRESH_TRIES + 1):
         raw = llm.complete(SYSTEM_PROMPT, user_prompt, max_tokens=1024,
                            timeout=REQUEST_TIMEOUT_S, tag="generate_content")
@@ -208,14 +242,25 @@ def generate_content(post_number: int = 0, topic: str | None = None) -> dict:
         content = json.loads(raw, strict=False)
 
         headline = _headline(content.get("tip", ""))
-        if _headline_key(headline) not in used_keys:
+        hook = content.get("hook") or ""
+        headline_repeat = _headline_key(headline) in used_keys
+        hook_repeat = bool(hook) and _hook_key(hook) in used_hook_keys
+        if not headline_repeat and not hook_repeat:
             break
-        print(f"[generate_content] Headline already posted ({headline!r}), regenerating "
-              f"({attempt}/{MAX_FRESH_TRIES})...", flush=True)
-        user_prompt += (
-            f"\n\nYour last answer opened with \"{headline}\", which was already posted. "
-            f"Write a different first sentence."
-        )
+        if headline_repeat:
+            print(f"[generate_content] Headline already posted ({headline!r}), regenerating "
+                  f"({attempt}/{MAX_FRESH_TRIES})...", flush=True)
+            user_prompt += (
+                f"\n\nYour last answer opened with \"{headline}\", which was already posted. "
+                f"Write a different first sentence."
+            )
+        if hook_repeat:
+            print(f"[generate_content] Hook already used ({hook!r}), regenerating "
+                  f"({attempt}/{MAX_FRESH_TRIES})...", flush=True)
+            user_prompt += (
+                f"\n\nYour last hook \"{hook}\" already opened a video. "
+                f"Ask a different question."
+            )
 
     # Trim tip if too long
     words = content.get("tip", "").split()
@@ -223,6 +268,10 @@ def generate_content(post_number: int = 0, topic: str | None = None) -> dict:
         content["tip"] = " ".join(words[:18])
 
     content["hook"] = clean_hook(content.get("hook"))
+    if content["hook"] and _hook_key(content["hook"]) in used_hook_keys:
+        # Still a repeat after every retry: start the video on the tip instead.
+        print(f"[generate_content] Dropping repeated hook ({content['hook']!r})", flush=True)
+        content["hook"] = None
     content["script"] = clean_script(content.get("script"))
 
     return content
