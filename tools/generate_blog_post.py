@@ -25,9 +25,8 @@ from datetime import datetime
 from pathlib import Path
 from zoneinfo import ZoneInfo
 
-import anthropic
+import llm
 
-MODEL = "claude-opus-4-7"
 REQUEST_TIMEOUT_S = 300.0
 MAX_ATTEMPTS = 5
 BACKOFF_BASE_S = 4  # 4s, 8s, 16s, 32s between attempts 1→5
@@ -116,32 +115,6 @@ def _style_sample(site_dir: Path) -> str:
     return text.rsplit("\n\n", 1)[0]
 
 
-def _call_claude_with_retry(client, user_prompt: str):
-    last_err = None
-    for attempt in range(1, MAX_ATTEMPTS + 1):
-        try:
-            return client.messages.create(
-                model=MODEL,
-                max_tokens=6000,
-                system=SYSTEM_PROMPT,
-                messages=[{"role": "user", "content": user_prompt}],
-                timeout=REQUEST_TIMEOUT_S,
-            )
-        except (
-            anthropic.APITimeoutError,
-            anthropic.APIConnectionError,
-            anthropic.RateLimitError,
-            anthropic.InternalServerError,
-        ) as e:
-            last_err = e
-            if attempt == MAX_ATTEMPTS:
-                break
-            wait = BACKOFF_BASE_S * (2 ** (attempt - 1))
-            print(f"[generate_blog_post] {type(e).__name__} on attempt {attempt}/{MAX_ATTEMPTS}, retrying in {wait}s...", flush=True)
-            time.sleep(wait)
-    raise last_err
-
-
 def _parse(raw: str) -> tuple[str, str, str]:
     """Split the model output into (title, slug, markdown starting with '# title')."""
     raw = raw.strip()
@@ -205,9 +178,8 @@ def generate_blog_post(site_dir: Path, topic: str | None = None) -> dict:
         f"{sample_block}\n\nFollow the output format exactly."
     )
 
-    client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
-    message = _call_claude_with_retry(client, user_prompt)
-    raw = "".join(b.text for b in message.content if getattr(b, "type", "") == "text")
+    raw = llm.complete(SYSTEM_PROMPT, user_prompt, max_tokens=6000,
+                       timeout=REQUEST_TIMEOUT_S, tag="generate_blog_post")
     title, slug, body = _parse(raw)
 
     words = len(body.split())

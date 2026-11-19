@@ -1,6 +1,6 @@
 """
 generate_content.py
-Uses Claude (Anthropic) to generate a branded coaching tip for Travis Dixon.
+Uses an AI model (free Gemini by default, see llm.py) to generate a branded coaching tip for Travis Dixon.
 Returns: { category, hook, tip, script, caption, hashtags }
 """
 
@@ -8,7 +8,7 @@ import os
 import re
 import json
 import time
-import anthropic
+import llm
 
 from brand_caption import brand_caption, strip_dashes
 from pathlib import Path
@@ -16,7 +16,6 @@ from dotenv import load_dotenv
 
 load_dotenv(override=True)
 
-MODEL = "claude-opus-4-7"
 REQUEST_TIMEOUT_S = 60.0
 MAX_ATTEMPTS = 5
 BACKOFF_BASE_S = 4  # 4s, 8s, 16s, 32s between attempts 1→5
@@ -94,6 +93,31 @@ def _past_headlines() -> list[str]:
             out.append(_headline(tip))
     return out
 
+
+def _hook_key(hook: str) -> str:
+    return re.sub(r"[^a-z0-9]", "", (hook or "").lower())
+
+
+def _past_hooks() -> list[str]:
+    """Every distinct opening question ever posted, oldest first. The hook is
+    spoken first and becomes the YouTube title, so a repeat reads as a rerun
+    even when the tip under it is new."""
+    if not LOG_FILE.exists():
+        return []
+    try:
+        with open(LOG_FILE) as f:
+            history = json.load(f).get("history", [])
+    except Exception:
+        return []
+    seen, out = set(), []
+    for h in history:
+        hook = h.get("hook") or ""
+        key = _hook_key(hook)
+        if key and key not in seen:
+            seen.add(key)
+            out.append(hook.strip())
+    return out
+
 SYSTEM_PROMPT = """You are a content writer for Travis Dixon, a relationship coach.
 
 Travis's brand: "Becoming A Trained Partner"
@@ -134,32 +158,6 @@ Return ONLY valid JSON in this exact format, no extra text:
 }"""
 
 
-def _call_claude_with_retry(client, user_prompt: str):
-    last_err = None
-    for attempt in range(1, MAX_ATTEMPTS + 1):
-        try:
-            return client.messages.create(
-                model=MODEL,
-                max_tokens=1024,
-                system=SYSTEM_PROMPT,
-                messages=[{"role": "user", "content": user_prompt}],
-                timeout=REQUEST_TIMEOUT_S,
-            )
-        except (
-            anthropic.APITimeoutError,
-            anthropic.APIConnectionError,
-            anthropic.RateLimitError,
-            anthropic.InternalServerError,
-        ) as e:
-            last_err = e
-            if attempt == MAX_ATTEMPTS:
-                break
-            wait = BACKOFF_BASE_S * (2 ** (attempt - 1))
-            print(f"[generate_content] {type(e).__name__} on attempt {attempt}/{MAX_ATTEMPTS} — retrying in {wait}s...", flush=True)
-            time.sleep(wait)
-    raise last_err
-
-
 def clean_hook(hook) -> str | None:
     """A usable opening question, or None so the video simply starts on the tip."""
     if not isinstance(hook, str):
@@ -189,8 +187,6 @@ def headline_already_posted(tip: str) -> bool:
 
 def generate_content(post_number: int = 0, topic: str | None = None) -> dict:
     """topic, when given, is used in place of the next queued topic."""
-    client = anthropic.Anthropic(api_key=os.getenv("ANTHROPIC_API_KEY"))
-
     category = CATEGORIES[post_number % len(CATEGORIES)]
 
     recent = _recent_tips()
@@ -232,24 +228,43 @@ def generate_content(post_number: int = 0, topic: str | None = None) -> dict:
         )
     used_keys = {_headline_key(h) for h in past}
 
-    for attempt in range(1, MAX_FRESH_TRIES + 1):
-        message = _call_claude_with_retry(client, user_prompt)
+    past_hooks = _past_hooks()
+    if past_hooks:
+        asked = "\n".join(f"  - {h}" for h in past_hooks)
+        user_prompt += (
+            f"\n\nThese hook questions have ALREADY opened a video. The new hook must ask "
+            f"something different, not the same question reworded:\n{asked}"
+        )
+    used_hook_keys = {_hook_key(h) for h in past_hooks}
 
-        raw = message.content[0].text.strip()
+    for attempt in range(1, MAX_FRESH_TRIES + 1):
+        raw = llm.complete(SYSTEM_PROMPT, user_prompt, max_tokens=1024,
+                           timeout=REQUEST_TIMEOUT_S, tag="generate_content")
         # Strip markdown fences if present
         if raw.startswith("```"):
             raw = raw.split("\n", 1)[1].rsplit("```", 1)[0].strip()
         content = json.loads(raw, strict=False)
 
         headline = _headline(content.get("tip", ""))
-        if _headline_key(headline) not in used_keys:
+        hook = content.get("hook") or ""
+        headline_repeat = _headline_key(headline) in used_keys
+        hook_repeat = bool(hook) and _hook_key(hook) in used_hook_keys
+        if not headline_repeat and not hook_repeat:
             break
-        print(f"[generate_content] Headline already posted ({headline!r}), regenerating "
-              f"({attempt}/{MAX_FRESH_TRIES})...", flush=True)
-        user_prompt += (
-            f"\n\nYour last answer opened with \"{headline}\", which was already posted. "
-            f"Write a different first sentence."
-        )
+        if headline_repeat:
+            print(f"[generate_content] Headline already posted ({headline!r}), regenerating "
+                  f"({attempt}/{MAX_FRESH_TRIES})...", flush=True)
+            user_prompt += (
+                f"\n\nYour last answer opened with \"{headline}\", which was already posted. "
+                f"Write a different first sentence."
+            )
+        if hook_repeat:
+            print(f"[generate_content] Hook already used ({hook!r}), regenerating "
+                  f"({attempt}/{MAX_FRESH_TRIES})...", flush=True)
+            user_prompt += (
+                f"\n\nYour last hook \"{hook}\" already opened a video. "
+                f"Ask a different question."
+            )
 
     # Trim tip if too long
     words = content.get("tip", "").split()
@@ -257,6 +272,10 @@ def generate_content(post_number: int = 0, topic: str | None = None) -> dict:
         content["tip"] = " ".join(words[:18])
 
     content["hook"] = clean_hook(content.get("hook"))
+    if content["hook"] and _hook_key(content["hook"]) in used_hook_keys:
+        # Still a repeat after every retry: start the video on the tip instead.
+        print(f"[generate_content] Dropping repeated hook ({content['hook']!r})", flush=True)
+        content["hook"] = None
     content["script"] = clean_script(content.get("script"))
     content["tip"] = strip_dashes(content.get("tip", ""))
     if content["script"]:

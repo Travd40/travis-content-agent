@@ -5,7 +5,8 @@ name: Weekly Blog Post
 # single markdown file to Travd40/travis_coaching_site (main deploys to Render).
 #
 # Secrets used:
-#   ANTHROPIC_API_KEY  already used by the daily post workflow
+#   GEMINI_API_KEY     free key from aistudio.google.com/apikey (writes the article)
+#   ANTHROPIC_API_KEY  optional paid fallback
 #   SITE_PUSH_TOKEN    GitHub token with Contents read+write on travis_coaching_site
 #
 # To queue a topic, add a string to blog_topic_queue.json. Otherwise Claude picks
@@ -46,6 +47,7 @@ jobs:
       - name: Check secrets
         env:
           SITE_PUSH_TOKEN:   ${{ secrets.SITE_PUSH_TOKEN }}
+          GEMINI_API_KEY:    ${{ secrets.GEMINI_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
           missing=0
@@ -53,8 +55,8 @@ jobs:
             echo "::error::SITE_PUSH_TOKEN secret is missing. Add it in this repo: Settings > Secrets and variables > Actions."
             missing=1
           fi
-          if [ -z "$ANTHROPIC_API_KEY" ]; then
-            echo "::error::ANTHROPIC_API_KEY secret is missing."
+          if [ -z "$GEMINI_API_KEY" ] && [ -z "$ANTHROPIC_API_KEY" ]; then
+            echo "::error::No AI key. Add a free GEMINI_API_KEY secret (aistudio.google.com/apikey)."
             missing=1
           fi
           exit $missing
@@ -81,6 +83,7 @@ jobs:
       - name: Write article
         id: gen
         env:
+          GEMINI_API_KEY:    ${{ secrets.GEMINI_API_KEY }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           TOPIC: ${{ inputs.topic }}
         run: python tools/generate_blog_post.py --site-dir site --topic "$TOPIC"

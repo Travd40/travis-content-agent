@@ -87,6 +87,8 @@ jobs:
 
       - name: Run agent
         env:
+          # Free Gemini key writes the posts; the Anthropic key is only a paid fallback.
+          GEMINI_API_KEY:           ${{ secrets.GEMINI_API_KEY }}
           ANTHROPIC_API_KEY:        ${{ secrets.ANTHROPIC_API_KEY }}
           META_GRAPH_VERSION:       ${{ secrets.META_GRAPH_VERSION }}
           META_PAGE_ACCESS_TOKEN:   ${{ secrets.META_PAGE_ACCESS_TOKEN }}
