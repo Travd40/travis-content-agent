@@ -74,7 +74,9 @@ def speak_scene(scene: list[dict], filename: str = "scene.wav"):
     if not scene:
         return None
     other_python = os.getenv("KOKORO_PYTHON")
-    if other_python and Path(other_python).resolve() != Path(sys.executable).resolve():
+    # Compare the paths as written: a virtual environment's python is a link to
+    # the same program, so resolving the links would hide the difference.
+    if other_python and os.path.abspath(other_python) != os.path.abspath(sys.executable):
         return _speak_scene_in(other_python, scene, filename)
     try:
         import numpy as np
