@@ -1,5 +1,5 @@
 {
-  "total_posts": 190,
+  "total_posts": 191,
   "history": [
     {
       "post_number": 1,
@@ -3608,6 +3608,29 @@
       "youtube_result": {
         "video_id": "7-1FaImgzcs",
         "url": "https://www.youtube.com/watch?v=7-1FaImgzcs"
+      }
+    },
+    {
+      "post_number": 191,
+      "timestamp": "2026-11-19T21:15:02.749574",
+      "category": "COMMUNICATION",
+      "tip": "Lower your voice, not hers. Calm is contagious when it comes without a lecture attached.",
+      "hook": "Why does she get louder when I stay calm?",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0191_COMMUNICATION.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0191_COMMUNICATION_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18004316568032190",
+          "container_id": "18584333824077598"
+        },
+        "facebook": {
+          "id": "1858866215167500"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0191_COMMUNICATION.mp4"
+      },
+      "youtube_result": {
+        "video_id": "p_vRgcIRD90",
+        "url": "https://www.youtube.com/watch?v=p_vRgcIRD90"
       }
     }
   ]
