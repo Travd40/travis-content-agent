@@ -92,8 +92,10 @@ def _past_headlines() -> list[str]:
     return out
 
 
-def _hook_key(hook: str) -> str:
-    return re.sub(r"[^a-z0-9]", "", (hook or "").lower())
+def _hook_key(hook) -> str:
+    if not isinstance(hook, str):
+        return ""
+    return re.sub(r"[^a-z0-9]", "", hook.lower())
 
 
 def _past_hooks() -> list[str]:
