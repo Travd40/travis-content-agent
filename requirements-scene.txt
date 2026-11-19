@@ -1,0 +1,4 @@
+# Free voices for Logic and Harmony (tools/scene_voice.py).
+# Installed into its own virtual environment by the workflows.
+kokoro-onnx==0.6.1
+soundfile==0.13.1

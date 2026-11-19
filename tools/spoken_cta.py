@@ -30,6 +30,17 @@ def voiceover_script(content: dict, post_number: int) -> str:
     return " ... ".join(p for p in parts if p)
 
 
+SCENE_TURN = "Is this you?"
+
+
+def coach_script_after_scene(content: dict, post_number: int) -> str:
+    """What Coach Tee says once Logic and Harmony have spoken: the question to
+    the viewer, the spoken script (or the short tip), then the ask. The hook
+    question is not spoken here because the couple's lines are the hook."""
+    body = content.get("script") or content["tip"]
+    return " ... ".join([SCENE_TURN, body, spoken_cta(post_number)])
+
+
 if __name__ == "__main__":
     sample = {
         "hook": "Why does he shut down every time we argue?",

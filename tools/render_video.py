@@ -19,7 +19,8 @@ OUTPUT_DIR   = Path(__file__).parent.parent / "output"
 
 
 def render_video(content: dict, output_filename: str = None, audio_path: str = None,
-                 audio_duration: float = None, captions: list | None = None) -> str:
+                 audio_duration: float = None, captions: list | None = None,
+                 scene_end: float | None = None) -> str:
     """
     Renders a coaching tip video using Remotion.
 
@@ -28,6 +29,8 @@ def render_video(content: dict, output_filename: str = None, audio_path: str = N
         output_filename: optional filename; auto-generated if not provided
         captions: optional [{"text", "start", "end"}] phrases (seconds) shown in
             sync with the voiceover; without them the video shows the tip
+        scene_end: seconds at which Logic and Harmony's opening scene ends and
+            Coach Tee takes over; None for the classic video with no scene
 
     Returns:
         Absolute path to the rendered MP4 file
@@ -58,6 +61,7 @@ def render_video(content: dict, output_filename: str = None, audio_path: str = N
         "audioSrc":         audio_src,
         "captions":         captions if audio_src else None,
         "durationInFrames": duration_frames,
+        "sceneEnd":         scene_end if (audio_src and captions and content.get("scene")) else None,
         "category":     content.get("category", "COACHING TIP"),
         "tip":          content.get("tip", ""),
         "hook":         content.get("hook") or "",

@@ -144,6 +144,14 @@ WRITING RULES:
   say why it happens, then give ONE specific thing a trained partner does instead. It must expand
   the tip, not repeat it word for word. No hashtags, emojis, links, or sign-off — the call to action
   is added separately.
+- The "scene" opens the video before Travis speaks. It is a moment from a coaching session:
+  a married couple, Logic (the husband) and Harmony (the wife), sit with Coach Tee and say the
+  thing the tip answers. Write 2 or 3 lines, each 9 words or fewer, alternating speakers, in
+  plain spoken words a real couple would say. The viewer should think "that is us".
+  Example: Harmony: "I'm done." Logic: "Why? What did I do?"
+  Rules for the scene: either one may be the partner who is struggling, so vary who starts and
+  who is in the wrong from day to day. No yelling, insults, threats, profanity or anything
+  physical. Never make either of them look stupid. Coach Tee does not speak in the scene.
 
 Return ONLY valid JSON in this exact format, no extra text:
 {
@@ -151,6 +159,7 @@ Return ONLY valid JSON in this exact format, no extra text:
   "hook": "Question a struggling partner would ask, 10 words max?",
   "tip": "The short tip that appears on video (12-18 words)",
   "script": "What Travis says after the hook (55-85 words)",
+  "scene": [{"speaker": "harmony", "line": "..."}, {"speaker": "logic", "line": "..."}],
   "caption": "Instagram/TikTok caption with CTA",
   "hashtags": "#tag1 #tag2 #tag3"
 }"""
@@ -177,6 +186,38 @@ def clean_script(script) -> str | None:
     if len(words) > 110:
         script = " ".join(words[:110]).rstrip(",;:") + "."
     return script
+
+
+SCENE_SPEAKERS = ("logic", "harmony")
+SCENE_MAX_WORDS = 12
+# A scene is dropped, never repaired, when a line would not be safe to voice.
+SCENE_BLOCKED = re.compile(
+    r"\b(hate you|shut up|stupid|idiot|kill|hit you|slap|divorce you|damn|hell|"
+    r"bitch|ass|crazy|worthless|pathetic)\b", re.IGNORECASE)
+
+
+def clean_scene(scene) -> list[dict] | None:
+    """The couple's opening lines, or None so the video opens the classic way.
+    Needs 2 or 3 short lines, both partners speaking, nothing harsh."""
+    if not isinstance(scene, list) or not 2 <= len(scene) <= 3:
+        return None
+    out = []
+    for item in scene:
+        if not isinstance(item, dict):
+            return None
+        speaker = str(item.get("speaker", "")).strip().lower()
+        line = item.get("line")
+        if speaker not in SCENE_SPEAKERS or not isinstance(line, str):
+            return None
+        line = " ".join(line.replace("\u2014", ", ").replace("\u2013", ", ").split()).strip('"').strip()
+        if not line or len(line.split()) > SCENE_MAX_WORDS or SCENE_BLOCKED.search(line):
+            return None
+        if line[-1] not in ".!?":
+            line += "."
+        out.append({"speaker": speaker, "line": line})
+    if {i["speaker"] for i in out} != set(SCENE_SPEAKERS):
+        return None
+    return out
 
 
 def headline_already_posted(tip: str) -> bool:
@@ -275,6 +316,7 @@ def generate_content(post_number: int = 0, topic: str | None = None) -> dict:
         print(f"[generate_content] Dropping repeated hook ({content['hook']!r})", flush=True)
         content["hook"] = None
     content["script"] = clean_script(content.get("script"))
+    content["scene"] = clean_scene(content.get("scene"))
 
     return content
 
