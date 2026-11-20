@@ -11,6 +11,7 @@ Each run:
 Usage:
   python agent.py        # Start scheduler (daily at POST_TIME, runs forever)
   python agent.py --now  # Run once right now (for testing)
+  python agent.py --preview  # Make today's video without posting it
 """
 
 import os
@@ -38,7 +39,7 @@ sys.path.insert(0, str(Path(__file__).parent / "tools"))
 from generate_content import generate_content, headline_already_posted
 from render_video import render_video
 from blog_promo import get_blog_promo
-from spoken_cta import voiceover_script
+from spoken_cta import voiceover_script, coach_script_after_scene
 
 POST_TIME = os.getenv("POST_TIME", "10:00")
 LOG_FILE  = Path(__file__).parent / "post_log.json"
@@ -99,7 +100,46 @@ def save_post_log(count: int, content: dict, video_path: str, caption_path: str,
         }, f, indent=2)
 
 
-def run_pipeline():
+def coach_voiceover(script: str):
+    """Coach Tee's voiceover in Travis's voice: (path, duration_s, captions) or None.
+    VOICE_ENGINE=chatterbox speaks in the cloned voice for free; otherwise (or if
+    that fails) ElevenLabs. With no voice the video renders silent as before."""
+    engines = ["chatterbox", "elevenlabs"] if os.getenv("VOICE_ENGINE") == "chatterbox" else ["elevenlabs"]
+    for engine in engines:
+        try:
+            if engine == "chatterbox":
+                from chatterbox_tts import generate_voiceover
+            else:
+                from elevenlabs_tts import generate_voiceover
+            vo = generate_voiceover(script)
+            if vo:
+                return vo
+        except Exception as e:
+            print(f"[agent] {engine} voiceover skipped ({type(e).__name__}: {e})")
+    return None
+
+
+def scene_voiceover(content: dict, post_count: int):
+    """Logic and Harmony's lines followed by Coach Tee. Returns
+    (path, duration_s, captions, scene_end_s), or None when any part fails, in
+    which case the caller makes the classic video without the scene."""
+    try:
+        from scene_voice import speak_scene, join_scene_and_coach
+        spoken = speak_scene(content["scene"])
+        if not spoken:
+            return None
+        coach = coach_voiceover(coach_script_after_scene(content, post_count))
+        if not coach:
+            return None
+        return join_scene_and_coach(*spoken, *coach)
+    except Exception as e:
+        print(f"[agent] Scene voiceover skipped ({type(e).__name__}: {e})")
+        return None
+
+
+def run_pipeline(preview: bool = False):
+    """preview=True makes the video and caption file only: nothing is posted
+    and the post log is left alone."""
     print("\n" + "=" * 60)
     print(f"[agent] Running — {datetime.now().strftime('%A %Y-%m-%d %H:%M')}")
     print("=" * 60)
@@ -109,7 +149,7 @@ def run_pipeline():
     # Step 1: Generate content
     # Friday = blog promo day (drives traffic to /blog posts).
     # Other days = normal coaching tip from Claude.
-    is_friday = datetime.now().weekday() == 4
+    is_friday = datetime.now().weekday() == 4 and not preview
     if is_friday:
         print(f"\n[agent] Friday → using blog promo rotation for post #{post_count + 1}...")
         try:
@@ -130,31 +170,29 @@ def run_pipeline():
     else:
         print(f"\n[agent] Generating coaching tip #{post_count + 1}...")
         try:
-            content = generate_content(post_count)
+            # PREVIEW_TOPIC lets a preview run show one chosen topic.
+            content = generate_content(post_count, topic=(os.getenv("PREVIEW_TOPIC") or None) if preview else None)
         except Exception as e:
             record_failure("generate_content", e)
             raise
     print(f"[agent] Category : {content['category']}")
     print(f"[agent] Tip      : {content['tip']}")
 
-    # Step 1.5: Voiceover (hook question + script + spoken CTA). VOICE_ENGINE=chatterbox
-    # speaks in Travis's cloned voice for free; otherwise (or if that fails) ElevenLabs.
-    # Optional either way — with no voice the video renders silent as before.
-    voiceover_path, voiceover_duration, captions = None, None, None
-    script = voiceover_script(content, post_count)
-    engines = ["chatterbox", "elevenlabs"] if os.getenv("VOICE_ENGINE") == "chatterbox" else ["elevenlabs"]
-    for engine in engines:
-        try:
-            if engine == "chatterbox":
-                from chatterbox_tts import generate_voiceover
-            else:
-                from elevenlabs_tts import generate_voiceover
-            vo = generate_voiceover(script)
-            if vo:
-                voiceover_path, voiceover_duration, captions = vo
-                break
-        except Exception as e:
-            print(f"[agent] {engine} voiceover skipped ({type(e).__name__}: {e})")
+    # Step 1.5: Voiceover. When the tip came with a scene, Logic and Harmony
+    # speak first and Coach Tee answers. If any part of that fails, the scene is
+    # dropped and the classic voiceover (hook + script + spoken CTA) is used.
+    voiceover_path, voiceover_duration, captions, scene_end = None, None, None, None
+    if content.get("scene"):
+        joined = scene_voiceover(content, post_count)
+        if joined:
+            voiceover_path, voiceover_duration, captions, scene_end = joined
+        else:
+            print("[agent] Making today's video without the scene.")
+            content["scene"] = None
+    if not voiceover_path:
+        vo = coach_voiceover(voiceover_script(content, post_count))
+        if vo:
+            voiceover_path, voiceover_duration, captions = vo
 
     # Step 2: Render video
     print(f"\n[agent] Rendering video...")
@@ -164,7 +202,8 @@ def run_pipeline():
         video_path = render_video(content, filename,
                                   audio_path=voiceover_path,
                                   audio_duration=voiceover_duration,
-                                  captions=captions)
+                                  captions=captions,
+                                  scene_end=scene_end)
     except Exception as e:
         record_failure("render_video", e)
         raise
@@ -180,6 +219,12 @@ def run_pipeline():
         f.write("\n\n")
         f.write(content["hashtags"])
         f.write("\n")
+
+    if preview:
+        print(f"\n[agent] Preview only. Nothing was posted and the post log is unchanged.")
+        print(f"[agent] Video  : {video_path}")
+        print(f"[agent] Caption: {caption_path}")
+        return video_path
 
     # Step 4: Publish to IG Reels + FB Page via Meta Graph API (non-blocking)
     meta_result = None
@@ -264,7 +309,9 @@ def start_scheduler():
 
 
 if __name__ == "__main__":
-    if "--now" in sys.argv:
+    if "--preview" in sys.argv:
+        run_pipeline(preview=True)
+    elif "--now" in sys.argv:
         run_pipeline()
     else:
         start_scheduler()
