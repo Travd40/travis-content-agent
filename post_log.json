@@ -1,5 +1,5 @@
 {
-  "total_posts": 191,
+  "total_posts": 192,
   "history": [
     {
       "post_number": 1,
@@ -3631,6 +3631,29 @@
       "youtube_result": {
         "video_id": "p_vRgcIRD90",
         "url": "https://www.youtube.com/watch?v=p_vRgcIRD90"
+      }
+    },
+    {
+      "post_number": 192,
+      "timestamp": "2026-11-20T20:55:09.163883",
+      "category": "COUPLES COACHING",
+      "tip": "Fair isn't equal. The couples who thrive give 100%, not half. Stop splitting the load.",
+      "hook": "Why does keeping score with my wife feel so exhausting?",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0192_COUPLES_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0192_COUPLES_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18023440631959663",
+          "container_id": "18584554021077598"
+        },
+        "facebook": {
+          "id": "1448814264003867"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0192_COUPLES_COACHING.mp4"
+      },
+      "youtube_result": {
+        "video_id": "3nL13qXtw88",
+        "url": "https://www.youtube.com/watch?v=3nL13qXtw88"
       }
     }
   ]
