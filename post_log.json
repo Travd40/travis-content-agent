@@ -1,5 +1,5 @@
 {
-  "total_posts": 192,
+  "total_posts": 193,
   "history": [
     {
       "post_number": 1,
@@ -3654,6 +3654,29 @@
       "youtube_result": {
         "video_id": "3nL13qXtw88",
         "url": "https://www.youtube.com/watch?v=3nL13qXtw88"
+      }
+    },
+    {
+      "post_number": 193,
+      "timestamp": "2026-11-21T20:00:55.033630",
+      "category": "COUPLES COACHING",
+      "tip": "Deliver the hard message without softening it into confusion. Clarity now saves her weeks of guessing later.",
+      "hook": "Why does she keep asking if I really meant it?",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0193_COUPLES_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0193_COUPLES_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18386092900237430",
+          "container_id": "18584790277077598"
+        },
+        "facebook": {
+          "id": "1855494922270451"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0193_COUPLES_COACHING.mp4"
+      },
+      "youtube_result": {
+        "video_id": "Rj4XLBE89Po",
+        "url": "https://www.youtube.com/watch?v=Rj4XLBE89Po"
       }
     }
   ]
