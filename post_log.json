@@ -1,5 +1,5 @@
 {
-  "total_posts": 194,
+  "total_posts": 195,
   "history": [
     {
       "post_number": 1,
@@ -3700,6 +3700,29 @@
       "youtube_result": {
         "video_id": "_ylX3pG4IMA",
         "url": "https://www.youtube.com/watch?v=_ylX3pG4IMA"
+      }
+    },
+    {
+      "post_number": 195,
+      "timestamp": "2026-11-24T00:39:36.835719",
+      "category": "COMMUNICATION",
+      "tip": "Lead with the care, then land the correction. Context first makes the critique feel like coaching.",
+      "hook": "Why does she hear attack when I'm just explaining?",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0195_COMMUNICATION.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0195_COMMUNICATION_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18217363450366386",
+          "container_id": "18585324073077598"
+        },
+        "facebook": {
+          "id": "1185818484430736"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0195_COMMUNICATION.mp4"
+      },
+      "youtube_result": {
+        "video_id": "B--cgTwiPBs",
+        "url": "https://www.youtube.com/watch?v=B--cgTwiPBs"
       }
     }
   ]
