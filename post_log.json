@@ -1,5 +1,5 @@
 {
-  "total_posts": 195,
+  "total_posts": 196,
   "history": [
     {
       "post_number": 1,
@@ -3723,6 +3723,29 @@
       "youtube_result": {
         "video_id": "B--cgTwiPBs",
         "url": "https://www.youtube.com/watch?v=B--cgTwiPBs"
+      }
+    },
+    {
+      "post_number": 196,
+      "timestamp": "2026-11-24T23:00:51.794575",
+      "category": "TRUST & SAFETY",
+      "tip": "Signal the temperature before you open the topic. She shouldn't have to guess if this is war or repair.",
+      "hook": "Why does she brace every time I bring something up?",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0196_TRUST_and_SAFETY.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0196_TRUST_and_SAFETY_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "17900063004413963",
+          "container_id": "18585535708077598"
+        },
+        "facebook": {
+          "id": "1149856380869472"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0196_TRUST_and_SAFETY.mp4"
+      },
+      "youtube_result": {
+        "video_id": "-_rzo8cgdGw",
+        "url": "https://www.youtube.com/watch?v=-_rzo8cgdGw"
       }
     }
   ]
