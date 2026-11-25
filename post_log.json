@@ -1,5 +1,5 @@
 {
-  "total_posts": 196,
+  "total_posts": 197,
   "history": [
     {
       "post_number": 1,
@@ -3746,6 +3746,29 @@
       "youtube_result": {
         "video_id": "-_rzo8cgdGw",
         "url": "https://www.youtube.com/watch?v=-_rzo8cgdGw"
+      }
+    },
+    {
+      "post_number": 197,
+      "timestamp": "2026-11-25T22:11:31.365400",
+      "category": "COUPLES COACHING",
+      "tip": "Share the context before she has to decode it. Her guessing is the labor you never see.",
+      "hook": "Why does she keep asking if anything's wrong?",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0197_COUPLES_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0197_COUPLES_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18140277673658841",
+          "container_id": "18585732181077598"
+        },
+        "facebook": {
+          "id": "2885083831870921"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0197_COUPLES_COACHING.mp4"
+      },
+      "youtube_result": {
+        "video_id": "egip_5NTMdc",
+        "url": "https://www.youtube.com/watch?v=egip_5NTMdc"
       }
     }
   ]
