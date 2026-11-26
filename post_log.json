@@ -1,5 +1,5 @@
 {
-  "total_posts": 197,
+  "total_posts": 198,
   "history": [
     {
       "post_number": 1,
@@ -3769,6 +3769,29 @@
       "youtube_result": {
         "video_id": "egip_5NTMdc",
         "url": "https://www.youtube.com/watch?v=egip_5NTMdc"
+      }
+    },
+    {
+      "post_number": 198,
+      "timestamp": "2026-11-26T22:14:39.994133",
+      "category": "MEN'S COACHING",
+      "tip": "Drop the explanation and ask the question. She needs curiosity from you, not a closing argument.",
+      "hook": "Why does she shut down the moment I start explaining?",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0198_MENS_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0198_MENS_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "17904638907673838",
+          "container_id": "18585960385077598"
+        },
+        "facebook": {
+          "id": "1394181402589345"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0198_MENS_COACHING.mp4"
+      },
+      "youtube_result": {
+        "video_id": "QoU3BVm3KdQ",
+        "url": "https://www.youtube.com/watch?v=QoU3BVm3KdQ"
       }
     }
   ]
