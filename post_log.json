@@ -1,5 +1,5 @@
 {
-  "total_posts": 198,
+  "total_posts": 199,
   "history": [
     {
       "post_number": 1,
@@ -3792,6 +3792,29 @@
       "youtube_result": {
         "video_id": "QoU3BVm3KdQ",
         "url": "https://www.youtube.com/watch?v=QoU3BVm3KdQ"
+      }
+    },
+    {
+      "post_number": 199,
+      "timestamp": "2026-11-27T21:50:51.113679",
+      "category": "COUPLES COACHING",
+      "tip": "An apology with an explanation attached is a negotiation. She wanted ownership, you handed her a case file.",
+      "hook": "Why does my apology make her more upset, not less?",
+      "video": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0199_COUPLES_COACHING.mp4",
+      "caption_file": "/home/runner/work/travis-content-agent/travis-content-agent/output/post_0199_COUPLES_COACHING_caption.txt",
+      "meta_result": {
+        "instagram": {
+          "id": "18233683300333846",
+          "container_id": "18586188568077598"
+        },
+        "facebook": {
+          "id": "1156493270463638"
+        },
+        "video_url": "https://raw.githubusercontent.com/Travd40/content-videos/main/videos/post_0199_COUPLES_COACHING.mp4"
+      },
+      "youtube_result": {
+        "video_id": "esu0e2lpvqM",
+        "url": "https://www.youtube.com/watch?v=esu0e2lpvqM"
       }
     }
   ]
